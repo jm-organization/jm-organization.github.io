@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function () {
-    var opacityControl = $('.jm-navigation-bar');
+    var opacityControl = $('.jm-layer');
 
     $(window).scroll(function(){
         var top = $(window).scrollTop(),
