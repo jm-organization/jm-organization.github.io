@@ -9,9 +9,17 @@ $(document).ready(function () {
         var windowScroll = $(window).scrollTop();
 
         if (windowScroll > object_to_stick) {
-            $(navigation).css("position", "fixed");
+            $(navigation).css({
+                "position":"fixed!important",
+                "top":"0",
+                "bottom":"inherit!important"
+            });
         } else {
-            $(navigation).css("position", "relative");
+            $(navigation).css({
+                "position":"",
+                "top":"",
+                "bottom":""
+            });
         }
     });
 });
