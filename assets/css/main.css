@@ -27,7 +27,8 @@ section {
     left: 0;
     width: inherit;
     height: 38px;
-    background: transparent; }
+    background: transparent;
+    z-index: 5; }
     .jm-header .navigation nav > li {
       line-height: 38px;
       font-size: 18px;
@@ -36,9 +37,9 @@ section {
       float: left;
       text-transform: uppercase; }
   .jm-header .jm-layer2 {
-    height: 120px;
+    height: 320px;
     position: absolute;
-    top: 450px;
+    top: 210px;
     background: linear-gradient(to top, #ffffff, transparent);
     width: inherit; }
 
