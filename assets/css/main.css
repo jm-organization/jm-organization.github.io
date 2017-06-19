@@ -7,6 +7,9 @@ li {
   width: 92%;
   margin: 0 auto; }
 
+section {
+  height: 468px; }
+
 /* Header */
 .jm-header {
   position: relative;
