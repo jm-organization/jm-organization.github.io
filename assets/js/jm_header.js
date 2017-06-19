@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function () {
-    var opacityControl = $('.jm-layer');
+    var opacityControl = $('.jm-layer, .jm-preview');
 
     $(window).scroll(function(){
         var top = $(window).scrollTop(),
