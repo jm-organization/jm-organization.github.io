@@ -10,5 +10,8 @@ $(document).ready(function () {
             opacity = top > 500 ? 1 : top * 2 / 750;
 
         opacityControl.css('opacity', opacity);
+        if (top > 1 ) {
+            $('.jm-layer').css('position', 'absolute');
+        }
     });
 });
