@@ -12,6 +12,8 @@ $(document).ready(function () {
         opacityControl.css('opacity', opacity);
         if (top > 1 ) {
             $('.jm-layer').css('position', 'absolute');
+        } else {
+            $('.jm-layer').css('position', '');
         }
     });
 });
