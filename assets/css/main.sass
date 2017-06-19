@@ -33,13 +33,15 @@ section
     position: absolute
     width: inherit
     height: auto
-    top: 100px
+    top: 55px
+    z-index: $maxZIndex - 1
 
     .jumbotron
       padding-left: 60px
       padding-right: 60px
       background: url("https://jm-organization.github.io/assets/img/blur-picture/header-blur1.png") no-repeat center!important
       color: $mediumDarkSupportColor!important
+      border-radius: 12px
 
   .navigation
     position: fixed
@@ -48,7 +50,7 @@ section
     height: $menuHeight
     padding: 4px 0
     background: transparent
-    z-index: 5898
+    z-index: $maxZIndex
 
     nav
       padding: 0 4px
