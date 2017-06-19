@@ -9,14 +9,14 @@ $(document).ready(function () {
         var windowScroll = $(window).scrollTop();
 
         if (windowScroll > object_to_stick) {
-            $('.jm-header').css('position','inherit!important');
+            $('.jm-navigation-bar').css('position','inherit');
             $(navigation).css({
-                "position":"fixed!important",
+                "position":"fixed",
                 "top":"0",
-                "bottom":"inherit!important"
+                "bottom":"inherit"
             });
         } else {
-            $('.jm-header').css('position','');
+            $('.jm-navigation-bar').css('position','');
             $(navigation).css({
                 "position":"",
                 "top":"",
