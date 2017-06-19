@@ -29,6 +29,11 @@ section {
     width: inherit;
     height: auto;
     top: 100px; }
+    .jm-header .jm-preview .jumbotron {
+      padding-left: 60px;
+      padding-right: 60px;
+      background: transparent !important;
+      color: white !important; }
   .jm-header .navigation {
     position: fixed;
     top: 0;
