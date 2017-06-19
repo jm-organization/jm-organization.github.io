@@ -1,3 +1,15 @@
+/* Sample */
+li {
+	list-style: none;
+}
+
+/* Page */
+.page-width {
+	width: 98px;
+	margin: 0 auto;
+}
+
+/* Header */
 .jm-header {
 	position: relative;
 	height: 530px;
@@ -17,7 +29,6 @@
 	position: absolute; 
 	bottom: 0;
 	left: 0;
-	width: inherit;
 	height: 38px;
 	background: inherit;
 	border-top: 1px solid transparent;
