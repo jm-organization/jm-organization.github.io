@@ -24,6 +24,11 @@ section {
     width: inherit;
     background: white;
     opacity: 0; }
+  .jm-header .jm-preview {
+    position: absolute;
+    width: inherit;
+    height: auto;
+    top: 100px; }
   .jm-header .navigation {
     position: fixed;
     top: 0;
