@@ -21,20 +21,20 @@ section {
     height: inherit;
     width: inherit;
     background: transparent; }
-    .jm-header .jm-navigation-bar .navigation {
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      width: inherit;
-      height: 38px;
-      background: inherit;
-      border-top: 1px solid transparent; }
-      .jm-header .jm-navigation-bar .navigation nav > li {
-        line-height: 38px;
-        font-size: 18px;
-        padding: 0 7px;
-        display: inline-block;
-        float: left;
-        text-transform: uppercase; }
+  .jm-header .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: 38px;
+    background: inherit;
+    border-top: 1px solid transparent; }
+    .jm-header .navigation nav > li {
+      line-height: 38px;
+      font-size: 18px;
+      padding: 0 7px;
+      display: inline-block;
+      float: left;
+      text-transform: uppercase; }
 
 /*# sourceMappingURL=main.css.map */
