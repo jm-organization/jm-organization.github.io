@@ -3,11 +3,10 @@
  */
 
 $(document).ready(function () {
-    var window = $(window),
-        opacityControl = $('.jm-navigation-bar');
+    var opacityControl = $('.jm-navigation-bar');
 
-    window.scroll(function(){
-        var top = window.scrollTop(),
+    $(window).scroll(function(){
+        var top = $(window).scrollTop(),
             opacity = top > 500 ? 1 : top * 2 / 1000;
 
         opacityControl.css('opacity', opacity);
