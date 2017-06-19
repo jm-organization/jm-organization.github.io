@@ -3,9 +3,10 @@
  */
 
 $(document).ready(function () {
+    var navigation = $('#navigation');
+    var object_to_stick = $(navigation).offset().top;
+    
     $(window).scroll(function () {
-        var navigation = $('#navigation');
-        var object_to_stick = $(navigation).offset().top;
         var windowScroll = $(window).scrollTop();
 
         if (windowScroll > object_to_stick) {
