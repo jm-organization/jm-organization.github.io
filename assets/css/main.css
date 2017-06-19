@@ -1,4 +1,7 @@
 /* Sample */
+body {
+  background: white; }
+
 li {
   list-style: none; }
 
@@ -14,7 +17,7 @@ section {
 .jm-header {
   height: 530px;
   width: 100%;
-  background: #929292 url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center 0; }
+  background: #9c9c9c url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center 0; }
   .jm-header .jm-layer {
     position: relative;
     height: inherit;
@@ -28,14 +31,24 @@ section {
     width: inherit;
     height: 38px;
     background: transparent;
-    z-index: 5; }
-    .jm-header .navigation nav > li {
-      line-height: 38px;
-      font-size: 18px;
-      padding: 0 7px;
-      display: inline-block;
-      float: left;
-      text-transform: uppercase; }
+    z-index: 5898; }
+    .jm-header .navigation nav {
+      height: 38px;
+      width: inherit; }
+      .jm-header .navigation nav li {
+        height: 24px;
+        line-height: 24px;
+        font-size: 18px;
+        padding: 0 9px;
+        margin: 7px 0;
+        display: inline-block;
+        float: left;
+        text-transform: uppercase;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        border-radius: 12px; }
+        .jm-header .navigation nav li a {
+          color: #c63725; }
   .jm-header .jm-layer2 {
     height: 320px;
     position: absolute;
