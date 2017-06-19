@@ -27,27 +27,13 @@ section {
   .jm-header .navigation {
     position: fixed;
     top: 0;
-    left: 0;
     width: inherit;
-    height: 38px;
+    height: 48px;
+    padding: 4px 0;
     background: transparent;
     z-index: 5898; }
     .jm-header .navigation nav {
-      height: 38px; }
-      .jm-header .navigation nav li {
-        height: 24px;
-        line-height: 24px;
-        font-size: 18px;
-        padding: 0 9px;
-        margin: 7px 0 12px 0;
-        display: inline-block;
-        float: left;
-        text-transform: uppercase;
-        background: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-        border-radius: 12px; }
-        .jm-header .navigation nav li a {
-          color: #c63725; }
+      padding: 0 4px; }
   .jm-header .jm-layer2 {
     height: 320px;
     position: absolute;
