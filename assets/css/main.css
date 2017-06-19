@@ -27,8 +27,7 @@ section {
     left: 0;
     width: inherit;
     height: 38px;
-    background: inherit;
-    border-top: 1px solid transparent; }
+    background: inherit; }
     .jm-header .navigation nav > li {
       line-height: 38px;
       font-size: 18px;

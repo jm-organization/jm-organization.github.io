@@ -3,26 +3,13 @@
  */
 
 $(document).ready(function () {
-    var navigation = $('#navigation');
-    var object_to_stick = $(navigation).offset().top;
-    
-    $(window).scroll(function () {
-        var windowScroll = $(window).scrollTop();
+    var window = $(window),
+        opacityControl = $('.jm-navigation-bar');
 
-        if (windowScroll > object_to_stick) {
-            $('.jm-navigation-bar').css('position','inherit');
-            $(navigation).css({
-                "position":"fixed",
-                "top":"0",
-                "bottom":"inherit"
-            });
-        } else {
-            $('.jm-navigation-bar').css('position','');
-            $(navigation).css({
-                "position":"",
-                "top":"",
-                "bottom":""
-            });
-        }
+    window.scroll(function(){
+        var top = window.scrollTop(),
+            opacity = top > 500 ? 1 : top * 2 / 1000;
+
+        opacityControl.css('opacity', opacity);
     });
 });
