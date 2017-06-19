@@ -33,14 +33,13 @@ section {
     background: transparent;
     z-index: 5898; }
     .jm-header .navigation nav {
-      height: 38px;
-      width: inherit; }
+      height: 38px; }
       .jm-header .navigation nav li {
         height: 24px;
         line-height: 24px;
         font-size: 18px;
         padding: 0 9px;
-        margin: 7px 0;
+        margin: 7px 0 12px 0;
         display: inline-block;
         float: left;
         text-transform: uppercase;
