@@ -27,7 +27,7 @@ li {
 
 .jm-header .jm-navigation-bar .navigation {
 	position: absolute; 
-	bottom: 0;
+	bottom: 2px;
 	left: 0;
 	width: inherit;
 	height: 38px;
@@ -39,5 +39,7 @@ li {
 	line-height: 38px; 
 	font-size: 18px;
 	padding: 0 7px;
+    display: inline-block;
+    float: left;
 }
 
