@@ -14,13 +14,13 @@ section {
 .jm-header {
   height: 530px;
   width: 100%;
-  background: #929292 url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center 0;
-  border-bottom: 2px solid #929292; }
+  background: #929292 url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center 0; }
   .jm-header .jm-navigation-bar {
     position: relative;
     height: inherit;
     width: inherit;
-    background: transparent; }
+    background: white;
+    opacity: 0; }
   .jm-header .navigation {
     position: fixed;
     top: 0;
