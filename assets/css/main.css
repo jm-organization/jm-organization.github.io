@@ -1,5 +1,26 @@
 .jm-header {
-	height: 413px;
+	position: relative;
+	height: 313px;
 	width: 100%;
-	background: #929292;
+	background-image:  url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center;
+	background-color:  #929292;
+}
+
+.jm-header .jm-navigation-bar {
+	position: relative;
+	height: inherit;
+	width: inherit;
+	background: transparent;
+}
+
+.jm-header .jm-navigation-bar .navigation {
+	position: absolute; 
+	bottom: 0;
+	left: 0;
+	width: inherit;
+	height: 38px;
+	background: inherit;
+	border:
+		bottom: 1px solid transparent;
+		top: 1px solid transparent;
 }
