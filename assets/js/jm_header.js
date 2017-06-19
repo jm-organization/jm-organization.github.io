@@ -19,7 +19,7 @@ var jm_header = {
             });
         } else {
             $('#'+element_id).css({
-                "background": 'rgba(255,255,255,'+$opacity+')'
+                "background": 'rgba(255,255,255,1)'
             });
         }
 
@@ -27,5 +27,7 @@ var jm_header = {
 };
 
 $(document).ready(function () {
-    window.onscroll = jm_header.move_to_up($('#header_menu').attr('id'));
+    $(window).scroll(function () {
+        jm_header.move_to_up($('#header_menu').attr('id'));
+    });
 });
