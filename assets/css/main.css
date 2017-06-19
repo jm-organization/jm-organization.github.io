@@ -1,8 +1,8 @@
 .jm-header {
 	position: relative;
-	height: 313px;
+	height: 520px;
 	width: 100%;
-	background:  #929292  url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center;
+	background:  #929292  url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center 0;
 }
 
 .jm-header .jm-navigation-bar {
