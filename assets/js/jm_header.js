@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $(window).scroll(function(){
         var top = $(window).scrollTop(),
-            opacity = top > 500 ? 1 : top * 2 / 1000;
+            opacity = top > 500 ? 1 : top * 2 / 750;
 
         opacityControl.css('opacity', opacity);
     });
