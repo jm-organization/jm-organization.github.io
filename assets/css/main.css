@@ -15,11 +15,11 @@ section {
 
 /* Header */
 .jm-header {
+  position: relative;
   height: 530px;
   width: 100%;
   background: #9c9c9c url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center 0; }
   .jm-header .jm-layer {
-    position: relative;
     height: inherit;
     width: inherit;
     background: white;
