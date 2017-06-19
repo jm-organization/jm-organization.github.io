@@ -1,1 +1,3 @@
 .idea
+/assets/css/*.sass
+/assets/css/*.css.map
