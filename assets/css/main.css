@@ -5,7 +5,7 @@ li {
 
 /* Page */
 .page-width {
-	width: 98px;
+	width: 92%;
 	margin: 0 auto;
 }
 
@@ -29,7 +29,15 @@ li {
 	position: absolute; 
 	bottom: 0;
 	left: 0;
+	width: inherit;
 	height: 38px;
 	background: inherit;
 	border-top: 1px solid transparent;
 }
+
+.jm-header .jm-navigation-bar .navigation nav li {
+	line-height: 38px; 
+	font-size: 18px;
+	padding: 0 7px;
+}
+
