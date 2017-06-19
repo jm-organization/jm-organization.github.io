@@ -2,8 +2,7 @@
 	position: relative;
 	height: 313px;
 	width: 100%;
-	background-image:  url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center;
-	background-color:  #929292;
+	background:  #929292  url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center;
 }
 
 .jm-header .jm-navigation-bar {
