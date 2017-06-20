@@ -73,10 +73,14 @@ section
       background-repeat: repeat-x
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1)
 
-  .carousel-inner > .item > div[data-role="img"]
-    background: no-repeat center 0
-    height: $headerHeight
-    width: 100%
+  .carousel-inner > .item
+    div[data-role="img"]
+      background: no-repeat center 0
+      height: $headerHeight
+      width: 100%
+    .text
+      color: $mediumTextColor
+
 
   .jm-layer2
     height: 320px

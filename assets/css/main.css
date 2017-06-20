@@ -64,10 +64,12 @@ section {
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
       background-repeat: repeat-x;
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1); }
-  .jm-header .carousel-inner > .item > div[data-role="img"] {
+  .jm-header .carousel-inner > .item div[data-role="img"] {
     background: no-repeat center 0;
     height: 530px;
     width: 100%; }
+  .jm-header .carousel-inner > .item .text {
+    color: #868686; }
   .jm-header .jm-layer2 {
     height: 320px;
     position: absolute;
