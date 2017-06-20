@@ -16,4 +16,10 @@ $(document).ready(function () {
             $('.jm-layer').css('position', '');
         }
     });
+
+    $('.warp-button-to-content').on('click', 'a', function () {
+        if ($(this).data('href') == '@content') {
+            $('body').scrollTop(495);
+        }
+    })
 });

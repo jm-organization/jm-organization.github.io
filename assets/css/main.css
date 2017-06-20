@@ -30,6 +30,18 @@ section {
     .jm-header .jm-layer.nav-layer {
       position: absolute;
       z-index: 5896; }
+  .jm-header .navigation {
+    position: fixed;
+    top: 0;
+    width: inherit;
+    height: 48px;
+    padding: 4px 0;
+    background: transparent;
+    z-index: 5898; }
+    .jm-header .navigation nav {
+      position: relative;
+      padding: 0 4px;
+      z-index: 5897; }
   .jm-header .jm-preview {
     position: absolute;
     width: inherit;
@@ -46,18 +58,22 @@ section {
       text-align: right;
       margin: 0 !important;
       width: auto; }
-  .jm-header .navigation {
-    position: fixed;
-    top: 0;
-    width: inherit;
-    height: 48px;
-    padding: 4px 0;
-    background: transparent;
-    z-index: 5898; }
-    .jm-header .navigation nav {
-      position: relative;
-      padding: 0 4px;
-      z-index: 5897; }
+  .jm-header .jm-warp {
+    position: absolute;
+    width: inherit; }
+    .jm-header .jm-warp.warp-button-to-content {
+      bottom: 45px;
+      height: 30px;
+      background: transparent; }
+    .jm-header .jm-warp a[data-href="@content"] {
+      width: 30px;
+      margin: 0 auto;
+      background: transparent;
+      border: 2px solid #424242;
+      border-radius: 50%;
+      line-height: 30px;
+      color: #424242;
+      padding: auto; }
   .jm-header .jm-layer2 {
     height: 320px;
     position: absolute;

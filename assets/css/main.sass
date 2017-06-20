@@ -35,6 +35,20 @@ section
       position: absolute
       z-index: $maxZIndex - 2
 
+  .navigation
+    position: fixed
+    top: 0
+    width: inherit
+    height: $menuHeight
+    padding: 4px 0
+    background: transparent
+    z-index: $maxZIndex
+
+    nav
+      position: relative
+      padding: 0 4px
+      z-index: $maxZIndex - 1
+
 
   .jm-preview
     position: absolute
@@ -54,19 +68,23 @@ section
       margin: 0!important
       width: auto
 
-  .navigation
-    position: fixed
-    top: 0
+  .jm-warp
+    position: absolute
     width: inherit
-    height: $menuHeight
-    padding: 4px 0
-    background: transparent
-    z-index: $maxZIndex
+    &.warp-button-to-content
+      bottom: 45px
+      height: $menuHeight - 18px
+      background: transparent
+    a[data-href="@content"]
+      width: $menuHeight - 18px
+      margin: 0 auto
+      background: transparent
+      border: $heavyBorder $darkColor
+      border-radius: 50%
+      line-height: $menuHeight - 18px
+      color: $darkColor
+      padding: 0 auto
 
-    nav
-      position: relative
-      padding: 0 4px
-      z-index: $maxZIndex - 1
 
   .jm-layer2
     height: 320px
