@@ -10,11 +10,11 @@ $(document).ready(function () {
             opacity = top > 500 ? 1 : top * 2 / 750;
 
         opacityControl.css('opacity', opacity);
-        /*if (top > 1 ) {
-            $('.jm-layer').css('position', 'absolute');
+        if (top > 3 ) {
+            $('.jm-layer').css('z-index', '6');
         } else {
-            $('.jm-layer').css('position', '');
-        }*/
+            $('.jm-layer').css('z-index', '');
+        }
     });
 
     $('.warp-button-to-content').on('click', 'a', function () {
