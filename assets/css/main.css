@@ -28,6 +28,9 @@ section {
     padding: 0 4px;
     z-index: 5897; }
 
+.carousel-indicators li {
+  border-color: #9c9c9c; }
+
 .jm-header {
   position: relative;
   height: 530px;
@@ -35,21 +38,21 @@ section {
   background: #9c9c9c url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center 0; }
   .jm-header .jm-layer {
     top: 0;
-    z-index: 5897;
+    z-index: 4;
     height: inherit;
     width: inherit;
     background: white;
     opacity: 0; }
     .jm-header .jm-layer.nav-layer {
       position: absolute;
-      z-index: 5896; }
+      z-index: 3; }
   .jm-header .jm-preview {
     position: absolute;
     width: inherit;
     max-height: 530px;
     top: 0;
     padding: 85px 25px;
-    z-index: 5895; }
+    z-index: 2; }
     .jm-header .jm-preview .jumbotron {
       padding-left: 60px;
       padding-right: 60px;
@@ -67,7 +70,7 @@ section {
   position: absolute;
   width: 100%; }
   .jm-warp.warp-button-to-content {
-    top: 485px;
+    top: 440px;
     height: 30px;
     background: transparent;
     z-index: 5896; }
