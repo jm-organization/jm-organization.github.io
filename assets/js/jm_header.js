@@ -23,5 +23,7 @@ $(document).ready(function () {
         }
     });
 
-    $('a[data-href="@content"]').tooltip('toggle')
+    $('a[data-href="@content"]').hover(function () {
+        $(this).tooltip('toggle');
+    })
 });
