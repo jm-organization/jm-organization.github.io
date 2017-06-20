@@ -55,9 +55,7 @@ section {
       background: url("https://jm-organization.github.io/assets/img/blur-picture/header-blur1.png") no-repeat center !important;
       color: #bb3905 !important;
       border-radius: 12px;
-      text-align: right;
-      margin: 0 !important;
-      width: auto; }
+      text-align: right; }
   .jm-header .jm-warp {
     position: absolute;
     width: inherit; }
