@@ -9,8 +9,9 @@ li
 
 /* Page */
 .page-width
-  width: 92%
+  width: $pageWidth
   margin: 0 auto
+  max-width: $maxWidth
 
 section
   height: 968px
@@ -18,7 +19,7 @@ section
 /* Header */
 .jm-header
   position: relative
-  height: 530px
+  height: $headerHeight
   width: 100%
   background:  $mediumDarkSupportColor  url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center 0
   //border-bottom: 2px solid #929292
@@ -38,8 +39,9 @@ section
   .jm-preview
     position: absolute
     width: inherit
-    height: auto
-    top: 55px
+    max-height: $maxPreviewHeight
+    top: 0
+    padding: (($headerHeight - $maxPreviewHeight) / 2) 25px
     z-index: $maxZIndex - 2
 
     .jumbotron
@@ -49,6 +51,8 @@ section
       color: #bb3905!important
       border-radius: 12px
       text-align: right
+      margin: auto 0!important
+      width: auto
 
   .navigation
     position: fixed
