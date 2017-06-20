@@ -20,7 +20,7 @@ section
 .navigation
   position: fixed
   top: 0
-  width: inherit
+  width: $width
   height: $menuHeight
   padding: 4px 0
   background: transparent
@@ -75,9 +75,9 @@ section
 
 .jm-warp
   position: absolute
-  width: inherit
+  width: $width
   &.warp-button-to-content
-    bottom: 45px
+    top: $headerHeight - 45px
     height: $menuHeight - 18px
     background: transparent
     z-index: $maxZIndex - 2
