@@ -33,7 +33,7 @@ section {
   .jm-header .jm-preview {
     position: absolute;
     width: inherit;
-    max-height: 360px;
+    max-height: 530px;
     top: 0;
     padding: 85px 25px;
     z-index: 5896; }
@@ -44,7 +44,7 @@ section {
       color: #bb3905 !important;
       border-radius: 12px;
       text-align: right;
-      margin: auto 0 !important;
+      margin: 0 !important;
       width: auto; }
   .jm-header .navigation {
     position: fixed;
