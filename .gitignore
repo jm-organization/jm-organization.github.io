@@ -2,4 +2,4 @@
 assets/css/*.css.map
 variables.css
 _data/
-_posts/
+#_posts/
