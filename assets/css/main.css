@@ -29,7 +29,7 @@ section {
     z-index: 5897; }
 
 .carousel-indicators li {
-  border-color: #9c9c9c; }
+  border-color: #9c9c9c !important; }
 
 .jm-header {
   position: relative;
