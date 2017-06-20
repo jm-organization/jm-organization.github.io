@@ -46,7 +46,7 @@ section {
     .jm-header .jm-layer.nav-layer {
       position: absolute;
       z-index: 5897; }
-  .jm-header .carousel-inner > .item > div {
+  .jm-header .carousel-inner > .item > div[data-role="img"] {
     background: no-repeat center 0;
     height: 530px;
     width: 100%; }
