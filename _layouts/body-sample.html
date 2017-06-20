@@ -9,7 +9,14 @@
 	<body>
 		<header class="jm-header" id="header" >{% include jm_header.html %}</header>
 		
-		<section>{{ content }}</section>
+		<section>
+			<div class="page-width">
+				<h1>{{ title }}></h1>
+				<hr class="small-devider">
+
+				{{ content }}
+			</div>
+		</section>
 		
 		<footer>{% include jm_footer.html %}</footer>
 	</body>
