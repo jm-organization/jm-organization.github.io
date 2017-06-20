@@ -10,11 +10,11 @@ $(document).ready(function () {
             opacity = top > 500 ? 1 : top * 2 / 750;
 
         opacityControl.css('opacity', opacity);
-        if (top > 1 ) {
+        /*if (top > 1 ) {
             $('.jm-layer').css('position', 'absolute');
         } else {
             $('.jm-layer').css('position', '');
-        }
+        }*/
     });
 
     $('.warp-button-to-content').on('click', 'a', function () {

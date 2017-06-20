@@ -36,6 +36,7 @@ section {
   height: 530px;
   width: 100%; }
   .jm-header .jm-layer {
+    position: absolute;
     top: 0;
     z-index: 4;
     height: inherit;
@@ -45,19 +46,8 @@ section {
     .jm-header .jm-layer.nav-layer {
       position: absolute;
       z-index: 5897; }
-  .jm-header .jm-preview {
-    position: absolute;
-    width: inherit;
-    max-height: 530px;
-    top: 0;
-    padding: 85px 25px;
-    z-index: 2; }
-    .jm-header .jm-preview .jumbotron {
-      padding-left: 60px;
-      padding-right: 60px;
-      background: url("https://jm-organization.github.io/assets/img/blur-picture/header-blur1.png") no-repeat center !important;
-      border-radius: 12px;
-      text-align: right; }
+  .jm-header .carousel-inner > .item > img {
+    background: no-repeat center 0; }
   .jm-header .jm-layer2 {
     height: 320px;
     position: absolute;

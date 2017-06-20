@@ -41,6 +41,7 @@ section
   //border-bottom: 2px solid #929292
 
   .jm-layer
+    position: absolute
     top: 0
     z-index: 4
     height: inherit
@@ -51,22 +52,8 @@ section
       position: absolute
       z-index: $maxZIndex - 1
 
-  .jm-preview
-    position: absolute
-    width: inherit
-    max-height: $maxPreviewHeight + ($headerHeight - $maxPreviewHeight)
-    top: 0
-    padding: (($headerHeight - $maxPreviewHeight) / 2) 25px
-    z-index: 2
-
-    .jumbotron
-      padding-left: 60px
-      padding-right: 60px
-      background: url("https://jm-organization.github.io/assets/img/blur-picture/header-blur1.png") no-repeat center!important
-      //color: #bb3905!important
-      border-radius: 12px
-      text-align: right
-
+  .carousel-inner > .item > img
+    background: no-repeat center 0
 
   .jm-layer2
     height: 320px
