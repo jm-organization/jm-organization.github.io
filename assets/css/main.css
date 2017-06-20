@@ -35,7 +35,7 @@ section {
     width: inherit;
     max-height: 360px;
     top: 0;
-    padding: 85px 2;
+    padding: 85px 25px;
     z-index: 5896; }
     .jm-header .jm-preview .jumbotron {
       padding-left: 60px;
