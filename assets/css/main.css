@@ -56,32 +56,33 @@ section {
       background: url("https://jm-organization.github.io/assets/img/blur-picture/header-blur1.png") no-repeat center !important;
       border-radius: 12px;
       text-align: right; }
-  .jm-header .jm-warp {
-    position: absolute;
-    width: inherit; }
-    .jm-header .jm-warp.warp-button-to-content {
-      bottom: 45px;
-      height: 30px;
-      background: transparent;
-      z-index: 5896; }
-    .jm-header .jm-warp a[data-href="@content"] {
-      width: 30px;
-      height: 100%;
-      margin: 0 auto;
-      background: transparent;
-      border: 2px solid #424242;
-      border-radius: 50%;
-      line-height: 30px;
-      color: #424242;
-      display: block;
-      font-size: 19px;
-      padding: 0 3px;
-      cursor: pointer; }
   .jm-header .jm-layer2 {
     height: 320px;
     position: absolute;
     top: 210px;
     background: linear-gradient(to top, #ffffff, transparent);
     width: inherit; }
+
+.jm-warp {
+  position: absolute;
+  width: inherit; }
+  .jm-warp.warp-button-to-content {
+    bottom: 45px;
+    height: 30px;
+    background: transparent;
+    z-index: 5896; }
+  .jm-warp a[data-href="@content"] {
+    width: 30px;
+    height: 100%;
+    margin: 0 auto;
+    background: transparent;
+    border: 2px solid #424242;
+    border-radius: 50%;
+    line-height: 30px;
+    color: #424242;
+    display: block;
+    font-size: 19px;
+    padding: 0 3px;
+    cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */

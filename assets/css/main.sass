@@ -65,28 +65,6 @@ section
       border-radius: 12px
       text-align: right
 
-  .jm-warp
-    position: absolute
-    width: inherit
-    &.warp-button-to-content
-      bottom: 45px
-      height: $menuHeight - 18px
-      background: transparent
-      z-index: $maxZIndex - 2
-    a[data-href="@content"]
-      width: $menuHeight - 18px
-      height: 100%
-      margin: 0 auto
-      background: transparent
-      border: $heavyBorder $darkColor
-      border-radius: 50%
-      line-height: $menuHeight - 18px
-      color: $darkColor
-      display: block
-      font-size: 19px
-      padding: 0 3px
-      cursor: pointer
-
 
   .jm-layer2
     height: 320px
@@ -94,3 +72,25 @@ section
     top: 210px
     background: linear-gradient(to top, #ffffff, transparent)
     width: inherit
+
+.jm-warp
+  position: absolute
+  width: inherit
+  &.warp-button-to-content
+    bottom: 45px
+    height: $menuHeight - 18px
+    background: transparent
+    z-index: $maxZIndex - 2
+  a[data-href="@content"]
+    width: $menuHeight - 18px
+    height: 100%
+    margin: 0 auto
+    background: transparent
+    border: $heavyBorder $darkColor
+    border-radius: 50%
+    line-height: $menuHeight - 18px
+    color: $darkColor
+    display: block
+    font-size: 19px
+    padding: 0 3px
+    cursor: pointer
