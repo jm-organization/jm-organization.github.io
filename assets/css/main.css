@@ -46,6 +46,8 @@ section {
     .jm-header .jm-layer.nav-layer {
       position: absolute;
       z-index: 5897; }
+  .jm-header .carousel-inner {
+    z-index: 14; }
   .jm-header .carousel-inner > .item > div[data-role="img"] {
     background: no-repeat center 0;
     height: 530px;
@@ -55,7 +57,7 @@ section {
     position: absolute;
     top: 210px;
     background: linear-gradient(to top, #ffffff, transparent);
-    width: inherit; }
+    width: 100%; }
 
 .jm-warp {
   position: absolute;
