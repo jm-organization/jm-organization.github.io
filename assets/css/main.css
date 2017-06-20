@@ -26,6 +26,9 @@ section {
     width: inherit;
     background: white;
     opacity: 0; }
+    .jm-header .jm-layer.nav-layer {
+      position: absolute;
+      z-index: 5896; }
   .jm-header .jm-preview {
     position: absolute;
     width: inherit;
@@ -47,7 +50,8 @@ section {
     background: transparent;
     z-index: 5898; }
     .jm-header .navigation nav {
-      padding: 0 4px; }
+      padding: 0 4px;
+      z-index: 5897; }
   .jm-header .jm-layer2 {
     height: 320px;
     position: absolute;

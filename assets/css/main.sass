@@ -24,13 +24,16 @@ section
   //border-bottom: 2px solid #929292
 
   .jm-layer
-    //position: absolute
     top: 0
     z-index: $maxZIndex - 1
     height: inherit
     width: inherit
     background: $baseColor
     opacity: 0
+    &.nav-layer
+      position: absolute
+      z-index: $maxZIndex - 2
+
 
   .jm-preview
     position: absolute
@@ -57,6 +60,7 @@ section
 
     nav
       padding: 0 4px
+      z-index: $maxZIndex - 1
 
   .jm-layer2
     height: 320px
