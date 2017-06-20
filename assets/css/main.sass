@@ -38,7 +38,6 @@ section
   position: relative
   height: $headerHeight
   width: 100%
-  background:  $mediumDarkSupportColor  url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center 0
   //border-bottom: 2px solid #929292
 
   .jm-layer
@@ -50,7 +49,7 @@ section
     opacity: 0
     &.nav-layer
       position: absolute
-      z-index: 3
+      z-index: $maxZIndex - 1
 
   .jm-preview
     position: absolute

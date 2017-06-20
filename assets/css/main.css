@@ -34,8 +34,7 @@ section {
 .jm-header {
   position: relative;
   height: 530px;
-  width: 100%;
-  background: #9c9c9c url("https://jm-organization.github.io/assets/img/background-picture/header1.png") no-repeat center 0; }
+  width: 100%; }
   .jm-header .jm-layer {
     top: 0;
     z-index: 4;
@@ -45,7 +44,7 @@ section {
     opacity: 0; }
     .jm-header .jm-layer.nav-layer {
       position: absolute;
-      z-index: 3; }
+      z-index: 5897; }
   .jm-header .jm-preview {
     position: absolute;
     width: inherit;
