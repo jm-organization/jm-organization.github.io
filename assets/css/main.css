@@ -48,7 +48,7 @@ section {
     max-height: 530px;
     top: 0;
     padding: 85px 25px;
-    z-index: 5896; }
+    z-index: 5895; }
     .jm-header .jm-preview .jumbotron {
       padding-left: 60px;
       padding-right: 60px;
@@ -64,7 +64,8 @@ section {
     .jm-header .jm-warp.warp-button-to-content {
       bottom: 45px;
       height: 30px;
-      background: transparent; }
+      background: transparent;
+      z-index: 5896; }
     .jm-header .jm-warp a[data-href="@content"] {
       width: 30px;
       margin: 0 auto;
@@ -73,7 +74,7 @@ section {
       border-radius: 50%;
       line-height: 30px;
       color: #424242;
-      padding: auto; }
+      padding: 0 auto; }
   .jm-header .jm-layer2 {
     height: 320px;
     position: absolute;
