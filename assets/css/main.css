@@ -15,6 +15,19 @@ section {
   height: 968px; }
 
 /* Header */
+.navigation {
+  position: fixed;
+  top: 0;
+  width: inherit;
+  height: 48px;
+  padding: 4px 0;
+  background: transparent;
+  z-index: 5898; }
+  .navigation nav {
+    position: relative;
+    padding: 0 4px;
+    z-index: 5897; }
+
 .jm-header {
   position: relative;
   height: 530px;
@@ -30,18 +43,6 @@ section {
     .jm-header .jm-layer.nav-layer {
       position: absolute;
       z-index: 5896; }
-  .jm-header .navigation {
-    position: fixed;
-    top: 0;
-    width: inherit;
-    height: 48px;
-    padding: 4px 0;
-    background: transparent;
-    z-index: 5898; }
-    .jm-header .navigation nav {
-      position: relative;
-      padding: 0 4px;
-      z-index: 5897; }
   .jm-header .jm-preview {
     position: absolute;
     width: inherit;

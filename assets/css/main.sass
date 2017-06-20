@@ -17,6 +17,20 @@ section
   height: 968px
 
 /* Header */
+.navigation
+  position: fixed
+  top: 0
+  width: inherit
+  height: $menuHeight
+  padding: 4px 0
+  background: transparent
+  z-index: $maxZIndex
+
+  nav
+    position: relative
+    padding: 0 4px
+    z-index: $maxZIndex - 1
+
 .jm-header
   position: relative
   height: $headerHeight
@@ -34,21 +48,6 @@ section
     &.nav-layer
       position: absolute
       z-index: $maxZIndex - 2
-
-  .navigation
-    position: fixed
-    top: 0
-    width: inherit
-    height: $menuHeight
-    padding: 4px 0
-    background: transparent
-    z-index: $maxZIndex
-
-    nav
-      position: relative
-      padding: 0 4px
-      z-index: $maxZIndex - 1
-
 
   .jm-preview
     position: absolute

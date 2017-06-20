@@ -15,7 +15,11 @@
 			</nav>
 		</div>
 
-		<header class="jm-header" id="header" >{% include jm_header.html %}</header>
+		{% include jm_header.html %}
+
+		<div class="jm-warp warp-button-to-content">
+			<a data-href="@content" data-toggle="tooltip" data-placement="bottom" title="Перейти к содержанию"><span class="glyphicon glyphicon-arrow-down"></span></a>
+		</div>
 
 		<section>
 			<div class="page-width">
