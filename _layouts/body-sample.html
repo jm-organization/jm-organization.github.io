@@ -7,8 +7,16 @@
 		{% include jm_links.html %}
 	</head>
 	<body>
+		<div class="navigation" id="navigation" >
+			<div class="jm-layer nav-layer" ></div>
+
+			<nav class="nav nav-pills page-width" >
+				{% include jm_navigation.html %}
+			</nav>
+		</div>
+
 		<header class="jm-header" id="header" >{% include jm_header.html %}</header>
-		
+
 		<section>
 			<div class="page-width">
 				<h1>{{ page.title }}</h1>
