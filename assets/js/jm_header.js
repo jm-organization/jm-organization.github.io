@@ -21,5 +21,7 @@ $(document).ready(function () {
         if ($(this).data('href') == '@content') {
             $('body').scrollTop(495);
         }
-    })
+    });
+
+    $('a[data-href="@content"]').tooltip('toggle')
 });
