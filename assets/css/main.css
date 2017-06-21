@@ -53,26 +53,15 @@ section {
 
 .jm-header {
   position: relative;
-  height: 530px;
-  width: 100%; }
+  height: 100;
+  width: 100%;
+  display: inline-table; }
   .jm-header .carousel-control {
-    z-index: 14; }
-  .jm-header .carousel-control.left {
-    background: transparent !important; }
-    .jm-header .carousel-control.left:hover {
-      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-      background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1); }
-  .jm-header .carousel-control.right {
-    background: transparent !important;
     left: auto;
-    right: 0; }
-    .jm-header .carousel-control.right:hover {
-      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-      background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1); }
+    right: 0;
+    z-index: 14; }
+    .jm-header .carousel-control.right, .jm-header .carousel-control.left {
+      background: transparent !important; }
   .jm-header .carousel-inner > .item .jm-layer2.to-bottom {
     top: 0;
     height: 100px; }
