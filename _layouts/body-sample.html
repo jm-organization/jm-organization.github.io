@@ -16,11 +16,7 @@
 		</div>
 
 		{% if page.url == '/' %}
-		{% include jm_header.html %}
-
-		<div class="jm-warp warp-button-to-content">
-			<a data-href="@content" data-toggle="tooltip" data-placement="bottom" title="Перейти к содержанию"><span class="glyphicon glyphicon-arrow-down"></span></a>
-		</div>
+			{% include jm_header.html %}
 		{% endif %}
 
 		<section{% if page.url == '/' %} style="padding-top: 48px"{% endif %}>
