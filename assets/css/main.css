@@ -80,7 +80,7 @@ section {
   position: absolute;
   width: 100%; }
   .jm-warp.warp-button-to-content {
-    top: 506px;
+    bottom: 0;
     height: 30px;
     background: transparent;
     z-index: 5896; }
