@@ -38,7 +38,7 @@ li {
   .page-width .jm-sidebar {
     width: 250px;
     float: left;
-    margin-left: 15px;
+    margin: 20px 0 15px;
     height: auto; }
 
 section {
