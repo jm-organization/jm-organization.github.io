@@ -30,6 +30,16 @@ li {
   width: 92%;
   margin: 0 auto;
   max-width: 1024px; }
+  .page-width .page-content {
+    width: calc(100% - 185px);
+    height: auto;
+    display: inline-block;
+    float: left; }
+  .page-width .jm-sidebar {
+    width: 170px;
+    float: left;
+    margin-left: 15px;
+    height: auto; }
 
 section {
   height: 968px; }

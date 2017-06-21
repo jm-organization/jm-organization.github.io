@@ -24,7 +24,9 @@
 				<h1>{{ page.title }}</h1>
 				<hr class="small-devider">
 
-				{{ content }}
+				<div class="page-content" data-name="content">
+					{{ content }}
+				</div>
 
 				{% include jm_sidebar.html %}
 			</div>
