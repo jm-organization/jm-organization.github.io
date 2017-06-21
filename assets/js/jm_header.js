@@ -5,6 +5,8 @@
 $(document).ready(function () {
     var opacityControl = $('.jm-layer');
 
+    if (window.scrollY == 0) $('.jm-warp.warp-button-to-top').css({'z-index':'-1', 'opacity':'0'});
+    
     $(window).scroll(function(){
         var top = $(window).scrollTop(),
             opacity = top > 500 ? 1 : top * 2 / 950;
