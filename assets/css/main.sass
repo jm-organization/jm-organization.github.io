@@ -105,12 +105,13 @@ li
     background: linear-gradient(to top, $supportColor, transparent)
     border-bottom: $heavyBorder $supportColor
   &.warp-button-to-top
+    position: fixed!important
     bottom: 0
     height: $menuHeight - 8px
     background: transparent
     z-index: 5
     padding: 7px 0
-  a[data-href="@content"]
+  a[data-href="@content"], a[data-href="@content"]
     width: $menuHeight - 18px
     height: 100%
     margin: 0 auto

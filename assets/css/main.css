@@ -95,12 +95,13 @@ li {
     background: linear-gradient(to top, #e2e2e2, transparent);
     border-bottom: 2px solid #e2e2e2; }
   .jm-warp.warp-button-to-top {
+    position: fixed !important;
     bottom: 0;
     height: 40px;
     background: transparent;
     z-index: 5;
     padding: 7px 0; }
-  .jm-warp a[data-href="@content"] {
+  .jm-warp a[data-href="@content"], .jm-warp a[data-href="@content"] {
     width: 30px;
     height: 100%;
     margin: 0 auto;
