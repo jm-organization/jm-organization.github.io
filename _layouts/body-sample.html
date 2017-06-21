@@ -15,7 +15,9 @@
 			</nav>
 		</div>
 
-		{% include jm_header.html %}
+		{% if page.url == '/' %}
+			{% include jm_header.html %}
+		{% endif %}
 
 		<div class="jm-warp warp-button-to-content">
 			<a data-href="@content" data-toggle="tooltip" data-placement="bottom" title="Перейти к содержанию"><span class="glyphicon glyphicon-arrow-down"></span></a>
