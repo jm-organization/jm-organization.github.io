@@ -31,12 +31,12 @@ li {
   margin: 0 auto;
   max-width: 1024px; }
   .page-width .page-content {
-    width: calc(100% - 185px);
+    width: calc(100% - 235px);
     height: auto;
     display: inline-block;
     float: left; }
   .page-width .jm-sidebar {
-    width: 170px;
+    width: 220px;
     float: left;
     margin-left: 15px;
     height: auto; }
