@@ -101,7 +101,7 @@ li {
     background: transparent;
     z-index: 5;
     padding: 7px 0; }
-  .jm-warp a[data-href="@content"], .jm-warp a[data-href="@content"] {
+  .jm-warp a[data-href="@content"], .jm-warp a[data-href="@to-top"] {
     width: 30px;
     height: 100%;
     margin: 0 auto;
