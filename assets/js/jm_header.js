@@ -31,8 +31,4 @@ $(document).ready(function () {
             $('.jm-warp.warp-button-to-top').css({'z-index':'1', 'opacity':'1'});
         }
     });
-
-    $('a[data-href="@content"]').hover(function () {
-        $(this).tooltip('toggle');
-    })
 });
