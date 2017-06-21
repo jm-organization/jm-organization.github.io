@@ -19,7 +19,7 @@ $(document).ready(function () {
 
     $('.warp-button-to-content').on('click', 'a', function () {
         if ($(this).data('href') == '@content') {
-            $('body').scrollTop(window.screen.availHeight - 48);
+            $('body').scrollTop((window.screen.availHeight - 90) - 48);
         }
     });
 
