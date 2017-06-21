@@ -17,9 +17,9 @@ $(document).ready(function () {
         }
 
         if (top == 0) {
-            $('.jm-warp').css({'z-index':'-1', 'opacity':'0'});
+            $('.jm-warp.warp-button-to-top').css({'z-index':'-1', 'opacity':'0'});
         } else if (top > window.screen.availHeight) {
-            $('.jm-warp').css({'z-index':'1', 'opacity':'1'});
+            $('.jm-warp.warp-button-to-top').css({'z-index':'1', 'opacity':'1'});
         }
     });
 
