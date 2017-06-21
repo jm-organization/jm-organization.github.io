@@ -88,10 +88,12 @@ section
   position: absolute
   width: $width
   &.warp-button-to-content
-    bottom: 5px
-    height: $menuHeight - 18px
+    bottom: 0
+    height: $menuHeight - 8px
     background: transparent
     z-index: $maxZIndex - 2
+    padding: 5px 0
+    background: linear-gradient(to top, $darkColor, transparent)
   a[data-href="@content"]
     width: $menuHeight - 18px
     height: 100%

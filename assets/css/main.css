@@ -80,10 +80,12 @@ section {
   position: absolute;
   width: 100%; }
   .jm-warp.warp-button-to-content {
-    bottom: 5px;
-    height: 30px;
+    bottom: 0;
+    height: 40px;
     background: transparent;
-    z-index: 5896; }
+    z-index: 5896;
+    padding: 5px 0;
+    background: linear-gradient(to top, #424242, transparent); }
   .jm-warp a[data-href="@content"] {
     width: 30px;
     height: 100%;
