@@ -97,7 +97,7 @@ li {
   .jm-warp.warp-button-to-top {
     position: fixed !important;
     bottom: 0;
-    height: 44px;
+    height: 42px;
     background: transparent;
     z-index: 5;
     padding: 7px 0; }
