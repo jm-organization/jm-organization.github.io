@@ -91,9 +91,10 @@ section
     bottom: 0
     height: $menuHeight - 8px
     background: transparent
-    z-index: $maxZIndex - 2
+    z-index: 5
     padding: 5px 0
-    background: linear-gradient(to top, $darkColor, transparent)
+    background: linear-gradient(to top, $supportColor, transparent)
+    border-bottom: $headerHeight $supportColor
   a[data-href="@content"]
     width: $menuHeight - 18px
     height: 100%
