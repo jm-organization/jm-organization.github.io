@@ -4,7 +4,7 @@
 
 //
 $(document).ready(function () {
-    $('.warp-button-to-content').on('click', 'a', function () {
+    $('.warp-button-to-top').on('click', 'a', function () {
         if ($(this).data('href') == '@to-top') {
             $('body').scrollTop(0);
         }
