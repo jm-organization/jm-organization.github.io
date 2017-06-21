@@ -18,7 +18,7 @@ $(document).ready(function () {
 
         if (window.scrollY == 0) {
             $('.jm-warp.warp-button-to-top').css({'z-index':'-1', 'opacity':'0'});
-        } else if (top > window.screen.availHeight) {
+        } else if (top > (window.screen.availHeight - 90) - 48) {
             $('.jm-warp.warp-button-to-top').css({'z-index':'1', 'opacity':'1'});
         }
     });
