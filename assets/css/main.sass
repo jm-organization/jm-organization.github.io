@@ -28,24 +28,6 @@ li
     background: linear-gradient(to bottom, #ffffff, transparent)
 
 
-/* Page */
-.page-width
-  width: $pageWidth
-  margin: 0 auto
-  max-width: $maxWidth
-
-  .page-content
-    width: calc(100% - 265px)
-    height: auto
-    display: inline-block
-    float: left
-
-  .jm-sidebar
-    width: 250px
-    float: left
-    margin: 20px 0 0 15px
-    height: auto
-
 /* Header */
 .navigation
   position: fixed
@@ -124,3 +106,31 @@ li
     font-size: 19px
     padding: 0 3px
     cursor: pointer
+
+/* Page */
+.page-width
+  width: $pageWidth
+  margin: 0 auto
+  max-width: $maxWidth
+
+  .page-content
+    width: calc(100% - 265px)
+    height: auto
+    display: inline-block
+    float: left
+
+    h1
+      text-transform: uppercase
+      text-align: center
+
+    article
+      padding: 24px
+      border-radius: 24px
+      border: $standardBorder $supportColor
+      margin-bottom: 15px
+
+  .jm-sidebar
+    width: 250px
+    float: left
+    margin: 20px 0 0 15px
+    height: auto

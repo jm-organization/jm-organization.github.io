@@ -25,22 +25,6 @@ li {
   .jm-layer2.to-bottom {
     background: linear-gradient(to bottom, #ffffff, transparent); }
 
-/* Page */
-.page-width {
-  width: 92%;
-  margin: 0 auto;
-  max-width: 1024px; }
-  .page-width .page-content {
-    width: calc(100% - 265px);
-    height: auto;
-    display: inline-block;
-    float: left; }
-  .page-width .jm-sidebar {
-    width: 250px;
-    float: left;
-    margin: 20px 0 0 15px;
-    height: auto; }
-
 /* Header */
 .navigation {
   position: fixed;
@@ -114,5 +98,29 @@ li {
     font-size: 19px;
     padding: 0 3px;
     cursor: pointer; }
+
+/* Page */
+.page-width {
+  width: 92%;
+  margin: 0 auto;
+  max-width: 1024px; }
+  .page-width .page-content {
+    width: calc(100% - 265px);
+    height: auto;
+    display: inline-block;
+    float: left; }
+    .page-width .page-content h1 {
+      text-transform: uppercase;
+      text-align: center; }
+    .page-width .page-content article {
+      padding: 24px;
+      border-radius: 24px;
+      border: 1px solid #e2e2e2;
+      margin-bottom: 15px; }
+  .page-width .jm-sidebar {
+    width: 250px;
+    float: left;
+    margin: 20px 0 0 15px;
+    height: auto; }
 
 /*# sourceMappingURL=main.css.map */
