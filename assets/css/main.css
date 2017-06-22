@@ -93,7 +93,7 @@ li {
     z-index: 5;
     padding: 5px 0;
     background: linear-gradient(to top, #e2e2e2, transparent);
-    border-bottom: 2px solid #e2e2e2; }
+    border-bottom: 2px solid #cdcdcd; }
   .jm-warp.warp-button-to-top {
     position: fixed !important;
     bottom: 0;
