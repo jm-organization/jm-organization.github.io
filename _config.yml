@@ -1,0 +1,16 @@
+exclude:
+  - README.md
+  - /*.pdn
+  - /*.xcf
+  - /Thumbs.db
+
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-redirect-from
+
+permalink: '/posts/:day-:month-:year/:title.html'
+paginate: 5
+paginate_path: "/posts/page-:num/"
+url: 'http://teamcofh.com'
