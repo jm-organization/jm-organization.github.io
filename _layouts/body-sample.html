@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div class="navigation" id="navigation" >
-			<div class="jm-layer nav-layer" ></div>
+			<div class="jm-layer nav-layer"{% if page.url != '/' %} style="opacity: 1"{% endif %}></div>
 
 			<nav class="nav nav-pills page-width" >
 				{% include jm_navigation.html %}
