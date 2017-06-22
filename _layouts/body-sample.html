@@ -7,17 +7,7 @@
 		{% include jm_links.html %}
 	</head>
 	<body>
-		<div class="navigation" id="navigation" >
-			<div class="jm-layer nav-layer"{% if page.url != '/' %} style="opacity: 1"{% endif %}></div>
-
-			<nav class="nav nav-pills page-width" >
-				{% include jm_navigation.html %}
-			</nav>
-		</div>
-
-		{% if page.url == '/' %}
-			{% include jm_header.html %}
-		{% endif %}
+		{% include jm_header.html %}
 
 		<section{% if page.url != '/' %} style="padding-top: 48px"{% endif %}>
 			<div class="page-width">
