@@ -3,7 +3,7 @@ layout: body-sample
 title: Главная
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <article class="jm-article">
     <h2><b>{{ post.title }}</b></h2>
 
@@ -18,4 +18,81 @@ title: Главная
     </ul>
 </article>
 {% endfor %}
+
+<ul class="uk-pagination">
+    {% assign max_buttons = 5 %}
+
+    {% assign max_buttons_sides = max_buttons | minus: 1 | divided_by: 2 %}
+    {% assign max_buttons_left = max_buttons_sides | floor %}
+    {% assign max_buttons_right = max_buttons_sides | ceil %}
+
+    {% assign start = paginator.page | minus: max_buttons_left %}
+    {% if start < 1 %}{% assign start = 1 %}{% endif %}
+    {% assign end = paginator.page | plus: max_buttons_right %}
+    {% if end > paginator.total_pages %}{% assign end = paginator.total_pages %}{% endif %}
+
+    {% assign current_start_diff = paginator.page | minus: start %}
+    {% assign current_end_diff = end | minus: paginator.page %}
+
+    {% if current_start_diff < max_buttons_left %}
+    {% assign start = 1 %}
+    {% assign end = max_buttons %}
+    {% if end > paginator.total_pages %}{% assign end = paginator.total_pages %}{% endif %}
+    {% endif %}
+    {% if current_end_diff < max_buttons_right %}
+    {% assign start = paginator.total_pages | plus: 1 | minus: max_buttons %}
+    {% if start < 1 %}{% assign start = 1 %}{% endif %}
+    {% assign end = paginator.total_pages %}
+    {% endif %}
+
+    <li>
+        {% if paginator.previous_page %}
+        <a href="/"><i class="uk-icon-angle-double-left"></i></a>
+        {% else %}
+        <span><i class="uk-icon-angle-double-left"></i></span>
+        {% endif %}
+    </li>
+    <li>
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}"><i class="uk-icon-angle-left"></i></a>
+        {% else %}
+        <span><i class="uk-icon-angle-left"></i></span>
+        {% endif %}
+    </li>
+
+    <li></li>
+
+    {% for page in (start..end) %}
+    {% if page == paginator.page %}
+    {% capture link %}<span>{{ page }}</span>{% endcapture %}
+    {% elsif page == 1 %}
+    {% capture link %}<a href="/">{{ page }}</a>{% endcapture %}
+    {% else %}
+    {% capture link %}<a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>{% endcapture %}
+    {% endif %}
+
+    <li{% if page == paginator.page %} class="uk-active"{% endif %}>
+    {{ link }}
+    </li>
+    {% endfor %}
+
+    <li></li>
+
+    <li>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}"><i class="uk-icon-angle-right"></i></a>
+        {% else %}
+        <span><i class="uk-icon-angle-right"></i></span>
+        {% endif %}
+    </li>
+    <li>
+        {% if paginator.next_page %}
+        <a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}">
+            <i class="uk-icon-angle-double-right"></i>
+        </a>
+        {% else %}
+        <span><i class="uk-icon-angle-double-right"></i></span>
+        {% endif %}
+    </li>
+</ul>
 
