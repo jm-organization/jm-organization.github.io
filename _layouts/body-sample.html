@@ -13,7 +13,14 @@
 			<div class="page-width">
 				<div class="page-content" data-name="content">
 					{% if page.title %}
+					<p>
+					{% if page.url == 'posts' %}
+					<ul class="pager">
+						<li class="previous"><a href="/#news">&larr; К списку новостей</a></li>
+					</ul>
+					{% endif %}
 					<h1>{{ page.title }}</h1>
+					</p>
 					<hr class="small-devider">
 					{% endif %}
 
