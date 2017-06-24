@@ -122,7 +122,8 @@ li {
     .page-width .page-content .jm-comments-title {
       margin-top: 35px; }
       .page-width .page-content .jm-comments-title .jm-pager {
-        margin: 15px 0; }
+        margin: 15px 0;
+        margin: 0 !important; }
         .page-width .page-content .jm-comments-title .jm-pager li.jm-comments-title {
           position: absolute;
           width: 100%;
