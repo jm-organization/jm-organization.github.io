@@ -2,7 +2,7 @@
 title: Новые горизонты в Украинской web-индустрии
 author: Magicmen
 author_url: https://vk.com/jmagicmen
-published: true
+published: false
 ---
 
 По указу президента Порошенко от _16 мая 2017 года_ было запрещено провайдерам давать доступ к соцыальным сетям:
