@@ -1,8 +1,8 @@
 ---
 layout: body-sample
-title: page.title
+title: {% if post.published %}page.title{% else %}Новость не найдена{% endif %}
 ---
-
+{% if post.published %}
 <div class="jm-article">
     {{ content }}
 </div>
@@ -38,4 +38,5 @@ title: page.title
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
 {% endif %}
