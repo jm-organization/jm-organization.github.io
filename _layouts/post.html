@@ -2,6 +2,7 @@
 layout: body-sample
 title: {% if post.published %}page.title{% else %}Новость не найдена{% endif %}
 ---
+
 {% if post.published %}
 <div class="jm-article">
     {{ content }}
@@ -39,4 +40,6 @@ title: {% if post.published %}page.title{% else %}Новость не найде
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 {% endif %}
+{% else %}
+<div class="jm-error not-found"><i class="jm-error-number">404</i></div>
 {% endif %}
