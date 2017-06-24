@@ -123,6 +123,8 @@ li {
       border-radius: 24px;
       border: 1px solid #e2e2e2;
       margin-bottom: 15px; }
+    .page-width .page-content .jm-pagination {
+      text-align: center; }
   .page-width .jm-sidebar {
     width: 250px;
     float: left;
