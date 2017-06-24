@@ -19,78 +19,80 @@ title: Главная
 </article>
 {% endfor %}
 
-<ul class="jm-pagination pagination">
-    {% assign max_buttons = 5 %}
+<div class="jm-pagination">
+    <ul class="pagination">
+        {% assign max_buttons = 5 %}
 
-    {% assign max_buttons_sides = max_buttons | minus: 1 | divided_by: 2 %}
-    {% assign max_buttons_left = max_buttons_sides | floor %}
-    {% assign max_buttons_right = max_buttons_sides | ceil %}
+        {% assign max_buttons_sides = max_buttons | minus: 1 | divided_by: 2 %}
+        {% assign max_buttons_left = max_buttons_sides | floor %}
+        {% assign max_buttons_right = max_buttons_sides | ceil %}
 
-    {% assign start = paginator.page | minus: max_buttons_left %}
-    {% if start < 1 %}{% assign start = 1 %}{% endif %}
-    {% assign end = paginator.page | plus: max_buttons_right %}
-    {% if end > paginator.total_pages %}{% assign end = paginator.total_pages %}{% endif %}
+        {% assign start = paginator.page | minus: max_buttons_left %}
+        {% if start < 1 %}{% assign start = 1 %}{% endif %}
+        {% assign end = paginator.page | plus: max_buttons_right %}
+        {% if end > paginator.total_pages %}{% assign end = paginator.total_pages %}{% endif %}
 
-    {% assign current_start_diff = paginator.page | minus: start %}
-    {% assign current_end_diff = end | minus: paginator.page %}
+        {% assign current_start_diff = paginator.page | minus: start %}
+        {% assign current_end_diff = end | minus: paginator.page %}
 
-    {% if current_start_diff < max_buttons_left %}
-    {% assign start = 1 %}
-    {% assign end = max_buttons %}
-    {% if end > paginator.total_pages %}{% assign end = paginator.total_pages %}{% endif %}
-    {% endif %}
-    {% if current_end_diff < max_buttons_right %}
-    {% assign start = paginator.total_pages | plus: 1 | minus: max_buttons %}
-    {% if start < 1 %}{% assign start = 1 %}{% endif %}
-    {% assign end = paginator.total_pages %}
-    {% endif %}
-
-    <li>
-        {% if paginator.previous_page %}
-        <a href="/">&laquo;</a>
-        {% else %}
-        <span>&laquo;</span>
+        {% if current_start_diff < max_buttons_left %}
+        {% assign start = 1 %}
+        {% assign end = max_buttons %}
+        {% if end > paginator.total_pages %}{% assign end = paginator.total_pages %}{% endif %}
         {% endif %}
-    </li>
-    <li>
-        {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}">&laquo;</a>
-        {% else %}
-        <span>&laquo;</span>
+        {% if current_end_diff < max_buttons_right %}
+        {% assign start = paginator.total_pages | plus: 1 | minus: max_buttons %}
+        {% if start < 1 %}{% assign start = 1 %}{% endif %}
+        {% assign end = paginator.total_pages %}
         {% endif %}
-    </li>
 
-    <li></li>
+        <li>
+            {% if paginator.previous_page %}
+            <a href="/">&laquo;</a>
+            {% else %}
+            <span>&laquo;</span>
+            {% endif %}
+        </li>
+        <li>
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}">&laquo;</a>
+            {% else %}
+            <span>&laquo;</span>
+            {% endif %}
+        </li>
 
-    {% for page in (start..end) %}
-    {% if page == paginator.page %}
-    {% capture link %}<span>{{ page }}</span>{% endcapture %}
-    {% elsif page == 1 %}
-    {% capture link %}<a href="/">{{ page }}</a>{% endcapture %}
-    {% else %}
-    {% capture link %}<a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>{% endcapture %}
-    {% endif %}
+        <li></li>
 
-    <li{% if page == paginator.page %} class="active"{% endif %}>
-    {{ link }}
-    </li>
-    {% endfor %}
-
-    <li></li>
-
-    <li>
-        {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}">&raquo;</i></a>
+        {% for page in (start..end) %}
+        {% if page == paginator.page %}
+        {% capture link %}<span>{{ page }}</span>{% endcapture %}
+        {% elsif page == 1 %}
+        {% capture link %}<a href="/">{{ page }}</a>{% endcapture %}
         {% else %}
-        <span>&raquo;</span>
+        {% capture link %}<a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>{% endcapture %}
         {% endif %}
-    </li>
-    <li>
-        {% if paginator.next_page %}
-        <a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}">&raquo;</a>
-        {% else %}
-        <span>&raquo;</span>
-        {% endif %}
-    </li>
-</ul>
+
+        <li{% if page == paginator.page %} class="active"{% endif %}>
+        {{ link }}
+        </li>
+        {% endfor %}
+
+        <li></li>
+
+        <li>
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}">&raquo;</i></a>
+            {% else %}
+            <span>&raquo;</span>
+            {% endif %}
+        </li>
+        <li>
+            {% if paginator.next_page %}
+            <a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}">&raquo;</a>
+            {% else %}
+            <span>&raquo;</span>
+            {% endif %}
+        </li>
+    </ul>
+</div>
 
