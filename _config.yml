@@ -10,9 +10,7 @@ gems:
   - jekyll-feed
   - jekyll-redirect-from
 
-posts:
-  comments: true
-
+comments: true
 permalink: '/posts/:day-:month-:year/:title.html'
 paginate: 5
 paginate_path: "/posts/page-:num/"
