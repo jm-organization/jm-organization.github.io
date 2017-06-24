@@ -2,7 +2,6 @@
 layout: body-sample
 title: page.title
 comments: true
-# other options
 ---
 
 <!-- $('.jm-header').animate({height: 'hide'}, 5000) -->
@@ -11,7 +10,7 @@ comments: true
     {{ content }}
 </div>
 
-{% if page.comments %}
+{% if page.comments == true %}
 <div id="disqus_thread"></div>
 <script>
 
