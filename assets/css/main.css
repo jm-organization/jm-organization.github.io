@@ -119,11 +119,16 @@ li {
       border-radius: 24px;
       border: 1px solid #e2e2e2;
       margin-bottom: 15px; }
-    .page-width .page-content .jm-article img {
-      width: 100%;
-      max-height: 280px;
-      height: auto;
-      cursor: pointer; }
+    .page-width .page-content .jm-article {
+      text-align: justify; }
+      .page-width .page-content .jm-article p {
+        margin-bottom: 30px; }
+        .page-width .page-content .jm-article p img {
+          width: 100%;
+          max-height: 280px;
+          height: auto;
+          cursor: pointer;
+          margin-bottom: 15px; }
     .page-width .page-content .jm-comments .jm-comments-title {
       margin-top: 35px; }
       .page-width .page-content .jm-comments .jm-comments-title .jm-pager {
