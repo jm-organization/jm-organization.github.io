@@ -107,8 +107,7 @@ li {
   .page-width .page-content {
     width: calc(100% - 265px);
     height: auto;
-    display: inline-block;
-    float: left; }
+    display: inline-block; }
     .page-width .page-content .jm-page-title, .page-width .page-content .jm-comments .jm-comments-title {
       position: relative;
       text-transform: uppercase; }
@@ -149,7 +148,7 @@ li {
       text-align: center; }
   .page-width .jm-sidebar {
     width: 250px;
-    float: left;
+    float: right;
     margin: 20px 0 0 15px;
     height: auto; }
 
