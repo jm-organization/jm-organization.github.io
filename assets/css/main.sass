@@ -131,21 +131,41 @@ li
       border: $standardBorder $supportColor
       margin-bottom: 15px
 
-    .jm-comments-title
-      @extend .jm-page-title
-      margin-top: 35px
-
-      .jm-pager
-        margin: 15px 0
-        li.jm-comments-title
+    .jm-article
+      img
+        width: 100%
+        max-height: 280px
+        height: auto
+        &:hover &:before
+          padding: 2px
+          background: rgba(0, 0, 0, 0.6)
+          font-size: 9px
+          line-height: 24px
+          height: 24px
+          border-radius: 12px
+          width: auto
+          content: 'Открыть изображение для просмотра'
+          display: inline-block
           position: absolute
-          width: 100%
-          left: 0
-          height: 32px
-          line-height: 32px
-          font-size: 32px
-          z-index: -1
-          margin: 0!important
+          top: -12px
+
+
+    .jm-comments
+      .jm-comments-title
+        @extend .jm-page-title
+        margin-top: 35px
+
+        .jm-pager
+          margin: 15px 0
+          li.jm-comments-title
+            position: absolute
+            width: 100%
+            left: 0
+            height: 32px
+            line-height: 32px
+            font-size: 32px
+            z-index: -1
+            margin: 0!important
 
     .jm-pagination
       text-align: center
