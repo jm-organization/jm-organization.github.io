@@ -2,6 +2,10 @@
 body {
   background: white; }
 
+footer {
+  margin-bottom: 48px;
+  width: 100%; }
+
 li {
   list-style: none; }
 
@@ -152,9 +156,10 @@ li {
     margin: 20px 0 0 15px;
     height: auto; }
   .page-width .jm-f-blocks {
-    display: table; }
+    display: table;
+    width: 100%; }
     .page-width .jm-f-blocks .jm-f-block {
-      display: table-column;
+      display: table-cell;
       padding: 5px 9px;
       margin-bottom: 25px;
       max-height: 190px;
