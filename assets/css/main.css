@@ -102,8 +102,8 @@ li {
 /* Page */
 .page-width {
   width: 92%;
-  margin: 0 auto;
-  max-width: 1024px; }
+  max-width: 1024px;
+  margin: 0 auto 45px; }
   .page-width .page-content {
     width: calc(100% - 265px);
     height: auto;
@@ -151,5 +151,13 @@ li {
     float: right;
     margin: 20px 0 0 15px;
     height: auto; }
+  .page-width .jm-f-blocks {
+    display: table; }
+    .page-width .jm-f-blocks .jm-f-block {
+      display: table-column;
+      padding: 5px 9px;
+      margin-bottom: 25px;
+      max-height: 190px;
+      min-height: 90px; }
 
 /*# sourceMappingURL=main.css.map */

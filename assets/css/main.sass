@@ -110,8 +110,8 @@ li
 /* Page */
 .page-width
   width: $pageWidth
-  margin: 0 auto
   max-width: $maxWidth
+  margin: 0 auto 45px
 
   .page-content
     width: calc(100% - 265px)
@@ -144,8 +144,6 @@ li
           text-align: left
           font-weight: bold
 
-
-
     .jm-comments
       .jm-comments-title
         @extend .jm-page-title
@@ -171,3 +169,12 @@ li
     float: right
     margin: 20px 0 0 15px
     height: auto
+
+  .jm-f-blocks
+    display: table
+    .jm-f-block
+      display: table-column
+      padding: 5px 9px
+      margin-bottom: 25px
+      max-height: 190px
+      min-height: 90px
