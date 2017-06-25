@@ -124,7 +124,7 @@ li {
       width: 100%;
       max-height: 280px;
       height: auto; }
-      .page-width .page-content .jm-article img:hover .page-width .page-content .jm-article img:before {
+      .page-width .page-content .jm-article img:before {
         padding: 2px;
         background: rgba(0, 0, 0, 0.6);
         font-size: 9px;
