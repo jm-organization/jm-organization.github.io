@@ -5,11 +5,11 @@ title: Главная
 
 {% for post in paginator.posts %}
 {% if post.published %}
-<article class="jm-article">
+<article>
     <h2><b>{{ post.title }}</b></h2>
 
     {% if post.author or post.date %}
-    <p class="uk-article-meta">{% if post.date %}{{ post.date | date: '%d.%m.%Y' }}{% endif %}, {% if post.author %}Опубликовал <strong>{% if post.author_url %}<a href="{{ post.author_url }}" target="_blank">{% endif %}{{ post.author }}{% if post.author_url %}</a>{% endif %}</strong>{% endif %}</p>
+    <p>{% if post.date %}{{ post.date | date: '%d.%m.%Y' }}{% endif %}, {% if post.author %}Опубликовал <strong>{% if post.author_url %}<a href="{{ post.author_url }}" target="_blank">{% endif %}{{ post.author }}{% if post.author_url %}</a>{% endif %}</strong>{% endif %}</p>
     {% endif %}
 
     {{ post.excerpt }}
