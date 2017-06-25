@@ -129,6 +129,9 @@ li {
           height: auto;
           cursor: pointer;
           margin-bottom: 15px; }
+        .page-width .page-content .jm-article p h3 {
+          text-align: left;
+          font-weight: bold; }
     .page-width .page-content .jm-comments .jm-comments-title {
       margin-top: 35px; }
       .page-width .page-content .jm-comments .jm-comments-title .jm-pager {
