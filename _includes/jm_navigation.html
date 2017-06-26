@@ -4,8 +4,17 @@
 <li{% if page.url contains '/about' %} class="active"{% endif %}>
 	<a href="/about">О нас</a>
 </li>
-<li{% if page.url contains '/posts' or page.url == '#news' %} class="active"{% endif %}>
-	<a href="/#news">Новости</a>
+<li class="dropdown{% if page.url contains '/posts' or page.url == '/archive' %} active{% endif %}">
+	<a href="#" onclick="return false" class="dropdown-toggle" data-toggle="dropdown" >Новости <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li role="presentation" class="dropdown-header">Родительские ссылки</li>
+		<li role="presentation"><a role="menuitem" href="/#news">Новости</a></li>
+
+		<li role="presentation" class="divider"></li>
+
+		<li role="presentation" class="dropdown-header">Дочерние ссылки</li>
+		<li role="presentation"><a role="menuitem" href="/archive">Архив</a></li>
+	</ul>
 </li>
 <li{% if page.url contains '/projects' %} class="active"{% endif %}>
 	<a href="/projects">Проекты</a>
