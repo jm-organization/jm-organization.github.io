@@ -1,6 +1,12 @@
 <li{% if page.url == '/' %} class="active"{% endif %}>
 	<a href="/">Главная</a>
 </li>
+<li{% if page.url contains '/about' %} class="active"{% endif %}>
+	<a href="/about">О нас</a>
+</li>
+<li{% if page.url contains '/posts' or page.url == '#news' %} class="active"{% endif %}>
+	<a href="/#news">Новости</a>
+</li>
 <li{% if page.url contains '/projects' %} class="active"{% endif %}>
 	<a href="/projects">Проекты</a>
 </li>
