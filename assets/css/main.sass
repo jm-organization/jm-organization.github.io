@@ -7,6 +7,24 @@ body
 footer
   margin-bottom: 48px
   width: 100%
+  *
+    display: inline-block
+
+  .jm-f-logo
+    max-width: 325px
+    h4
+      max-width: 58%
+
+  .jm-f-blocks
+    display: inline-table
+    width: calc(100% - 325px)
+    float: right
+    .jm-f-block
+      display: table-cell
+      padding: 5px 9px
+      margin-bottom: 25px
+      max-height: 190px
+      min-height: 90px
 
 li
   list-style: none
@@ -173,13 +191,3 @@ li
     float: right
     margin: 20px 0 0 15px
     height: auto
-
-  .jm-f-blocks
-    display: table
-    width: 100%
-    .jm-f-block
-      display: table-cell
-      padding: 5px 9px
-      margin-bottom: 25px
-      max-height: 190px
-      min-height: 90px

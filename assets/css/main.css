@@ -5,6 +5,22 @@ body {
 footer {
   margin-bottom: 48px;
   width: 100%; }
+  footer * {
+    display: inline-block; }
+  footer .jm-f-logo {
+    max-width: 325px; }
+    footer .jm-f-logo h4 {
+      max-width: 58%; }
+  footer .jm-f-blocks {
+    display: inline-table;
+    width: calc(100% - 325px);
+    float: right; }
+    footer .jm-f-blocks .jm-f-block {
+      display: table-cell;
+      padding: 5px 9px;
+      margin-bottom: 25px;
+      max-height: 190px;
+      min-height: 90px; }
 
 li {
   list-style: none; }
@@ -155,14 +171,5 @@ li {
     float: right;
     margin: 20px 0 0 15px;
     height: auto; }
-  .page-width .jm-f-blocks {
-    display: table;
-    width: 100%; }
-    .page-width .jm-f-blocks .jm-f-block {
-      display: table-cell;
-      padding: 5px 9px;
-      margin-bottom: 25px;
-      max-height: 190px;
-      min-height: 90px; }
 
 /*# sourceMappingURL=main.css.map */
