@@ -8,12 +8,12 @@ footer {
   footer .page-width * {
     display: inline-block; }
   footer .page-width .jm-f-logo {
-    max-width: 325px; }
+    max-width: 350px; }
     footer .page-width .jm-f-logo h4 {
       max-width: 58%; }
   footer .page-width .jm-f-blocks {
     display: inline-table;
-    width: calc(100% - 325px);
+    width: calc(100% - 350px);
     float: right; }
     footer .page-width .jm-f-blocks .jm-f-block {
       display: table-cell;
