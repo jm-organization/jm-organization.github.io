@@ -7,7 +7,8 @@ footer {
   width: 100%; }
   footer .page-width .jm-f-logo {
     max-width: 350px;
-    display: inline-block; }
+    display: inline-block;
+    margin-bottom: 42px; }
     footer .page-width .jm-f-logo h4 {
       max-width: 58%;
       float: right;
@@ -16,12 +17,13 @@ footer {
   footer .page-width .jm-f-blocks {
     display: inline-table;
     width: calc(100% - 350px);
-    float: right; }
+    float: right;
+    height: 180px; }
     footer .page-width .jm-f-blocks .jm-f-block {
       display: table-cell;
       padding: 5px 9px;
       margin-bottom: 25px;
-      height: 180px; }
+      height: inherit; }
 
 li {
   list-style: none; }
@@ -124,7 +126,7 @@ li {
 .page-width {
   width: 92%;
   max-width: 1024px;
-  margin: 0 auto 45px; }
+  margin: 0 auto 48px; }
   .page-width .page-content {
     width: calc(100% - 265px);
     height: auto;
