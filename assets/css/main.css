@@ -189,7 +189,7 @@ li {
       .page-width .jm-archive .jm-a-line:before {
         position: absolute;
         z-index: 1;
-        left: 6px;
+        left: -6px;
         bottom: -6px;
         content: "";
         width: 15px;
@@ -201,7 +201,7 @@ li {
         content: "";
         position: absolute;
         z-index: 2;
-        left: 6px;
+        left: -6px;
         bottom: -6px;
         width: 15px;
         height: 15px;
@@ -213,6 +213,11 @@ li {
       position: relative;
       width: 100%;
       display: inline-block; }
+      .page-width .jm-archive .jm-a-events .jm-a-year {
+        background: white;
+        border-bottom: 3px solid #e2e2e2;
+        line-height: 36px;
+        font-size: 26px; }
       .page-width .jm-archive .jm-a-events .jm-archive-article {
         margin-top: 15px; }
       .page-width .jm-archive .jm-a-events .jm-archive-article > .jm-aa-date {

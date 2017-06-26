@@ -217,7 +217,7 @@ li
       &:before
         position: absolute
         z-index: 1
-        left: 6px
+        left: -6px
         bottom: -6px
         content: ''
         width: $deviderWH
@@ -229,7 +229,7 @@ li
         content: ''
         position: absolute
         z-index: 2
-        left: 6px
+        left: -6px
         bottom: -6px
         width: $deviderWH
         height: $deviderWH
@@ -244,6 +244,12 @@ li
       position: relative
       width: 100%
       display: inline-block
+
+      .jm-a-year
+        background: $baseColor
+        border-bottom: $lineWidth solid $supportColor
+        line-height: 36px
+        font-size: 26px
 
       .jm-archive-article
         margin-top: 15px
