@@ -203,9 +203,10 @@ li {
         line-height: 25px;
         font-size: 23px; }
         .page-width .jm-archive .jm-a-events .jm-archive-article > .jm-aa-title:before {
+          content: "";
           position: absolute;
           z-index: 1;
-          left: -4px;
+          left: 0;
           top: 0;
           width: 15px;
           height: 15px;

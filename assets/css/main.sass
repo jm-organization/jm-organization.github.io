@@ -234,16 +234,17 @@ li
         line-height: 25px
         font-size: 23px
         &:before
+          content: ''
           position: absolute
           z-index: 1
-          left: -4px
+          left: 0
           top: 0
           width: $deviderWH
           height: $deviderWH
           background: $baseColor
-          border: 3px solid $supportColor
+          border: $lineWidth solid $supportColor
             radius: 50%
-          padding: 3px
+          padding: $lineWidth
       .jm-archive-article > .jm-aa-body
         display: inline-block
         margin-left: $dateWidth + ($marginLineWidth * 2) + $lineWidth
