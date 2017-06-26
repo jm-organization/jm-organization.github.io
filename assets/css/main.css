@@ -176,5 +176,29 @@ li {
     float: right;
     margin: 20px 0 0 15px;
     height: auto; }
+  .page-width .jm-archive {
+    position: relative; }
+    .page-width .jm-archive .jm-a-line {
+      width: 3px;
+      margin: 0 12px;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      background: #e2e2e2;
+      left: 116px; }
+    .page-width .jm-archive .jm-a-events {
+      position: relative;
+      width: 100%;
+      display: inline-block; }
+      .page-width .jm-archive .jm-a-events .jm-archive-article > .jm-aa-date {
+        width: 116px;
+        display: inline-block;
+        text-align: right; }
+      .page-width .jm-archive .jm-a-events .jm-archive-article > .jm-aa-title {
+        display: inline-block;
+        padding-left: 24px; }
+      .page-width .jm-archive .jm-a-events .jm-archive-article > .jm-aa-body {
+        display: inline-block;
+        margin-left: 143px; }
 
 /*# sourceMappingURL=main.css.map */

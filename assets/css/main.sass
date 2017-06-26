@@ -197,3 +197,34 @@ li
     float: right
     margin: 20px 0 0 15px
     height: auto
+
+  .jm-archive
+    $dateWidth: 116px
+    $marginLineWidth: 12px
+    $lineWidth: 3px
+    position: relative
+
+    .jm-a-line
+      width: $lineWidth
+      margin: 0 $marginLineWidth
+      height: 100%
+      position: absolute
+      z-index: -1
+      background: $supportColor
+      left: $dateWidth
+
+    .jm-a-events
+      position: relative
+      width: 100%
+      display: inline-block
+
+      .jm-archive-article > .jm-aa-date
+        width: $dateWidth
+        display: inline-block
+        text-align: right
+      .jm-archive-article > .jm-aa-title
+        display: inline-block
+        padding-left: $marginLineWidth * 2
+      .jm-archive-article > .jm-aa-body
+        display: inline-block
+        margin-left: $dateWidth + ($marginLineWidth * 2) + $lineWidth
