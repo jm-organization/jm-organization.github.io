@@ -213,55 +213,53 @@ li {
       position: relative;
       width: 100%;
       display: inline-block; }
-      .page-width .jm-archive .jm-a-events .jm-a-year-block {
-        border-bottom: 3px solid #e2e2e2; }
-        .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-a-year {
-          background: white;
-          border-bottom: 3px solid #e2e2e2;
-          line-height: 36px;
-          font-size: 26px; }
-        .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article {
-          margin-top: 15px; }
-        .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-date {
-          position: relative;
-          width: 116px;
-          display: inline-block;
-          text-align: right;
-          float: left;
-          line-height: 25px; }
-          .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-date:before {
-            position: absolute;
-            z-index: 1;
-            right: -21px;
-            top: 4px;
-            content: "";
-            width: 15px;
-            height: 15px;
-            border: 6px solid white;
-              border-radius: 50%;
-            background: #e2e2e2; }
-        .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-title {
-          position: relative;
-          display: inline-block;
-          padding-left: 24px;
-          line-height: 25px;
-          font-size: 23px;
-          float: left; }
-          .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-title:before {
-            content: "";
-            position: absolute;
-            z-index: 2;
-            left: 6px;
-            top: 4px;
-            width: 15px;
-            height: 15px;
-            background: transparent;
-            border: 3px solid #e2e2e2;
-              border-radius: 50%;
-            padding: 3px; }
-        .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-body {
-          display: inline-block;
-          margin-left: 143px;
-          padding-top: 9px; }
+      .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-a-year {
+        background: white;
+        border-bottom: 3px solid #e2e2e2;
+        line-height: 36px;
+        font-size: 26px; }
+      .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article {
+        margin-top: 15px; }
+      .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-date {
+        position: relative;
+        width: 116px;
+        display: inline-block;
+        text-align: right;
+        float: left;
+        line-height: 25px; }
+        .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-date:before {
+          position: absolute;
+          z-index: 1;
+          right: -21px;
+          top: 4px;
+          content: "";
+          width: 15px;
+          height: 15px;
+          border: 6px solid white;
+            border-radius: 50%;
+          background: #e2e2e2; }
+      .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-title {
+        position: relative;
+        display: inline-block;
+        padding-left: 24px;
+        line-height: 25px;
+        font-size: 23px;
+        float: left; }
+        .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-title:before {
+          content: "";
+          position: absolute;
+          z-index: 2;
+          left: 6px;
+          top: 4px;
+          width: 15px;
+          height: 15px;
+          background: transparent;
+          border: 3px solid #e2e2e2;
+            border-radius: 50%;
+          padding: 3px; }
+      .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-body {
+        display: inline-block;
+        margin-left: 143px;
+        padding-top: 9px; }
 
 /*# sourceMappingURL=main.css.map */
