@@ -6,24 +6,28 @@ title: Архив
 <div class="jm-archive">
     <div class="jm-a-line"></div>
     <div class="jm-a-events">
-        <div class="jm-a-year">За этот год</div>
-        {% for post in site.posts %}
-        {% unless post.next %}
-        <div class="jm-archive-article">
-            {% else %}
-            {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-            {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-            {% if year != nyear %}
+        <div class="jm-a-year-block">
+            <div class="jm-a-year">За этот год</div>
+            {% for post in site.posts %}
+            {% unless post.next %}
+            <div class="jm-archive-article">
+                {% else %}
+                {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+                {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+                {% if year != nyear %}
+            </div>
         </div>
 
-        <div class="jm-a-year">{{ post.date | date: '%Y' }}</div>
-        <div class="jm-archive-article">
-            {% endif %}
-            {% endunless %}
-            <div class="jm-aa-date">{{ post.date | date: '%d %b' }}</div>
-            <div class="jm-aa-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-            <div class="jm-aa-body">{{ post.excerpt }}</div>
-            {% endfor %}
+        <div class="jm-a-year-block">
+            <div class="jm-a-year">{{ post.date | date: '%Y' }}</div>
+            <div class="jm-archive-article">
+                {% endif %}
+                {% endunless %}
+                <div class="jm-aa-date">{{ post.date | date: '%d %b' }}</div>
+                <div class="jm-aa-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+                <div class="jm-aa-body">{{ post.excerpt }}</div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
