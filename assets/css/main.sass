@@ -202,6 +202,8 @@ li
     $dateWidth: 116px
     $marginLineWidth: 12px
     $lineWidth: 3px
+    $deviderWH: 15px
+
     position: relative
 
     .jm-a-line
@@ -218,13 +220,31 @@ li
       width: 100%
       display: inline-block
 
+      .jm-archive-article
+        margin-top: 15px
+
       .jm-archive-article > .jm-aa-date
         width: $dateWidth
         display: inline-block
         text-align: right
       .jm-archive-article > .jm-aa-title
+        position: relative
         display: inline-block
         padding-left: $marginLineWidth * 2
+        line-height: 25px
+        font-size: 23px
+        &:before
+          position: absolute
+          z-index: 1
+          left: -4px
+          top: 0
+          width: $deviderWH
+          height: $deviderWH
+          background: $baseColor
+          border: 3px solid $supportColor
+            radius: 50%
+          padding: 3px
       .jm-archive-article > .jm-aa-body
         display: inline-block
         margin-left: $dateWidth + ($marginLineWidth * 2) + $lineWidth
+        padding-top: 9px
