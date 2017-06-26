@@ -193,6 +193,7 @@ li {
       .page-width .jm-archive .jm-a-events .jm-archive-article {
         margin-top: 15px; }
       .page-width .jm-archive .jm-a-events .jm-archive-article > .jm-aa-date {
+        position: relative;
         width: 116px;
         display: inline-block;
         text-align: right;
