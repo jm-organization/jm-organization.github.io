@@ -23,7 +23,39 @@ title: Архив
             <div class="jm-archive-article">
                 {% endif %}
                 {% endunless %}
-                <div class="jm-aa-date">{{ post.date | date: '%d %B' }}</div>
+                
+                {% assign day = post.date | date: '%d' %}
+                {% assign en_mouth = post.date | date: '%B' %}
+                {% case en_mouth %}
+                    {% when 'January' %}
+                        {% ru_mouth = 'Января' %}
+                    {% when 'February' %}
+                        {% ru_mouth = 'Февраля' %}
+                    {% when 'March' %}
+                        {% ru_mouth = 'Марта' %}
+                    {% when 'April' %}
+                        {% ru_mouth = 'Апреля' %}
+                    {% when 'May' %}
+                        {% ru_mouth = 'Мая' %}
+                    {% when 'June' %}
+                        {% ru_mouth = 'Июня' %}
+                    {% when 'Juli' %}
+                        {% ru_mouth = 'Июля' %}
+                    {% when 'August' %}
+                        {% ru_mouth = 'Августа' %}
+                    {% when 'September' %}
+                        {% ru_mouth = 'Сентября' %}
+                    {% when 'October' %}
+                        {% ru_mouth = 'Октября' %}
+                    {% when 'November' %}
+                        {% ru_mouth = 'Ноября' %}
+                    {% when 'December' %}
+                        {% ru_mouth = 'Декабря' %}
+                    {% else %}
+                        {% ru_mouth = '' %}
+                {% endcase %}
+                
+                <div class="jm-aa-date">{{ day ru_mouth }}</div>
                 <div class="jm-aa-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
                 <div class="jm-aa-body">{{ post.excerpt }}</div>
                 {% endfor %}
