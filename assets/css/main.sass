@@ -227,18 +227,33 @@ li
         width: $dateWidth
         display: inline-block
         text-align: right
+        float: left
+        line-height: 25px
+        &:before
+          position: absolute
+          z-index: 1
+          right: -6px
+          top: 4px
+          content: ''
+          width: $deviderWH
+          height: $deviderWH
+          margin: 6px
+          border: $lineWidth solid $supportColor
+            radius: 50%
+          background: $supportColor
       .jm-archive-article > .jm-aa-title
         position: relative
         display: inline-block
         padding-left: $marginLineWidth * 2
         line-height: 25px
         font-size: 23px
+        float: left
         &:before
           content: ''
           position: absolute
           z-index: 1
-          left: 0
-          top: 0
+          left: 6px
+          top: 4px
           width: $deviderWH
           height: $deviderWH
           background: $baseColor
