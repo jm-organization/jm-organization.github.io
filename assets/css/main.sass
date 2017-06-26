@@ -232,13 +232,12 @@ li
         &:before
           position: absolute
           z-index: 1
-          right: -6px
+          right: -24px
           top: 4px
           content: ''
           width: $deviderWH
           height: $deviderWH
-          margin: 6px
-          border: $lineWidth solid $supportColor
+          border: ($lineWidth * 2) solid $baseColor
             radius: 50%
           background: $supportColor
       .jm-archive-article > .jm-aa-title
@@ -251,12 +250,12 @@ li
         &:before
           content: ''
           position: absolute
-          z-index: 1
+          z-index: 2
           left: 6px
           top: 4px
           width: $deviderWH
           height: $deviderWH
-          background: $baseColor
+          background: transparent
           border: $lineWidth solid $supportColor
             radius: 50%
           padding: $lineWidth

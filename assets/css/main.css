@@ -201,13 +201,12 @@ li {
         .page-width .jm-archive .jm-a-events .jm-archive-article > .jm-aa-date:before {
           position: absolute;
           z-index: 1;
-          right: -6px;
+          right: -24px;
           top: 4px;
           content: "";
           width: 15px;
           height: 15px;
-          margin: 6px;
-          border: 3px solid #e2e2e2;
+          border: 6px solid white;
             border-radius: 50%;
           background: #e2e2e2; }
       .page-width .jm-archive .jm-a-events .jm-archive-article > .jm-aa-title {
@@ -220,12 +219,12 @@ li {
         .page-width .jm-archive .jm-a-events .jm-archive-article > .jm-aa-title:before {
           content: "";
           position: absolute;
-          z-index: 1;
+          z-index: 2;
           left: 6px;
           top: 4px;
           width: 15px;
           height: 15px;
-          background: white;
+          background: transparent;
           border: 3px solid #e2e2e2;
             border-radius: 50%;
           padding: 3px; }
