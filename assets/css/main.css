@@ -5,12 +5,14 @@ body {
 footer {
   margin-bottom: 48px;
   width: 100%; }
-  footer .page-width * {
-    display: inline-block; }
   footer .page-width .jm-f-logo {
     max-width: 350px; }
+    footer .page-width .jm-f-logo * {
+      display: inline-block; }
     footer .page-width .jm-f-logo h4 {
-      max-width: 58%; }
+      max-width: 58%;
+      float: right;
+      padding-top: 35px; }
   footer .page-width .jm-f-blocks {
     display: inline-table;
     width: calc(100% - 350px);
