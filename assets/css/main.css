@@ -6,17 +6,19 @@ footer {
   margin-bottom: 48px;
   width: 100%; }
   footer .page-width .jm-f-logo {
-    max-width: 350px;
+    max-width: 450px;
     display: inline-block;
     margin-bottom: 42px; }
+    footer .page-width .jm-f-logo img {
+      float: left; }
     footer .page-width .jm-f-logo h4 {
       max-width: 58%;
-      float: right;
-      padding-top: 35px;
-      display: inline-block; }
+      padding: 35px 0;
+      display: inline-block;
+      margin: 0 0 0 12px; }
   footer .page-width .jm-f-blocks {
     display: inline-table;
-    width: calc(100% - 350px);
+    width: calc(100% - 450px);
     float: right;
     height: 180px; }
     footer .page-width .jm-f-blocks .jm-f-block {
@@ -24,8 +26,6 @@ footer {
       padding: 5px 9px;
       margin-bottom: 25px;
       height: inherit; }
-      footer .page-width .jm-f-blocks .jm-f-block ul {
-        padding-left: 10px; }
 
 li {
   list-style: none; }
