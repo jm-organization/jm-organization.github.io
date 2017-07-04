@@ -8,10 +8,11 @@ footer
   margin-bottom: 48px
   width: 100%
   .page-width
+    display: table
 
     .jm-f-logo
       max-width: 412px
-      display: inline-block
+      display: table-cell
       margin-bottom: 42px
       img
         float: left
@@ -46,8 +47,7 @@ footer
 
 
     .jm-f-blocks
-      display: inline-table
-      width: calc(100% - 412px)
+      display: table-cell
       float: right
       height: 180px
       .jm-f-block
@@ -62,7 +62,7 @@ footer
       $techHeight: 48px
       width: 100%
       height: $techHeight
-      display: block
+      display: table-cell
       padding: 0!important
       margin: 11px 0!important
       text-align: center
