@@ -11,11 +11,20 @@ footer {
     margin-bottom: 42px; }
     footer .page-width .jm-f-logo img {
       float: left; }
-    footer .page-width .jm-f-logo h4 {
+    footer .page-width .jm-f-logo .jm-f-about {
       max-width: 58%;
       padding: 35px 0;
       display: inline-block;
       margin: 0 0 0 12px; }
+      footer .page-width .jm-f-logo .jm-f-about h4 {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: inline-block; }
+        footer .page-width .jm-f-logo .jm-f-about h4 small {
+          display: block; }
+      footer .page-width .jm-f-logo .jm-f-about .jm-f-contacts {
+        display: inline-block; }
   footer .page-width .jm-f-blocks {
     display: inline-table;
     width: calc(100% - 450px);
@@ -26,6 +35,8 @@ footer {
       padding: 5px 9px;
       margin-bottom: 25px;
       height: inherit; }
+      footer .page-width .jm-f-blocks .jm-f-block ul {
+        padding-left: 0 !important; }
 
 li {
   list-style: none; }
