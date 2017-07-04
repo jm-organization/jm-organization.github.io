@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Sample */
 body {
   background: white; }
@@ -15,7 +16,8 @@ footer {
       max-width: 58%;
       padding: 35px 0;
       display: inline-block;
-      margin: 0 0 0 12px; }
+      margin: 0 0 0 12px;
+      height: 100%; }
       footer .page-width .jm-f-logo .jm-f-about h4 {
         width: 100%;
         padding: 0;
@@ -25,6 +27,11 @@ footer {
           display: block; }
       footer .page-width .jm-f-logo .jm-f-about .jm-f-contacts {
         display: inline-block; }
+        footer .page-width .jm-f-logo .jm-f-about .jm-f-contacts ul {
+          margin: 5px 0 0;
+          padding: 0 !important; }
+          footer .page-width .jm-f-logo .jm-f-about .jm-f-contacts ul li:before {
+            content: "✉"; }
   footer .page-width .jm-f-blocks {
     display: inline-table;
     width: calc(100% - 450px);
