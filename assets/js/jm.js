@@ -4,7 +4,7 @@
 
 //
 $(document).ready(function () {
-    $('a[data-href="@content"], a[data-href="@to-top"]').hover(function () {
+    $('*[data-toggle="tooltip"]').hover(function () {
         $(this).tooltip('toggle');
     });
     
