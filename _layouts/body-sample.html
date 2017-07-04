@@ -31,7 +31,15 @@
 		<div class="jm-warp warp-button-to-top">
 			<a data-href="@to-top" data-toggle="tooltip" data-placement="top" title="Наверх"><span class="glyphicon glyphicon-arrow-up"></span></a>
 		</div>
+		
+		<!-- VK Widget -->
+		<div id="vk_community_messages"></div>
 
 		{% include jm_inline_script.html %}
+		
+		<script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
+		<script type="text/javascript">
+		VK.Widgets.CommunityMessages("vk_community_messages", 149345104, {expanded: "1",disableExpandChatSound: "1",tooltipButtonText: "Є питання?"});
+		</script>
 	</body>
 </html>
