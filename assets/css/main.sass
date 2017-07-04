@@ -10,7 +10,7 @@ footer
   .page-width
 
     .jm-f-logo
-      max-width: 450px
+      max-width: 412px
       display: inline-block
       margin-bottom: 42px
       img
@@ -42,11 +42,12 @@ footer
               line-height: 22px
               display: inline-block
               float: right
+              color: $ultraTextColor
 
 
     .jm-f-blocks
       display: inline-table
-      width: calc(100% - 450px)
+      width: calc(100% - 412px)
       float: right
       height: 180px
       .jm-f-block
@@ -56,6 +57,22 @@ footer
         height: inherit
         ul
           padding-left: 0!important
+
+    .jm-f-technologies-used
+      $techHeight: 48px
+      width: 100%
+      height: $techHeight
+      display: block
+      padding: 0!important
+      margin: 11px 0!important
+      text-align: center
+      li
+        margin: 8px 0
+        height: $techHeight - (8px*2)
+        width: auto
+        padding: 0 15px
+        border-right: 1px solid $mediumDarkSupportColor
+
 
 li
   list-style: none
