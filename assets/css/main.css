@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Sample */
 body {
   background: white; }
@@ -30,8 +29,6 @@ footer {
         footer .page-width .jm-f-logo .jm-f-about .jm-f-contacts ul {
           margin: 5px 0 0;
           padding: 0 !important; }
-          footer .page-width .jm-f-logo .jm-f-about .jm-f-contacts ul li:before {
-            content: "✉"; }
   footer .page-width .jm-f-blocks {
     display: inline-table;
     width: calc(100% - 450px);
