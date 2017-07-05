@@ -169,6 +169,11 @@ footer {
     width: calc(100% - 265px);
     height: auto;
     display: inline-block; }
+    @media (max-width: 728px) {
+      .page-width .page-content {
+        width: 100%;
+        height: auto;
+        float: left; } }
     .page-width .page-content .jm-page-title, .page-width .page-content .jm-comments .jm-comments-title {
       position: relative;
       text-transform: uppercase; }
@@ -181,7 +186,7 @@ footer {
       margin-bottom: 15px; }
       @media (max-width: 728px) {
         .page-width .page-content article {
-          width: 100%;
+          width: inherit;
           padding: 8px;
           margin-bottom: 9px; } }
     .page-width .page-content .jm-article {

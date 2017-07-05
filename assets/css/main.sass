@@ -180,6 +180,10 @@ footer
     width: calc(100% - 265px)
     height: auto
     display: inline-block
+    @media (max-width: 728px)
+      width: $width
+      height: auto
+      float: left
 
     .jm-page-title
       position: relative
@@ -193,7 +197,7 @@ footer
       border: $standardBorder $supportColor
       margin-bottom: 15px
       @media (max-width: 728px)
-        width: 100%
+        width: inherit
         padding: 8px
         margin-bottom: 9px
 
