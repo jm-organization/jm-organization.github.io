@@ -331,6 +331,10 @@ footer {
         line-height: 25px;
         font-size: 23px;
         float: left; }
+        @media (max-width: 728px) {
+          .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-title {
+            word-wrap: break-word;
+            max-width: 220px; } }
         .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-title:before {
           content: "";
           position: absolute;
