@@ -5,7 +5,9 @@
 $(document).ready(function () {
     var opacityControl = $('.jm-layer');
 
-    $('.item > [data-role="img"]').css({'height': (document.documentElement.clientHeight - 108)});
+    if (document.documentElement.clientWidth > 1024) {
+        $('.item > [data-role="img"]').css({'height': (document.documentElement.clientHeight - 108)});
+    }
 
     if (window.scrollY == 0) $('.jm-warp.warp-button-to-top').css({'z-index':'-1', 'opacity':'0'});
 
