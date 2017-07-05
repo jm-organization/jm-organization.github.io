@@ -4,6 +4,10 @@
 body
   background: $baseColor
 
+section
+  @media (max-width: 728px)
+    padding-top: 48px
+
 footer
   margin-bottom: 48px
   width: 100%
@@ -15,12 +19,18 @@ footer
       margin-bottom: 42px
       img
         float: left
+        @media (max-width: 728px)
+          width: 96px
       .jm-f-about
         max-width: 58%
         padding: 35px 0
         display: inline-block
         margin: 0 0 0 12px
         height: 100%
+        @media (max-width: 728px)
+          padding: 15px 0
+          max-width: 65%
+          margin-left: 5px
         h4
           width: 100%
           padding: 0
@@ -241,10 +251,7 @@ footer
     margin: 20px 0 0 15px
     height: auto
     @media (max-width: 728px)
-      width: 100%
-      display: inline-block
-      margin: 20px 0 0
-      float: left
+      display: none
 
 
   .jm-archive
