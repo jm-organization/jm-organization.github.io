@@ -125,9 +125,11 @@ footer
       height: 320px
     [data-role="img"]
       background: $supportColor no-repeat center 0
-      background-size: cover
       min-height: $headerMinHeight
       width: 100%
+
+      @media (min-width: 1024px)
+        background-size: cover
     .text
       color: $mediumTextColor
 

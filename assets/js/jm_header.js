@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     $('.warp-button-to-content').on('click', 'a', function () {
         if ($(this).data('href') == '@content') {
-            $('body').scrollTop((window.screen.availHeight - 90) - 48);
+            $('body').scrollTop($('.jm-header').height() - 48);
             $('.jm-warp.warp-button-to-top').css({'z-index':'1', 'opacity':'1'});
         }
     });
