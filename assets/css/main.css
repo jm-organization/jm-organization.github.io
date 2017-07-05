@@ -97,6 +97,9 @@ footer {
   padding: 4px 0;
   background: transparent;
   z-index: 5898; }
+  @media (max-width: 728px) {
+    .navigation {
+      background: white; } }
   .navigation nav {
     position: relative;
     padding: 0 4px;
@@ -199,8 +202,12 @@ footer {
       @media (max-width: 728px) {
         .page-width .page-content article {
           width: inherit;
-          padding: 8px;
-          margin-bottom: 9px; } }
+          padding: 12px;
+          margin-bottom: 9px; }
+          .page-width .page-content article h2 {
+            margin: 0 0 8px; }
+          .page-width .page-content article ul.pager {
+            margin-bottom: 0; } }
     .page-width .page-content .jm-article {
       text-align: justify; }
       .page-width .page-content .jm-article p {
