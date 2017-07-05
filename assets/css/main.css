@@ -111,7 +111,7 @@ footer {
   .jm-header .carousel-inner > .item .jm-layer2.to-top {
     bottom: 0;
     height: 320px; }
-  .jm-header .carousel-inner > .item div[data-role="img"] {
+  .jm-header .carousel-inner > .item img[data-role="img"] {
     background: #e2e2e2 no-repeat center 0;
     min-height: 530px;
     width: 100%; }
