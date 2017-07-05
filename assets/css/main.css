@@ -113,7 +113,7 @@ footer {
     height: 320px; }
   .jm-header .carousel-inner > .item div[data-role="img"] {
     background: #e2e2e2 no-repeat center 0;
-    height: 530px;
+    min-height: 530px;
     width: 100%; }
   .jm-header .carousel-inner > .item .text {
     color: #868686; }
