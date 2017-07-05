@@ -127,7 +127,6 @@ footer
       background: $supportColor no-repeat center 0
       min-height: $headerMinHeight
       width: 100%
-
       @media (min-width: 1024px)
         background-size: cover
     .text
@@ -171,6 +170,11 @@ footer
   max-width: $maxWidth
   margin: 0 auto 48px
   display: flex
+  @media (max-width: 728px)
+    width: $width - 2%
+    margin: 0 auto 48px
+    padding: 0
+    display: flex
 
   .page-content
     width: calc(100% - 265px)
@@ -185,9 +189,13 @@ footer
 
     article
       padding: 24px
-      border-radius: 24px
+      border-radius: 4px
       border: $standardBorder $supportColor
       margin-bottom: 15px
+      @media (max-width: 728px)
+        width: 100%
+        padding: 8px
+        margin-bottom: 9px
 
     .jm-article
       text-align: justify
@@ -228,6 +236,12 @@ footer
     float: right
     margin: 20px 0 0 15px
     height: auto
+    @media (max-width: 728px)
+      width: 100%
+      display: inline-block
+      margin: 20px 0 0
+      float: left
+
 
   .jm-archive
     $dateWidth: 116px
