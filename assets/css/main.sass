@@ -255,8 +255,7 @@ footer
             margin: 0!important
             @media (max-width: 728px)
               position: relative
-              padding: 5px
-              float: left
+              padding: 9px
 
     .jm-pagination
       text-align: center
@@ -272,6 +271,7 @@ footer
 
   .jm-archive
     $dateWidth: 116px
+    $dateSDWidth: 56px
     $marginLineWidth: 12px
     $lineWidth: 3px
     $deviderWH: 15px
@@ -286,6 +286,8 @@ footer
       z-index: -1
       background: $supportColor
       left: $dateWidth
+      @media (max-width: 728px)
+        left: $dateSDWidth
       &:before
         position: absolute
         z-index: 1
@@ -334,6 +336,8 @@ footer
           text-align: right
           float: left
           line-height: 25px
+          @media (max-width: 728px)
+            width: $dateSDWidth
           &:before
             position: absolute
             z-index: 1
@@ -368,3 +372,5 @@ footer
           display: inline-block
           margin-left: $dateWidth + ($marginLineWidth * 2) + $lineWidth
           padding-top: 9px
+          @media (max-width: 728px)
+            margin-left: $dateSDWidth + ($marginLineWidth * 2) + $lineWidth

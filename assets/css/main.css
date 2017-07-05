@@ -245,8 +245,7 @@ footer {
           @media (max-width: 728px) {
             .page-width .page-content .jm-comments .jm-comments-title .jm-pager li.jm-comments-title {
               position: relative;
-              padding: 5px;
-              float: left; } }
+              padding: 9px; } }
     .page-width .page-content .jm-pagination {
       text-align: center; }
   .page-width .jm-sidebar {
@@ -267,6 +266,9 @@ footer {
       z-index: -1;
       background: #e2e2e2;
       left: 116px; }
+      @media (max-width: 728px) {
+        .page-width .jm-archive .jm-a-line {
+          left: 56px; } }
       .page-width .jm-archive .jm-a-line:before {
         position: absolute;
         z-index: 1;
@@ -308,6 +310,9 @@ footer {
         text-align: right;
         float: left;
         line-height: 25px; }
+        @media (max-width: 728px) {
+          .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-date {
+            width: 56px; } }
         .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-date:before {
           position: absolute;
           z-index: 1;
@@ -342,5 +347,8 @@ footer {
         display: inline-block;
         margin-left: 143px;
         padding-top: 9px; }
+        @media (max-width: 728px) {
+          .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-body {
+            margin-left: 83px; } }
 
 /*# sourceMappingURL=main.css.map */
