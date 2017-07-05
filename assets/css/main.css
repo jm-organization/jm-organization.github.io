@@ -29,6 +29,8 @@ footer {
         footer .page-width .jm-f-logo .jm-f-about .jm-f-contacts ul {
           margin: 5px 0 0;
           padding: 0 !important; }
+          footer .page-width .jm-f-logo .jm-f-about .jm-f-contacts ul li {
+            list-style: none; }
           footer .page-width .jm-f-logo .jm-f-about .jm-f-contacts ul li > span {
             padding-right: 5px;
             line-height: 22px;
