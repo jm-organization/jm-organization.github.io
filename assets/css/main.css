@@ -51,6 +51,8 @@ footer {
       height: inherit; }
       footer .page-width .jm-f-blocks .jm-f-block ul {
         padding-left: 0 !important; }
+        footer .page-width .jm-f-blocks .jm-f-block ul li {
+          list-style: none; }
 
 .jm-layer {
   position: absolute;
