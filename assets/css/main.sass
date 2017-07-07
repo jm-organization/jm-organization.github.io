@@ -325,10 +325,12 @@ footer
         line-height: 36px
         font-size: 26px
 
-      .jm-a-year-block > .jm-archive-article
+      .jm-a-year-block > .jm-archive-article,
+      .jm-a-collaborator
         margin-top: 15px
 
-      .jm-a-year-block > .jm-archive-article > .jm-aa-date
+      .jm-a-year-block > .jm-archive-article > .jm-aa-date,
+      .jm-a-collaborator > .jm-ac-date
         position: relative
         width: $dateWidth
         display: inline-block
@@ -348,7 +350,8 @@ footer
           border: ($lineWidth * 2) solid $baseColor
             radius: 50%
           background: $supportColor
-      .jm-a-year-block > .jm-archive-article > .jm-aa-title
+      .jm-a-year-block > .jm-archive-article > .jm-aa-title,
+      .jm-a-collaborator > .jm-ac-cname
         position: relative
         display: inline-block
         padding-left: $marginLineWidth * 2
@@ -370,7 +373,8 @@ footer
           border: $lineWidth solid $supportColor
             radius: 50%
           padding: $lineWidth
-      .jm-a-year-block > .jm-archive-article > .jm-aa-body
+      .jm-a-year-block > .jm-archive-article > .jm-aa-body,
+      .jm-a-collaborator > .jm-ac-cinfo
         display: inline-block
         margin-left: $dateWidth + ($marginLineWidth * 2) + $lineWidth
         padding-top: 9px
