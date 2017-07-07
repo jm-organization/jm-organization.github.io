@@ -256,9 +256,9 @@ footer {
     @media (max-width: 728px) {
       .page-width .jm-sidebar {
         display: none; } }
-  .page-width .jm-archive {
+  .page-width .jm-archive, .page-width .jm-about {
     position: relative; }
-    .page-width .jm-archive .jm-a-line {
+    .page-width .jm-archive .jm-a-line, .page-width .jm-about .jm-a-line {
       width: 3px;
       margin: 0 12px;
       height: 100%;
@@ -267,9 +267,9 @@ footer {
       background: #e2e2e2;
       left: 116px; }
       @media (max-width: 728px) {
-        .page-width .jm-archive .jm-a-line {
+        .page-width .jm-archive .jm-a-line, .page-width .jm-about .jm-a-line {
           left: 56px; } }
-      .page-width .jm-archive .jm-a-line:before {
+      .page-width .jm-archive .jm-a-line:before, .page-width .jm-about .jm-a-line:before {
         position: absolute;
         z-index: 1;
         left: -6px;
@@ -280,7 +280,7 @@ footer {
         border: 6px solid white;
           border-radius: 50%;
         background: #e2e2e2; }
-      .page-width .jm-archive .jm-a-line:after {
+      .page-width .jm-archive .jm-a-line:after, .page-width .jm-about .jm-a-line:after {
         content: "";
         position: absolute;
         z-index: 2;
@@ -292,18 +292,17 @@ footer {
         border: 3px solid #e2e2e2;
           border-radius: 50%;
         padding: 3px; }
-    .page-width .jm-archive .jm-a-events {
+    .page-width .jm-archive .jm-a-events, .page-width .jm-archive .jm-a-collaborators, .page-width .jm-about .jm-a-events, .page-width .jm-about .jm-a-collaborators {
       position: relative;
       width: 100%;
-      display: inline-block; }
-      .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-a-year {
-        background: white;
-        border-bottom: 3px solid #e2e2e2;
-        line-height: 36px;
-        font-size: 26px; }
-      .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article {
+      display: inline-block;
+      background: white;
+        background-border-bottom: 3px solid #e2e2e2;
+        background-line-height: 36px;
+        background-font-size: 26px; }
+      .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article, .page-width .jm-about .jm-a-collaborators .jm-a-year-block > .jm-archive-article {
         margin-top: 15px; }
-      .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-date {
+      .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-date, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-date, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-date, .page-width .jm-about .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-date {
         position: relative;
         width: 116px;
         display: inline-block;
@@ -311,9 +310,9 @@ footer {
         float: left;
         line-height: 25px; }
         @media (max-width: 728px) {
-          .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-date {
+          .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-date, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-date, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-date, .page-width .jm-about .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-date {
             width: 56px; } }
-        .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-date:before {
+        .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-date:before, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-date:before, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-date:before, .page-width .jm-about .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-date:before {
           position: absolute;
           z-index: 1;
           right: -21px;
@@ -324,7 +323,7 @@ footer {
           border: 6px solid white;
             border-radius: 50%;
           background: #e2e2e2; }
-      .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-title {
+      .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-title, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-title, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-title, .page-width .jm-about .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-title {
         position: relative;
         display: inline-block;
         padding-left: 24px;
@@ -332,10 +331,10 @@ footer {
         font-size: 23px;
         float: left; }
         @media (max-width: 728px) {
-          .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-title {
+          .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-title, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-title, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-title, .page-width .jm-about .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-title {
             word-wrap: break-word;
             max-width: 220px; } }
-        .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-title:before {
+        .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-title:before, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-title:before, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-title:before, .page-width .jm-about .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-title:before {
           content: "";
           position: absolute;
           z-index: 2;
@@ -347,12 +346,12 @@ footer {
           border: 3px solid #e2e2e2;
             border-radius: 50%;
           padding: 3px; }
-      .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-body {
+      .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-body, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-body, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-body, .page-width .jm-about .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-body {
         display: inline-block;
         margin-left: 143px;
         padding-top: 9px; }
         @media (max-width: 728px) {
-          .page-width .jm-archive .jm-a-events .jm-a-year-block .jm-archive-article > .jm-aa-body {
+          .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-body, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-body, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-body, .page-width .jm-about .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-body {
             margin-left: 83px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -269,7 +269,7 @@ footer
       display: none
 
 
-  .jm-archive
+  .jm-archive, .jm-about
     $dateWidth: 116px
     $dateSDWidth: 56px
     $marginLineWidth: 12px
@@ -314,66 +314,65 @@ footer
 
 
 
-    .jm-a-events
+    .jm-a-events, .jm-a-collaborators
       position: relative
       width: 100%
       display: inline-block
 
-      .jm-a-year-block
-        .jm-a-year
-          background: $baseColor
-          border-bottom: $lineWidth solid $supportColor
-          line-height: 36px
-          font-size: 26px
+      .jm-a-year-block > .jm-a-year
+        background: $baseColor
+        border-bottom: $lineWidth solid $supportColor
+        line-height: 36px
+        font-size: 26px
 
-        .jm-archive-article
-          margin-top: 15px
+      .jm-a-year-block > .jm-archive-article
+        margin-top: 15px
 
-        .jm-archive-article > .jm-aa-date
-          position: relative
-          width: $dateWidth
-          display: inline-block
-          text-align: right
-          float: left
-          line-height: 25px
-          @media (max-width: 728px)
-            width: $dateSDWidth
-          &:before
-            position: absolute
-            z-index: 1
-            right: -21px
-            top: 4px
-            content: ''
-            width: $deviderWH
-            height: $deviderWH
-            border: ($lineWidth * 2) solid $baseColor
-              radius: 50%
-            background: $supportColor
-        .jm-archive-article > .jm-aa-title
-          position: relative
-          display: inline-block
-          padding-left: $marginLineWidth * 2
-          line-height: 25px
-          font-size: 23px
-          float: left
-          @media (max-width: 728px)
-            word-wrap: break-word
-            max-width: 220px
-          &:before
-            content: ''
-            position: absolute
-            z-index: 2
-            left: 6px
-            top: 4px
-            width: $deviderWH
-            height: $deviderWH
-            background: transparent
-            border: $lineWidth solid $supportColor
-              radius: 50%
-            padding: $lineWidth
-        .jm-archive-article > .jm-aa-body
-          display: inline-block
-          margin-left: $dateWidth + ($marginLineWidth * 2) + $lineWidth
-          padding-top: 9px
-          @media (max-width: 728px)
-            margin-left: $dateSDWidth + ($marginLineWidth * 2) + $lineWidth
+      .jm-a-year-block > .jm-archive-article > .jm-aa-date
+        position: relative
+        width: $dateWidth
+        display: inline-block
+        text-align: right
+        float: left
+        line-height: 25px
+        @media (max-width: 728px)
+          width: $dateSDWidth
+        &:before
+          position: absolute
+          z-index: 1
+          right: -21px
+          top: 4px
+          content: ''
+          width: $deviderWH
+          height: $deviderWH
+          border: ($lineWidth * 2) solid $baseColor
+            radius: 50%
+          background: $supportColor
+      .jm-a-year-block > .jm-archive-article > .jm-aa-title
+        position: relative
+        display: inline-block
+        padding-left: $marginLineWidth * 2
+        line-height: 25px
+        font-size: 23px
+        float: left
+        @media (max-width: 728px)
+          word-wrap: break-word
+          max-width: 220px
+        &:before
+          content: ''
+          position: absolute
+          z-index: 2
+          left: 6px
+          top: 4px
+          width: $deviderWH
+          height: $deviderWH
+          background: transparent
+          border: $lineWidth solid $supportColor
+            radius: 50%
+          padding: $lineWidth
+      .jm-a-year-block > .jm-archive-article > .jm-aa-body
+        display: inline-block
+        margin-left: $dateWidth + ($marginLineWidth * 2) + $lineWidth
+        padding-top: 9px
+        @media (max-width: 728px)
+          margin-left: $dateSDWidth + ($marginLineWidth * 2) + $lineWidth
