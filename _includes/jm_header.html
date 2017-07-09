@@ -1,5 +1,5 @@
-<div class="navigation" id="navigation" >
-	<div class="jm-layer nav-layer"{% if page.url != '/' %} style="opacity: 1"{% endif %}></div>
+<div class="navigation {% if page.url == '/' %}navbar-fixed-top{% endif %}" {% if page.url != '/' %} style="border-bottom: 1px solid #e2e2e2" {% endif %} id="navigation" >
+	{% if page.url != '/' %}<div class="jm-layer nav-layer"></div>{% endif %}
 
 	<nav class="nav nav-pills page-width" >
 		{% include jm_navigation.html %}
