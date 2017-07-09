@@ -1,4 +1,4 @@
-co-worker1:
+co-worker:
   name: Magicmen
   first-name: Иван
   second-name: Громов
@@ -8,7 +8,7 @@ co-worker1:
   info:
     web-sites: https://vk.com/jmagicmen, https://github.com/Magicfar4
 
-co-worker2:
+co-worker:
   name: NESTLI
   first-name: NESTLI
   second-name: Exidaz
@@ -18,7 +18,7 @@ co-worker2:
   info:
     web-sites:
 
-co-worker3:
+co-worker:
   name: connor41
   first-name:
   second-name:
