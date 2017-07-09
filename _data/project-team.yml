@@ -1,0 +1,30 @@
+co-worker1:
+  name: Magicmen
+  first-name: Иван
+  second-name: Громов
+  other-names: Magicfar4(https://github.com/Magicfar4), jikoto
+  position: Генеральный директор
+  date-of-adopted: 23 юня
+  info:
+    web-sites: https://vk.com/jmagicmen, https://github.com/Magicfar4
+
+co-worker2:
+  name: NESTLI
+  first-name: NESTLI
+  second-name: Exidaz
+  other-names:
+  position: Редактор
+  date-of-adopted: 23 Июня
+  info:
+    web-sites:
+
+co-worker3:
+  name: connor41
+  first-name:
+  second-name:
+  other-names:
+  web-sites:
+  position: Системный администратор
+  date-of-adopted: 4 Июля
+  info:
+    web-sites:
