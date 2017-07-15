@@ -32,21 +32,24 @@ $(document).ready(function () {
         });
     });
 
-    var $other_names = other_names_block.data('on').split(',');
-    $other_names.forEach(function (other_name) {
-        other_names_block.append(tags.tag({
-            tag: 'a',
-            tagContent: tags.tag({
-                tag: 'span',
+    other_names_block.each(function (index, element) {
+        var $other_names = other_names_block.data('on').split(',');
+
+        $other_names.forEach(function (site) {
+            $(element).append(tags.tag({
+                tag: 'a',
+                tagContent: tags.tag({
+                    tag: 'span',
+                    attributes: {
+                        class: 'label label-default'
+                    },
+                    tagContent: other_name
+                }),
                 attributes: {
-                    class: 'label label-default'
-                },
-                tagContent: other_name
-            }),
-            attributes: {
-                href: '',
-                style: 'padding-right: 4px'
-            }
-        }));
-    })
+                    href: '',
+                    style: 'padding-right: 4px'
+                }
+            }));
+        });
+    });
 });
