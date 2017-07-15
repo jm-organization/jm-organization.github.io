@@ -12,7 +12,7 @@ title: О нас
             {% for cw in site.data.projectteam %}
             <div class="jm-a-collaborator" id="{{ cw.co-worker }}">
                 <div class="jm-ac-date">{{ cw.date-of-adopted }}</div>
-                <div class="jm-ac-cname">{{ cw.name }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}</div>
+                <div class="jm-ac-cname">{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}</div>
                 <div class="jm-ac-cinfo">
                     <p>{{ cw.position }}</p>
                     <p id="web-sites">{{ cw.info.web-sites }}</p>
