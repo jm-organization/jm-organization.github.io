@@ -1,4 +1,5 @@
-- co-worker: "Magicmen"
+co-worker:
+  name: "Magicmen"
   first-name: "Иван"
   second-name: "Громов"
   other-names: "Magicfar4(https://github.com/Magicfar4), jikoto"
@@ -7,7 +8,8 @@
   info:
     web-sites: "https://vk.com/jmagicmen, https://github.com/Magicfar4"
 
-- co-worker: "NESTLI"
+co-worker:
+  name: "NESTLI"
   first-name: "NESTLI"
   second-name: "Exidaz"
   other-names:
@@ -16,7 +18,8 @@
   info:
     web-sites:
 
-- co-worker: "connor41"
+co-worker:
+  name: "connor41"
   first-name:
   second-name:
   other-names:
