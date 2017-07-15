@@ -264,7 +264,7 @@ footer {
       position: absolute;
       z-index: -1;
       background: #e2e2e2;
-      left: 116px; }
+      left: 68px; }
       @media (max-width: 728px) {
         .page-width .jm-archive .jm-a-line, .page-width .jm-about .jm-a-line {
           left: 56px; } }
@@ -312,7 +312,7 @@ footer {
       .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-date, .page-width .jm-about .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-date,
       .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-date {
         position: relative;
-        width: 116px;
+        width: 68px;
         display: inline-block;
         text-align: right;
         float: left;
@@ -380,7 +380,7 @@ footer {
       .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-about .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-body,
       .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo {
         display: inline-block;
-        margin-left: 143px;
+        margin-left: 95px;
         padding-top: 9px;
         width: calc(100% - 143px); }
         @media (max-width: 728px) {
