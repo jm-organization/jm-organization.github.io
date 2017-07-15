@@ -3,15 +3,16 @@
  */
 
 $(document).ready(function () {
-    var web_sites_block = $('#web-sites');
+    var web_sites_block = $('.web-sites');
     var href_pattern_before = /([a-z]{3,6}:\/\/)/g;
     var href_pattern_after = /\/([\w@\/?=&\.%#]{0,256})\/?/g;
 
     var other_names_block = $('#other-names');
     var other_name_pattern = /test/;
 
-    var $sites = web_sites_block.data('ws').split(',');
     web_sites_block.each(function () {
+        var $sites = web_sites_block.data('ws').split(',');
+
         $sites.forEach(function (site) {
             $(this).append(tags.tag({
                 tag: 'a',
