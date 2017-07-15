@@ -15,13 +15,13 @@ $(document).ready(function () {
             tagContent: tags.tag({
                 tag: 'span',
                 attributes: {
-                    class: 'label label-success',
-                    style: 'padding-right: 4px'
+                    class: 'label label-success'
                 },
                 tagContent: site.replace(href_pattern_before, '').replace(href_pattern_after, '')
             }),
             attributes: {
-                href: site
+                href: site,
+                style: 'padding-right: 4px'
             }
         }));
     });
