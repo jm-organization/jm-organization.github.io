@@ -1,8 +1,8 @@
 <li{% if page.url == '/' %} class="active"{% endif %}>
 	<a href="/">Главная</a>
 </li>
-<li class="disabled{% if page.url contains '/about/' %} active"{% endif %}">
-	<a href="/about" onclick="return false">О нас</a>
+<li{% if page.url contains '/about/' %} class="active"{% endif %}>
+	<a href="/about">О нас</a>
 </li>
 <li class="hidden-xs hidden-sm{% if page.url contains '/posts' %} active{% endif %}">
 	<a href="/#news">Новости</a>
