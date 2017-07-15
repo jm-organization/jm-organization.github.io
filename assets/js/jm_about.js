@@ -10,7 +10,7 @@ $(document).ready(function () {
     var other_names_block = $('#other-names');
     var other_name_pattern = /test/;
 
-    web_sites_block.each(function (element) {
+    web_sites_block.each(function (index, element) {
         var $sites = $(element).data('ws').split(',');
 
         $sites.forEach(function (site) {
