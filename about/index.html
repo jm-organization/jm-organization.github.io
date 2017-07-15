@@ -9,7 +9,7 @@ title: О нас
     <div class="jm-a-co-workers">
         <div class="jm-a-line"></div>
         <div class="jm-a-collaborators">
-            {% for cw in site.data.project-team %}
+            {% for cw in site.data.projectteam %}
             <div class="jm-a-collaborator" id="{{ cw.co-worker }}">
                 <div class="jm-ac-date">{{ cw.co-worker.date-of-adopted }}</div>
                 <div class="jm-ac-cname">{{ cw.co-worker }} {% if cw.co-worker.first-name %}({{ cw.co-worker.first-name }}{% if cw.co-worker.second-name %} {{ cw.co-worker.second-name }}{% endif %}){% endif %}</div>
