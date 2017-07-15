@@ -6,6 +6,7 @@
   date-of-adopted: "23 Июня"
   info:
     web-sites: "https://vk.com/jmagicmen,https://github.com/Magicfar4"
+    base-info: "Magicmen.html"
 
 - co-worker: "NESTLI"
   first-name: "NESTLI"
@@ -15,6 +16,7 @@
   date-of-adopted: "23 Июня"
   info:
     web-sites:
+    base-info: "NESTLI.html"
 
 - co-worker: "connor41"
   first-name:
@@ -25,3 +27,4 @@
   date-of-adopted: "4 Июля"
   info:
     web-sites:
+    base-info: "connor41.html"

@@ -4,8 +4,10 @@ title: О нас
 ---
 
 <div class="jm-about">
+    <!-- О компании -->
     <div class="jm-a-company">{% include about/company.md %}</div>
 
+    <!-- Сотрудники -->
     <div class="jm-a-co-workers">
         <div class="jm-a-line"></div>
         <div class="jm-a-collaborators">
@@ -14,12 +16,21 @@ title: О нас
                 <div class="jm-ac-date">{{ cw.date-of-adopted }}</div>
                 <div class="jm-ac-cname">{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}</div>
                 <div class="jm-ac-cinfo">
+                    <!-- Должность -->
                     <p id="position" style="padding-top: 2px" class="text-muted">{{ cw.position }}</p>
+
+                    <!-- Сайты сотрудника -->
                     {% if cw.info.web-sites %}
                     <p id="web-sites" data-ws="{{ cw.info.web-sites }}"></p>
                     {% endif %}
+
+                    <!-- Основная информация о сотруднике -->
+                    <p id="base-info" data-bi="{{ cw.info.base-info }}">{% include about/members/cw.info.base-info %}</p>
+
                     <hr>
+
                     {% if cw.other-names %}
+                    <!-- Другие прозвища сотрудника -->
                     <p id="other-names" data-on="{{ cw.other-names }}">Также известен, как: </p>
                     {% endif %}
                 </div>
@@ -30,5 +41,6 @@ title: О нас
 
     <div class="jm-a-our-goals">{% include about/our_goals.md %}</div>
 
+    <!-- Статистика -->
     <div class="jm-a-statistics">{% include about/statistics.md %}</div>
 </div>
