@@ -10,12 +10,12 @@ title: О нас
         <div class="jm-a-line"></div>
         <div class="jm-a-collaborators">
             {% for cw in site.data.projectteam %}
-            <div class="jm-a-collaborator" id="{{ cw.co-worker.name }}">
-                <div class="jm-ac-date">{{ cw.co-worker.date-of-adopted }}</div>
-                <div class="jm-ac-cname">{{ cw.co-worker.name }} {% if cw.co-worker.first-name %}({{ cw.co-worker.first-name }}{% if cw.co-worker.second-name %} {{ cw.co-worker.second-name }}{% endif %}){% endif %}</div>
+            <div class="jm-a-collaborator" id="{{ cw.co-worker }}">
+                <div class="jm-ac-date">{{ cw.date-of-adopted }}</div>
+                <div class="jm-ac-cname">{{ cw.name }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}</div>
                 <div class="jm-ac-cinfo">
-                    <p>{{ cw.co-worker.position }}</p>
-                    <p id="web-sites">{{ cw.co-worker.info.web-sites }}</p>
+                    <p>{{ cw.position }}</p>
+                    <p id="web-sites">{{ cw.info.web-sites }}</p>
                 </div>
             </div>
             {% endfor %}
