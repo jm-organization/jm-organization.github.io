@@ -10,11 +10,11 @@ $(document).ready(function () {
     var other_names_block = $('#other-names');
     var other_name_pattern = /test/;
 
-    web_sites_block.each(function () {
-        var $sites = web_sites_block.data('ws').split(',');
+    web_sites_block.each(function (element) {
+        var $sites = $($(element)).data('ws').split(',');
 
         $sites.forEach(function (site) {
-            $(this).append(tags.tag({
+            $(element).append(tags.tag({
                 tag: 'a',
                 tagContent: tags.tag({
                     tag: 'span',
