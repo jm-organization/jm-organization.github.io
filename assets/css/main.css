@@ -263,7 +263,7 @@ footer {
       height: 100%;
       position: absolute;
       z-index: -1;
-      left: 68px; }
+      left: 116px; }
       @media (max-width: 728px) {
         .page-width .jm-archive .jm-a-line, .page-width .jm-about .jm-a-line, .page-width .jm-a-co-workers .jm-a-line {
           left: 56px; } }
@@ -315,7 +315,7 @@ footer {
       .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-date, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-date,
       .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-date {
         position: relative;
-        width: 68px;
+        width: 116px;
         display: inline-block;
         text-align: right;
         float: left;
@@ -395,7 +395,7 @@ footer {
       .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-body,
       .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo {
         display: inline-block;
-        margin-left: 95px;
+        margin-left: 143px;
         padding-top: 9px;
         width: calc(100% - 143px); }
         @media (max-width: 728px) {
