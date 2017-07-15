@@ -12,21 +12,23 @@ $(document).ready(function () {
 
     var $sites = web_sites_block.data('ws').split(',');
     $sites.forEach(function (site) {
-        web_sites_block.append(tags.tag({
-            tag: 'a',
-            tagContent: tags.tag({
-                tag: 'span',
+        web_sites_block.each(function () {
+            $(this).append(tags.tag({
+                tag: 'a',
+                tagContent: tags.tag({
+                    tag: 'span',
+                    attributes: {
+                        class: 'label label-success'
+                    },
+                    tagContent: site.replace(href_pattern_before, '').replace(href_pattern_after, '')
+                }),
                 attributes: {
-                    class: 'label label-success'
-                },
-                tagContent: site.replace(href_pattern_before, '').replace(href_pattern_after, '')
-            }),
-            attributes: {
-                href: site,
-                style: 'padding-right: 4px',
-                target: '_blank'
-            }
-        }));
+                    href: site,
+                    style: 'padding-right: 4px',
+                    target: '_blank'
+                }
+            }));
+        });
     });
 
     var $other_names = other_names_block.data('on').split(',');
