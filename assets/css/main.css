@@ -263,7 +263,7 @@ footer {
       height: 100%;
       position: absolute;
       z-index: -1;
-      background: #e2e2e2;
+      background: linear-gradient(to top 95%, #e2e2e2 85%, white);
       left: 68px; }
       @media (max-width: 728px) {
         .page-width .jm-archive .jm-a-line, .page-width .jm-about .jm-a-line, .page-width .jm-a-co-workers .jm-a-line {
