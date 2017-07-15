@@ -3,7 +3,7 @@
  */
 
 var web_sites = {
-    ws: $('#web-sites')
+    ws: $('#web-sites').data('ws')
 };
 
 $(document).ready(function () {
