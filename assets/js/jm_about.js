@@ -23,7 +23,8 @@ $(document).ready(function () {
             }),
             attributes: {
                 href: site,
-                style: 'padding-right: 4px'
+                style: 'padding-right: 4px',
+                target: '_blank'
             }
         }));
     });
