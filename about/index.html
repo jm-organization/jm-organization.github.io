@@ -14,7 +14,10 @@ title: О нас
             {% for cw in site.data.projectteam %}
             <div class="jm-a-collaborator" id="{{ cw.co-worker }}">
                 <div class="jm-ac-date">{{ cw.date-of-adopted }}</div>
-                <div class="jm-ac-cname">{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}</div>
+                <div class="jm-ac-co-worker">
+                    <img src="/assets/img/co-worker-avatars/{{ cw.co-worker }}.png" width="32px" height="32px">
+                    <h3>{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}</h3>
+                </div>
                 <div class="jm-ac-cinfo">
                     <!-- Должность -->
                     <p id="position" style="padding-top: 2px" class="text-muted">{{ cw.position }}</p>
