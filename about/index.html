@@ -15,7 +15,7 @@ title: О нас
                 <div class="jm-ac-cname">{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}</div>
                 <div class="jm-ac-cinfo">
                     <p>{{ cw.position }}</p>
-                    <p id="web-sites">{{ cw.info.web-sites }}</p>
+                    <p id="web-sites" data-ws="{{ cw.info.web-sites }}"></p>
                 </div>
             </div>
             {% endfor %}
