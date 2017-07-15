@@ -402,7 +402,10 @@ footer {
         border: 1px solid #e2e2e2; }
       .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3 {
         float: left;
-        margin: 15.5px 0; }
+        margin: 7.5px 0; }
+        .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3 small {
+          width: 100%;
+          display: block; }
       .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-body,
       .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-body,
       .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-body,

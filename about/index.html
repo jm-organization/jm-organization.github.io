@@ -16,12 +16,9 @@ title: О нас
                 <div class="jm-ac-date">{{ cw.date-of-adopted }}</div>
                 <div class="jm-ac-co-worker">
                     <img src="/assets/img/co-worker-avatars/{{ cw.co-worker }}.png" width="56px" height="56px">
-                    <h3>{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}</h3>
+                    <h3>{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}<small id="position">{{ cw.position }}</small></h3>
                 </div>
                 <div class="jm-ac-cinfo" style="padding-top: 2px">
-                    <!-- Должность -->
-                    <p id="position" class="text-muted">{{ cw.position }}</p>
-
                     <!-- Сайты сотрудника -->
                     {% if cw.info.web-sites %}
                     <p id="web-sites" data-ws="{{ cw.info.web-sites }}"></p>
