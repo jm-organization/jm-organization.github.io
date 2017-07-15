@@ -263,7 +263,6 @@ footer {
       height: 100%;
       position: absolute;
       z-index: -1;
-      background: linear-gradient(to top 95%, #e2e2e2 85%, white);
       left: 68px; }
       @media (max-width: 728px) {
         .page-width .jm-archive .jm-a-line, .page-width .jm-about .jm-a-line, .page-width .jm-a-co-workers .jm-a-line {
@@ -408,5 +407,9 @@ footer {
           .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-body,
           .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo {
             margin-left: 83px; } }
+  .page-width .jm-archive .jm-a-line {
+    background: #e2e2e2; }
+  .page-width .jm-a-co-workers .jm-a-line {
+    background: linear-gradient(to top, #e2e2e2 85%, white); }
 
 /*# sourceMappingURL=main.css.map */

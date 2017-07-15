@@ -283,7 +283,6 @@ footer
       height: 100%
       position: absolute
       z-index: -1
-      background: linear-gradient(to top, $supportColor 85%, $baseColor)
       left: $dateWidth
       @media (max-width: 728px)
         left: $dateSDWidth
@@ -310,8 +309,6 @@ footer
         border: $lineWidth solid $supportColor
           radius: 50%
         padding: $lineWidth
-
-
 
     .jm-a-events, .jm-a-collaborators
       position: relative
@@ -380,3 +377,10 @@ footer
         width: calc(100% - 143px)
         @media (max-width: 728px)
           margin-left: $dateSDWidth + ($marginLineWidth * 2) + $lineWidth
+
+  .jm-archive
+    .jm-a-line
+      background: $supportColor
+  .jm-a-co-workers
+    .jm-a-line
+      background: linear-gradient(to top, $supportColor 85%, $baseColor)
