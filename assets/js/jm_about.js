@@ -7,8 +7,10 @@ $(document).ready(function () {
     var href_pattern_before = /([a-z]{3,6}:\/\/)/g;
     var href_pattern_after = /\/([\w@\/?=&\.%#]{0,256})\/?/g;
 
-    var $sites = web_sites_block.data('ws').split(',');
+    var other_names_block = $('#other-names');
+    var other_name_pattern = /test/;
 
+    var $sites = web_sites_block.data('ws').split(',');
     $sites.forEach(function (site) {
         web_sites_block.append(tags.tag({
             tag: 'a',
@@ -25,4 +27,22 @@ $(document).ready(function () {
             }
         }));
     });
+
+    var $other_names = other_names_block.data('on').split(',');
+    $other_names.forEach(function (other_name) {
+        other_names_block.append(tags.tag({
+            tag: 'a',
+            tagContent: tags.tag({
+                tag: 'span',
+                attributes: {
+                    class: 'label label-default'
+                },
+                tagContent: other_name
+            }),
+            attributes: {
+                href: '',
+                style: 'padding-right: 4px'
+            }
+        }));
+    })
 });
