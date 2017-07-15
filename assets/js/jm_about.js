@@ -32,7 +32,7 @@ $(document).ready(function () {
     });
 
     other_names_block.each(function (index, element) {
-        var $other_names = $(element).data('on').split('|');
+        var $other_names = $(element).data('on');
 
         $other_names.forEach(function (other_name) {
             $(element).append(tags.tag({
