@@ -2,7 +2,7 @@
 	<a href="/">Главная</a>
 </li>
 <li{% if page.url contains '/about/' %} class="active"{% endif %}>
-	<a href="/about">О нас</a>
+	<a href="/about" onclic="return false" disabled>О нас</a>
 </li>
 <li class="hidden-xs hidden-sm{% if page.url contains '/posts' %} active{% endif %}">
 	<a href="/#news">Новости</a>
@@ -11,7 +11,7 @@
 	<a href="/archive">Архив</a>
 </li>
 <li{% if page.url contains '/projects' %} class="active"{% endif %}>
-	<a href="/projects">Проекты</a>
+	<a href="/projects" onclic="return false" disabled>Проекты</a>
 </li>
 <li class="hidden-xs hidden-sm" style="position: absolute; right: 0;">
 	<a href="https://github.com/jm-organization/jm-organization.github.io" target="_blank">Src</a>
