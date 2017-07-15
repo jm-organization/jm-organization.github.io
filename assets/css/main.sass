@@ -274,6 +274,7 @@ footer
     $marginLineWidth: 12px
     $lineWidth: 3px
     $deviderWH: 15px
+    $paddingCoWorker: 15.5px
 
     position: relative
 
@@ -335,7 +336,7 @@ footer
         line-height: 25px
         @media (max-width: 728px)
           width: $dateSDWidth
-        &:before
+        &:after
           position: absolute
           z-index: 1
           right: -21px
@@ -346,6 +347,11 @@ footer
           border: ($lineWidth * 2) solid $baseColor
             radius: 50%
           background: $supportColor
+      .jm-a-collaborator > .jm-ac-date
+        height: 26px
+        padding: 15.5px 0
+        &:after
+          top: 21px
       .jm-a-year-block > .jm-archive-article > .jm-aa-title,
       .jm-a-collaborator > .jm-ac-co-worker
         position: relative
@@ -369,6 +375,16 @@ footer
           border: $lineWidth solid $supportColor
             radius: 50%
           padding: $lineWidth
+      .jm-a-collaborator > .jm-ac-co-worker
+        img
+          float: left
+          margin-right: 9px
+          border-radius: 50%
+          padding: 4px
+          border: $standardBorder $supportColor
+        h3
+          float: left
+          margin: 15.5px 0
       .jm-a-year-block > .jm-archive-article > .jm-aa-body,
       .jm-a-collaborator > .jm-ac-cinfo
         display: inline-block
@@ -377,10 +393,13 @@ footer
         width: calc(100% - 143px)
         @media (max-width: 728px)
           margin-left: $dateSDWidth + ($marginLineWidth * 2) + $lineWidth
+      .jm-a-collaborator > .jm-ac-cinfo
+        margin-left: ($dateWidth + ($marginLineWidth * 2) + $lineWidth) + 56px + 8px
+        width: calc(100% - 207px)
 
   .jm-archive
     .jm-a-line
       background: $supportColor
   .jm-a-co-workers
     .jm-a-line
-      background: linear-gradient(to top, $supportColor 85%, $baseColor)
+      background: linear-gradient(to top, $supportColor 88%, $baseColor)
