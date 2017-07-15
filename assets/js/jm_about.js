@@ -3,15 +3,12 @@
  */
 
 $(document).ready(function () {
-    var web_sites = {
-        ws_block: $('#web-sites'),
-        ws: web_sites.ws_block.data('ws')
-    };
+    var web_sites_block = $('#web-sites');
 
-    var $sites = web_sites.ws.split(',');
+    var $sites = web_sites_block.data('ws').split(',');
 
     $sites.forEach(function (site) {
-        web_sites.ws_block.append(tags.tag({
+        web_sites_block.append(tags.tag({
             tag: 'span',
             attributes: {
                 class: 'label label-success'
