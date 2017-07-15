@@ -17,7 +17,7 @@ title: О нас
                     <p id="position" style="padding-top: 2px" class="text-muted">{{ cw.position }}</p>
                     <p id="web-sites" data-ws="{{ cw.info.web-sites }}"></p>
                     <hr>
-                    <p id="other-names" data-on="{{ cw.other-names }}"></p>
+                    <p id="other-names" data-on="{{ cw.other-names }}">{% if cw.other-names %}Также известен, как:{% endif %}</p>
                 </div>
             </div>
             {% endfor %}
