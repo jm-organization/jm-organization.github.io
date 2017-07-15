@@ -13,7 +13,7 @@ title: О нас
         <div class="jm-a-collaborators">
             {% for cw in site.data.projectteam %}
             <div class="jm-a-collaborator" id="{{ cw.co-worker }}">
-                <div class="jm-ac-date">{{ cw.date-of-adopted }}</div>
+                <div class="jm-ac-date" data-toggle="tooltip" data-placement="bottom" title="В компании с">{{ cw.date-of-adopted }}</div>
                 <div class="jm-ac-co-worker">
                     <img src="/assets/img/co-worker-avatars/{{ cw.co-worker }}.png" width="56px" height="56px">
                     <h3>{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}<small id="position">{{ cw.position }}</small></h3>
