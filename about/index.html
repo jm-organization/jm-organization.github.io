@@ -4,9 +4,7 @@ title: О нас
 ---
 
 <div class="jm-about">
-    <div class="jm-a-company">
-        {% include about/company.md %}
-    </div>
+    <div class="jm-a-company">{% include about/company.md %}</div>
 
     <div class="jm-a-co-workers">
         <div class="jm-a-line"></div>
@@ -17,20 +15,20 @@ title: О нас
                 <div class="jm-ac-cname">{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}</div>
                 <div class="jm-ac-cinfo">
                     <p id="position" style="padding-top: 2px" class="text-muted">{{ cw.position }}</p>
+                    {% if cw.info.web-sites %}
                     <p id="web-sites" data-ws="{{ cw.info.web-sites }}"></p>
+                    {% endif %}
                     <hr>
-                    <p id="other-names" data-on="{{ cw.other-names }}">{% if cw.other-names %}Также известен, как:{% endif %}</p>
+                    {% if cw.other-names %}
+                    <p id="other-names" data-on="{{ cw.other-names }}">Также известен, как: </p>
+                    {% endif %}
                 </div>
             </div>
             {% endfor %}
         </div>
     </div>
 
-    <div class="jm-a-our-goals">
-        {% include about/our_goals.md %}
-    </div>
+    <div class="jm-a-our-goals">{% include about/our_goals.md %}</div>
 
-    <div class="jm-a-statistics">
-        {% include about/statistics.md %}
-    </div>
+    <div class="jm-a-statistics">{% include about/statistics.md %}</div>
 </div>
