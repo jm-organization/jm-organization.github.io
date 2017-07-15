@@ -207,6 +207,16 @@ footer
       text-transform: uppercase
       h1
         text-align: center
+        position: relative
+        &:before, &:after
+          width: 100%
+          height: 1px
+          margin: auto 0
+          background: $supportColor
+        &:before
+          padding-right: 15px
+        &:after
+          padding-left: 15px
 
     article
       padding: 24px
