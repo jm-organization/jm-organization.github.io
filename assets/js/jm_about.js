@@ -18,10 +18,10 @@ $(document).ready(function () {
                     class: 'label label-success',
                     style: 'padding-right: 4px'
                 },
-                tagContent: site
+                tagContent: site.replace(href_pattern_before, '').replace(href_pattern_after, '')
             }),
             attributes: {
-                href: site.replace(href_pattern_before, '').replace(href_pattern_after, '')
+                href: site
             }
         }));
     });
