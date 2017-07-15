@@ -11,8 +11,8 @@ $(document).ready(function () {
     var other_name_pattern = /test/;
 
     var $sites = web_sites_block.data('ws').split(',');
-    $sites.forEach(function (site) {
-        web_sites_block.each(function () {
+    web_sites_block.each(function () {
+        $sites.forEach(function (site) {
             $(this).append(tags.tag({
                 tag: 'a',
                 tagContent: tags.tag({
