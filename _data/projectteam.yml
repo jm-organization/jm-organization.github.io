@@ -1,7 +1,10 @@
 - co-worker: "Magicmen"
   first-name: "Иван"
   second-name: "Громов"
-  other-names: "Magicfar4(https://github.com/Magicfar4),jikoto"
+  other-names: "[
+    {name: 'Magicfar4', href: 'https://github.com/Magicfar4'},
+    {name: 'jikoto'}
+  ]"
   position: "Генеральный директор"
   date-of-adopted: "23 Июня 2017"
   info:
@@ -14,7 +17,7 @@
   position: "Редактор"
   date-of-adopted: "23 Июня 2017"
   info:
-    web-sites:
+    web-sites: "https://vk.com/nestli_777"
 
 - co-worker: "connor41"
   first-name:

@@ -8,7 +8,8 @@ $(document).ready(function () {
     var href_pattern_after = /\/([\w@\/?=&\.%#]{0,256})\/?/g;
 
     var other_names_block = $('#other-names');
-    var other_name_pattern = /test/;
+    var href_pattern_with_hooks = /(\(([a-z]{3,6}:\/\/)([a-z\.0-9_-]{0,256})\.([a-z]{2,6})\/([\w@\/?=&\.%#]{0,256})\/?\))/g;
+    var href_pattern = /([a-z]{3,6}:\/\/)([a-z\.0-9_-]{0,256})\.([a-z]{2,6})\/([\w@\/?=&\.%#]{0,256})\/?/g;
 
     web_sites_block.each(function (index, element) {
         var $sites = $(element).data('ws').split(',');
@@ -33,9 +34,9 @@ $(document).ready(function () {
     });
 
     other_names_block.each(function (index, element) {
-        var $other_names = other_names_block.data('on').split(',');
+        var $other_names = other_names_block.data('on');
 
-        $other_names.forEach(function (site) {
+        $other_names.forEach(function (other_name) {
             $(element).append(tags.tag({
                 tag: 'a',
                 tagContent: tags.tag({
@@ -43,10 +44,10 @@ $(document).ready(function () {
                     attributes: {
                         class: 'label label-default'
                     },
-                    tagContent: other_name
+                    tagContent: other_name.name
                 }),
                 attributes: {
-                    href: '',
+                    href: (typeof other_name.href != 'undefined')?other_name.href:'',
                     style: 'padding-right: 4px'
                 }
             }));
