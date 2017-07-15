@@ -2,11 +2,11 @@
  * Created by Admin on 15.07.2017.
  */
 
-var web_sites = {
-    ws: $('#web-sites').data('ws')
-};
-
 $(document).ready(function () {
+    var web_sites = {
+        ws: $('#web-sites').data('ws')
+    };
+
     var $sites = web_sites.ws.split(',');
 
     $sites.forEach(function (site) {
