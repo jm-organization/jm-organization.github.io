@@ -392,20 +392,37 @@ footer {
           border: 3px solid #e2e2e2;
             border-radius: 50%;
           padding: 3px; }
-      .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before {
-        top: 21px; }
-      .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker img, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker img, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker img, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker img, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker img, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker img {
-        float: left;
-        margin-right: 9px;
-        border-radius: 50%;
-        padding: 4px;
-        border: 1px solid #e2e2e2; }
-      .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3 {
-        float: left;
-        margin: 7.5px 0; }
-        .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3 small {
-          width: 100%;
-          display: block; }
+      .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker {
+        position: relative; }
+        .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before {
+          top: 21px; }
+        .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker img, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker img, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker img, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker img, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker img, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker img {
+          float: left;
+          margin-right: 9px;
+          border-radius: 50%;
+          padding: 4px;
+          border: 1px solid #e2e2e2; }
+        .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3 {
+          float: left;
+          margin: 7.5px 0; }
+          .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker h3 small, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker h3 small {
+            width: 100%;
+            display: block; }
+        .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator {
+          position: absolute;
+          height: 48px;
+          width: 48px;
+          right: 0;
+          margin: 8px; }
+          .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:hover, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:hover, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:hover, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:hover, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:hover, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:hover {
+            background: #e2e2e2; }
+          .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:before, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:before, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:before, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:before, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:before, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            border-right: 1px solid #666666;
+            border-bottom: 1px solid #666666;
+            transform: rotate(45deg); }
       .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-body,
       .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-body,
       .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-body,

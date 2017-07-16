@@ -376,6 +376,7 @@ footer
             radius: 50%
           padding: $lineWidth
       .jm-a-collaborator > .jm-ac-co-worker
+        position: relative
         &:before
           top: 21px
         img
@@ -390,6 +391,22 @@ footer
           small
             width: 100%
             display: block
+        .accordion-collaborator
+          position: absolute
+          height: 48px
+          width: 48px
+          right: 0
+          margin: 8px
+          &:hover
+            background: $supportColor
+          &:before
+            content: ''
+            width: 9px
+            height: 9px
+            border:
+              right: $standardBorder $darkSupportColor
+              bottom: $standardBorder $darkSupportColor
+            transform: rotate(45deg)
       .jm-a-year-block > .jm-archive-article > .jm-aa-body,
       .jm-a-collaborator > .jm-ac-cinfo
         display: inline-block
