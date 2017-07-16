@@ -36,12 +36,12 @@ title: О нас
                         <img src="/assets/img/co-worker-avatars/{{ cw.co-worker }}.png" width="56px" height="56px">
                         <h3>{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}<small id="position">{{ cw.position }}</small></h3>
                     </div>
-                    <div class="jm-acc-open-more-info" data-toggle="tooltip" data-placement="top" title="Больше информации">
+                    <!-- <div class="jm-acc-open-more-info" data-toggle="tooltip" data-placement="top" title="Больше информации">
                         <a class="accordion-collaborator" data-toggle="collapse" data-parent="#accordion" href="#{{ cw.co-worker }}Info"></a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="jm-ac-cinfo" style="padding-top: 2px">
-                    <div class="panel-collapse collapse" id="{{ cw.co-worker }}Info">
+                    <div class="panel-collapse collapse in" id="{{ cw.co-worker }}Info">
                         {% if cw.info.web-sites %}
                         <p class="web-sites" data-ws='{{ cw.info.web-sites }}'></p>
                         {% endif %}
