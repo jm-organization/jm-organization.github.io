@@ -397,9 +397,11 @@ footer
           width: 48px
           right: 0
           margin: 8px
+          border-radius: 4px
           &:hover
             background: $supportColor
           &:before
+            position: absolute
             content: ''
             width: 9px
             height: 9px
@@ -407,6 +409,9 @@ footer
               right: $standardBorder $darkSupportColor
               bottom: $standardBorder $darkSupportColor
             transform: rotate(45deg)
+            top: 19px
+            left: 19px
+            display: inline-block
       .jm-a-year-block > .jm-archive-article > .jm-aa-body,
       .jm-a-collaborator > .jm-ac-cinfo
         display: inline-block

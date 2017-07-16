@@ -413,16 +413,21 @@ footer {
           height: 48px;
           width: 48px;
           right: 0;
-          margin: 8px; }
+          margin: 8px;
+          border-radius: 4px; }
           .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:hover, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:hover, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:hover, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:hover, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:hover, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:hover {
             background: #e2e2e2; }
           .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:before, .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:before, .page-width .jm-about .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:before, .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:before, .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:before, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .accordion-collaborator:before {
+            position: absolute;
             content: "";
             width: 9px;
             height: 9px;
             border-right: 1px solid #666666;
             border-bottom: 1px solid #666666;
-            transform: rotate(45deg); }
+            transform: rotate(45deg);
+            top: 19px;
+            left: 19px;
+            display: inline-block; }
       .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-body,
       .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-body,
       .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-body,
