@@ -36,21 +36,23 @@ title: О нас
                     <h3>{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}<small id="position">{{ cw.position }}</small></h3>
                     <a class="accordion-collaborator" data-toggle="collapse" data-parent="#accordion" href="#{{ cw.co-worker }}Info"></a>
                 </div>
-                <div class="jm-ac-cinfo panel-collapse collapse" style="padding-top: 2px" id="{{ cw.co-worker }}Info">
-                    <!-- Сайты сотрудника -->
-                    {% if cw.info.web-sites %}
-                    <p class="web-sites" data-ws='{{ cw.info.web-sites }}'></p>
-                    {% endif %}
+                <div class="panel-collapse collapse" id="{{ cw.co-worker }}Info">
+                    <div class="jm-ac-cinfo" style="padding-top: 2px">
+                        <!-- Сайты сотрудника -->
+                        {% if cw.info.web-sites %}
+                        <p class="web-sites" data-ws='{{ cw.info.web-sites }}'></p>
+                        {% endif %}
 
-                    <!-- Основная информация о сотруднике -->
-                    <p id="base-info" data-bi="{}"></p>
+                        <!-- Основная информация о сотруднике -->
+                        <p id="base-info" data-bi="{}"></p>
 
-                    <hr>
+                        <hr>
 
-                    {% if cw.other-names %}
-                    <!-- Другие прозвища сотрудника -->
-                    <p class="other-names" data-on='{{ cw.other-names }}'>Также известен, как: </p>
-                    {% endif %}
+                        {% if cw.other-names %}
+                        <!-- Другие прозвища сотрудника -->
+                        <p class="other-names" data-on='{{ cw.other-names }}'>Также известен, как: </p>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
             {% endfor %}
