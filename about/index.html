@@ -32,24 +32,22 @@ title: О нас
             <div class="jm-a-collaborator" id="{{ cw.co-worker }}">
                 <div class="jm-ac-date" data-toggle="tooltip" data-placement="bottom" title="В компании с">{{ cw.date-of-adopted }}</div>
                 <div class="jm-ac-co-worker">
-                    <img src="/assets/img/co-worker-avatars/{{ cw.co-worker }}.png" width="56px" height="56px">
-                    <h3>{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}<small id="position">{{ cw.position }}</small></h3>
-                    <a class="accordion-collaborator" data-toggle="collapse" data-parent="#accordion" href="#{{ cw.co-worker }}Info"></a>
+                    <div class="jm-acc-min-info">
+                        <img src="/assets/img/co-worker-avatars/{{ cw.co-worker }}.png" width="56px" height="56px">
+                        <h3>{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}<small id="position">{{ cw.position }}</small></h3>
+                    </div>
+                    <div class="jm-acc-open-more-info" data-toggle="tooltip" data-placement="top" title="Больше информации">
+                        <a class="accordion-collaborator" data-toggle="collapse" data-parent="#accordion" href="#{{ cw.co-worker }}Info"></a>
+                    </div>
                 </div>
                 <div class="jm-ac-cinfo" style="padding-top: 2px">
                     <div class="panel-collapse collapse" id="{{ cw.co-worker }}Info">
-                        <!-- Сайты сотрудника -->
                         {% if cw.info.web-sites %}
                         <p class="web-sites" data-ws='{{ cw.info.web-sites }}'></p>
                         {% endif %}
-
-                        <!-- Основная информация о сотруднике -->
                         <p id="base-info" data-bi="{}"></p>
 
-                        <hr>
-
                         {% if cw.other-names %}
-                        <!-- Другие прозвища сотрудника -->
                         <p class="other-names" data-on='{{ cw.other-names }}'>Также известен, как: </p>
                         {% endif %}
                     </div>

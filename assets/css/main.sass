@@ -377,21 +377,22 @@ footer
           padding: $lineWidth
       .jm-a-collaborator > .jm-ac-co-worker
         position: relative
+        width: calc(100% - 143px)
         &:before
           top: 21px
-        img
+        .jm-acc-min-info > img
           float: left
           margin-right: 9px
           border-radius: 50%
           padding: 4px
           border: $standardBorder $supportColor
-        h3
+        .jm-acc-min-info > h3
           float: left
           margin: 7.5px 0
           small
             width: 100%
             display: block
-        .accordion-collaborator
+        .jm-acc-open-more-info > .accordion-collaborator
           position: absolute
           height: 48px
           width: 48px
@@ -423,6 +424,9 @@ footer
       .jm-a-collaborator > .jm-ac-cinfo
         margin-left: ($dateWidth + ($marginLineWidth * 2) + $lineWidth) + 56px + 8px
         width: calc(100% - 207px)
+        .other-names
+          border-top: $standardBorder $lightSupportColor
+          padding-top:  6px
 
   .jm-archive
     .jm-a-line
