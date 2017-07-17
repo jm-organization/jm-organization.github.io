@@ -3,7 +3,8 @@ title: Вместе - мы сила
 author: Magicmen
 author_url: https://vk.com/jmagicmen
 published: true
-categories: Набор в команду
+category: Набор в команду
+picture: invation-in-command.jpg
 ---
 
 Наша команда состоит из 2 человек, редактора - [NESTLI](https://jm-organization.github.io/about/#NESTLI 'NESTLI') и заведующего всем - меня ([Magicmen](https://jm-organization.github.io/about/#Magicmen 'Гениральный Директор Magicmen')). И я со всем этим уже не справляюсь. Изучение новых технологий забирает много сил, а одному поднимать целый проект очень сложно. Поэтому, для тех, кто рад с нами сотрудничать, наши двери открыты.

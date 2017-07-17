@@ -214,8 +214,34 @@ footer
 
     article
       margin-bottom: 15px
-      h2
-        margin-top: 0
+      .jm-a-header
+        display: block
+        width: 100%
+        height: auto
+        margin-bottom: 7px
+        .jm-ah-picture
+          width: 61px
+          padding-right: 5px
+          display: inline-block
+          height: 100%
+          float: left
+          img
+            border: $standardBorder $supportColor
+              radius: 50%
+            padding: 3px
+        .jm-ah-header
+          width: auto
+          display: inline-block
+          float: left
+          height: auto
+          padding-bottom: 3px
+          h2
+            margin: 0
+      ul.pager
+        .vk-sender
+          background-color: #6287AE
+          &:hover
+            background-color: rgb(103, 142, 180)
       @media (max-width: 728px)
         width: inherit
         margin-bottom: 9px

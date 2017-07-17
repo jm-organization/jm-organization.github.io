@@ -207,8 +207,33 @@ footer {
       margin-bottom: 9px; }
     .page-width .page-content article {
       margin-bottom: 15px; }
-      .page-width .page-content article h2 {
-        margin-top: 0; }
+      .page-width .page-content article .jm-a-header {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 7px; }
+        .page-width .page-content article .jm-a-header .jm-ah-picture {
+          width: 61px;
+          padding-right: 5px;
+          display: inline-block;
+          height: 100%;
+          float: left; }
+          .page-width .page-content article .jm-a-header .jm-ah-picture img {
+            border: 1px solid #e2e2e2;
+              border-radius: 50%;
+            padding: 3px; }
+        .page-width .page-content article .jm-a-header .jm-ah-header {
+          width: auto;
+          display: inline-block;
+          float: left;
+          height: auto;
+          padding-bottom: 3px; }
+          .page-width .page-content article .jm-a-header .jm-ah-header h2 {
+            margin: 0; }
+      .page-width .page-content article ul.pager .vk-sender {
+        background-color: #6287AE; }
+        .page-width .page-content article ul.pager .vk-sender:hover {
+          background-color: #678eb4; }
       @media (max-width: 728px) {
         .page-width .page-content article {
           width: inherit;
