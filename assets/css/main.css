@@ -225,9 +225,8 @@ footer {
         .page-width .page-content article .jm-a-header .jm-ah-header {
           display: inline;
           float: left;
-          padding-bottom: 3px; }
-          .page-width .page-content article .jm-a-header .jm-ah-header h2 {
-            margin: 0; }
+          padding-bottom: 3px;
+          margin: 0; }
       .page-width .page-content article ul.pager .vk-sender > a {
         background-color: #6287AE; }
         .page-width .page-content article ul.pager .vk-sender > a:hover {
