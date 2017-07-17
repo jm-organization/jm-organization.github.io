@@ -38,12 +38,21 @@ title: О нас
     {% capture progress_require %}{{ require_precept | divided_by: max_collaborators }}{% endcapture %}
 
     <div class="progress">
-        <div class="progress-bar progress-bar-success" data-role="progress-now" style="width: {{ progress_now }}%">
-            <span class="sr-only">На данный момент всего {{ progress_now }}% сотрудников или ({{ value_now }}) человека.</span>
-        </div>
-        <div class="progress-bar progress-bar-warning" data-role="progress-require" style="width: {{ progress_require }}%">
-            <span class="sr-only">Нужно {{ progress_require }}% от общего количества ({{ max_collaborators }}) чтобы началась работа.</span>
-        </div>
+        <div class="progress-bar progress-bar-success"
+             data-role="progress-now"
+             style="width: {{ progress_now }}%"
+             data-toggle="tooltip"
+             data-placement="top"
+             title="На данный момент всего {{ progress_now }}% сотрудников или ({{ value_now }}) человека."
+        ><span class="sr-only">{{ progress_now }}%/{{ progress_require }}%</span></div>
+
+        <div class="progress-bar progress-bar-info"
+             data-role="progress-require"
+             style="width: {{ progress_require | minus: progress_now }}%"
+             data-toggle="tooltip"
+             data-placement="top"
+             title="Нужно {{ progress_require }}% от общего количества ({{ max_collaborators }}) чтобы началась работа."
+        ><span class="sr-only">Нужно {{ progress_require }}% из ({{ max_collaborators }}) сотрудников.</span></div>
     </div>
 
     <!-- Сотрудники -->
