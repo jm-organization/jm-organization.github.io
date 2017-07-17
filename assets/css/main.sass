@@ -414,6 +414,8 @@ footer
         width: calc(100% - 143px)
         &:before
           top: 21px
+        .jm-acc-min-info
+          display: flex
         .jm-acc-min-info > img
           float: left
           margin-right: 9px
@@ -423,6 +425,11 @@ footer
         .jm-acc-min-info > h3
           float: left
           margin: 7.5px 0
+          @media (max-width: 728px)
+            display: inline-block
+            width: calc(100% - 65px)
+            float: right
+            font-size: 16px
           small
             width: 100%
             display: block
@@ -461,6 +468,8 @@ footer
         .other-names
           border-top: $standardBorder $lightSupportColor
           padding-top:  6px
+        @media (max-width: 728px)
+          margin-left: $dateSDWidth + ($marginLineWidth * 2) + $lineWidth
 
   .jm-archive
     .jm-a-line
