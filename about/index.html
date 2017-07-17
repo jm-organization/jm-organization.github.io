@@ -28,13 +28,22 @@ title: О нас
 
     {% capture max_collaborators %}10{% endcapture %}
     {% capture min_collaborators %}1{% endcapture %}
+    {% capture require_collaborators %}4{% endcapture %}
     {% capture value_now %}{{ site.data.projectteam | size }}{% endcapture %}
 
     {% capture now_precept %}{{ value_now | times: 100 }}{% endcapture %}
-    {% capture progress %}{{ now_precept | divided_by: max_collaborators }}{% endcapture %}
+    {% capture progress_now %}{{ now_precept | divided_by: max_collaborators }}{% endcapture %}
+
+    {% capture require_precept %}{{ require_collaborators | times: 100 }}{% endcapture %}
+    {% capture progress_require %}{{ require_precept | divided_by: max_collaborators }}{% endcapture %}
 
     <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ value_now }}" aria-valuemin="{{ min_collaborators }}" aria-valuemax="{{ max_collaborators }}" style="width: {{ progress }}%"></div>
+        <div class="progress-bar progress-bar-success" data-role="progress-now" style="width: {{ progress_now }}%">
+            <span class="sr-only">На данный момент всего {{ progress_now }}% сотрудников или ({{ value_now }}) человека.</span>
+        </div>
+        <div class="progress-bar progress-bar-warning" data-role="progress-require" style="width: {{ progress_require }}%">
+            <span class="sr-only">Нужно {{ progress_require }}% от общего количества ({{ max_collaborators }}) чтобы началась работа.</span>
+        </div>
     </div>
 
     <!-- Сотрудники -->
