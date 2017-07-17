@@ -208,7 +208,7 @@ footer {
     .page-width .page-content article {
       margin-bottom: 15px; }
       .page-width .page-content article .jm-a-header {
-        display: block;
+        display: flex;
         width: 100%;
         height: auto;
         margin-bottom: 7px; }
@@ -223,16 +223,14 @@ footer {
               border-radius: 50%;
             padding: 3px; }
         .page-width .page-content article .jm-a-header .jm-ah-header {
-          width: auto;
-          display: inline-block;
+          display: inline;
           float: left;
-          height: auto;
           padding-bottom: 3px; }
           .page-width .page-content article .jm-a-header .jm-ah-header h2 {
             margin: 0; }
-      .page-width .page-content article ul.pager .vk-sender {
+      .page-width .page-content article ul.pager .vk-sender > a {
         background-color: #6287AE; }
-        .page-width .page-content article ul.pager .vk-sender:hover {
+        .page-width .page-content article ul.pager .vk-sender > a:hover {
           background-color: #678eb4; }
       @media (max-width: 728px) {
         .page-width .page-content article {
