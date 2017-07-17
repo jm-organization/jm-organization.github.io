@@ -16,9 +16,9 @@ title: Главная
 
     <ul class="pager">
         <li class="next" style="float: left!important;"><a href="{{ post.url }}">Подробнее &rarr;</a></li>
-        <li style="float: left!important;">
+        <li style="float: left!important; padding-left: 5px;">
             <a class="twitter-share-button"
-               href="https://twitter.com/intent/tweet?text={{ post.title }}&url{{ post.url | replace: '/', '%2F' | replace: ':', '%3A'}}"
+               href="https://twitter.com/intent/tweet?text={{ post.title }}. {{ post.url }}"
             >Поделиться</a>
         </li>
     </ul>
