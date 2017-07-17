@@ -16,6 +16,11 @@ title: Главная
 
     <ul class="pager">
         <li class="next" style="float: left!important;"><a href="{{ post.url }}">Подробнее &rarr;</a></li>
+        <li style="float: left!important;">
+            <a class="twitter-share-button"
+               href="https://twitter.com/intent/tweet?text={{ post.title }}&url{{ post.url | replace: '/', '%2F' | replace: ':', '%3A'}}"
+            >Поделиться</a>
+        </li>
     </ul>
 </article>
 {% endif %}
