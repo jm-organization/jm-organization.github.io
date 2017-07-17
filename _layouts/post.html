@@ -14,19 +14,19 @@ title: page.title
 
 <div class="jm-social-sender">
     {% if site.vk-support %}
-    <p class="jm-ss-vk">
+    <div class="jm-ss-vk">
         <script type="text/javascript">
             document.write(VK.Share.button(false,{
                 type: "round_nocount", text: "Поделиться"
             }));
         </script>
-    </p>
+    </div>
     {% endif %}
 
-    <p class="jm-ss-tweeter">
+    <div class="jm-ss-tweeter">
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Твитнуть</a>
-    </p>
+    </div>
 </div>
 
 {% if site.comments %}
