@@ -227,10 +227,6 @@ footer {
           float: left;
           padding-bottom: 3px;
           margin: 0; }
-      .page-width .page-content article ul.pager .vk-sender > a {
-        background-color: #6287AE; }
-        .page-width .page-content article ul.pager .vk-sender > a:hover {
-          background-color: #678eb4; }
       @media (max-width: 728px) {
         .page-width .page-content article {
           width: inherit;
@@ -254,6 +250,10 @@ footer {
         .page-width .page-content .jm-article p h3 {
           text-align: left;
           font-weight: bold; }
+    .page-width .page-content .jm-social-sender {
+      display: block;
+      margin-bottom: 15px;
+      height: auto; }
     .page-width .page-content .jm-comments .jm-comments-title {
       margin-top: 35px; }
       .page-width .page-content .jm-comments .jm-comments-title .jm-pager {
