@@ -206,19 +206,19 @@ footer {
     .page-width .page-content .jm-a-title {
       margin-bottom: 9px; }
     .page-width .page-content article {
-      padding: 24px;
-      border-radius: 4px;
-      border: 1px solid #e2e2e2;
       margin-bottom: 15px; }
+      .page-width .page-content article h2 {
+        margin-top: 0; }
       @media (max-width: 728px) {
         .page-width .page-content article {
           width: inherit;
-          padding: 12px;
           margin-bottom: 9px; }
           .page-width .page-content article h2 {
             margin: 0 0 8px; }
           .page-width .page-content article ul.pager {
             margin-bottom: 0; } }
+      .page-width .page-content article .jm-a-category {
+        margin: 0; }
     .page-width .page-content .jm-article {
       text-align: justify; }
       .page-width .page-content .jm-article p {

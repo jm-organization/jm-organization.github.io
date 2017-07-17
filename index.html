@@ -5,21 +5,22 @@ title: Главная
 
 {% for post in paginator.posts %}
 {% if post.published %}
-<article>
-    <h2><b>{{ post.title }}</b></h2>
+<article class="panel panel-default">
+    <div class="panel-body">
+        <h2><b>{{ post.title }}</b></h2>
 
-    {% if post.author or post.date %}
-    <p>{% if post.date %}{{ post.date | date: '%d.%m.%Y' }}{% endif %}, {% if post.author %}Опубликовал <strong>{% if post.author_url %}<a href="{{ post.author_url }}" target="_blank">{% endif %}{{ post.author }}{% if post.author_url %}</a>{% endif %}</strong>{% endif %}</p>
-    {% endif %}
+        {% if post.author or post.date %}
+        <p>{% if post.date %}{{ post.date | date: '%d.%m.%Y' }}{% endif %}, {% if post.author %}Опубликовал <strong>{% if post.author_url %}<a href="{{ post.author_url }}" target="_blank">{% endif %}{{ post.author }}{% if post.author_url %}</a>{% endif %}</strong>{% endif %}</p>
+        {% endif %}
 
-    {{ post.excerpt }}
+        {{ post.excerpt }}
 
-    <ul class="pager">
-        <li class="next" style="float: left!important;"><a href="{{ post.url }}">Подробнее &rarr;</a></li>
-        <li style="float: left!important; padding-left: 5px;">
-            <a class="twitter-share-button"
-                href="https://twitter.com/intent/tweet?text={{ post.title }}. https://jm-organization.github.io{{ post.url }}"
-            ><span style="
+        <ul class="pager">
+            <li class="next" style="float: left!important;"><a href="{{ post.url }}">Подробнее &rarr;</a></li>
+            <li style="float: left!important; padding-left: 5px;">
+                <a class="twitter-share-button"
+                   href="https://twitter.com/intent/tweet?text={{ post.title }}. https://jm-organization.github.io{{ post.url }}"
+                ><span style="
                 background: url(https://abs.twimg.com/a/1500006089/img/t1/favicon.svg) no-repeat center 0;
                 width: 20px;
                 height: 20px;
@@ -27,9 +28,13 @@ title: Главная
                 background-size: contain;
                 float: left;
                 margin-right: 5px"
-            ></span>Поделиться</a>
-        </li>
-    </ul>
+                ></span>Поделиться</a>
+            </li>
+        </ul>
+    </div>
+    <div class="panel-footer">
+        <p class="jm-a-category"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;{{ post.category }}</p>
+    </div>
 </article>
 {% endif %}
 {% endfor %}
