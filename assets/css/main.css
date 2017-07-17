@@ -257,8 +257,9 @@ footer {
       .page-width .page-content .jm-social-sender [class^="jm-ss-"],
       .page-width .page-content .jm-social-sender [class*=" jm-ss-"] {
         display: inline-block;
-        float: left;
-        padding-right: 6p; }
+        padding-right: 6px; }
+      .page-width .page-content .jm-social-sender .jm-ss-vk a {
+        padding-bottom: 3px !important; }
     .page-width .page-content .jm-comments .jm-comments-title {
       margin-top: 35px; }
       .page-width .page-content .jm-comments .jm-comments-title .jm-pager {
