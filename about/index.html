@@ -31,7 +31,7 @@ title: О нас
     {% capture value_now %}{{ site.data.projectteam | size }}{% endcapture %}
 
     {% capture now_precept %}{{ value_now | times: 100 }}{% endcapture %}
-    {% capture progress %}{{ value_now | divided_by: max_collaborators }}{% endcapture %}
+    {% capture progress %}{{ now_precept | divided_by: max_collaborators }}{% endcapture %}
 
     <div class="progress">
         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ value_now }}" aria-valuemin="{{ min_collaborators }}" aria-valuemax="{{ max_collaborators }}" style="width: {{ progress }}%"></div>
