@@ -60,20 +60,11 @@ title: Главная
 
         <li>
             {% if paginator.previous_page %}
-            <a href="/">&laquo;</a>
-            {% else %}
-            <span>&laquo;</span>
-            {% endif %}
-        </li>
-        <li>
-            {% if paginator.previous_page %}
             <a href="{{ paginator.previous_page_path }}">&laquo;</a>
             {% else %}
             <span>&laquo;</span>
             {% endif %}
         </li>
-
-        <li></li>
 
         {% for page in (start..end) %}
         {% if page == paginator.page %}
@@ -89,18 +80,9 @@ title: Главная
         </li>
         {% endfor %}
 
-        <li></li>
-
         <li>
             {% if paginator.next_page %}
             <a href="{{ paginator.next_page_path }}">&raquo;</i></a>
-            {% else %}
-            <span>&raquo;</span>
-            {% endif %}
-        </li>
-        <li>
-            {% if paginator.next_page %}
-            <a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}">&raquo;</a>
             {% else %}
             <span>&raquo;</span>
             {% endif %}
