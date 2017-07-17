@@ -405,7 +405,7 @@ footer {
           .page-width .jm-a-co-workers .jm-a-events .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-title,
           .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker {
             word-wrap: break-word;
-            max-width: 220px; } }
+            width: calc(100% - 56px) !important; } }
         .page-width .jm-archive .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-title:before,
         .page-width .jm-archive .jm-a-events .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-archive .jm-a-collaborators .jm-a-year-block > .jm-archive-article > .jm-aa-title:before,
         .page-width .jm-archive .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-about .jm-a-events .jm-a-year-block > .jm-archive-article > .jm-aa-title:before,
