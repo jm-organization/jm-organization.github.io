@@ -13,13 +13,20 @@ title: page.title
 </div>
 
 <div class="jm-social-sender">
-    <script type="text/javascript">
-        document.write(VK.Share.button(false,{
-            type: "round_nocount", text: "Поделиться"
-        }));
-    </script>
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Твитнуть</a>
+    {% if site.vk-support %}
+    <p class="jm-ss-vk">
+        <script type="text/javascript">
+            document.write(VK.Share.button(false,{
+                type: "round_nocount", text: "Поделиться"
+            }));
+        </script>
+    </p>
+    {% endif %}
+
+    <p class="jm-ss-tweeter">
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Твитнуть</a>
+    </p>
 </div>
 
 {% if site.comments %}

@@ -31,29 +31,35 @@
 		<div class="jm-warp warp-button-to-top">
 			<a data-href="@to-top" data-toggle="tooltip" data-placement="top" title="Наверх"><span class="glyphicon glyphicon-arrow-up"></span></a>
 		</div>
-		
+
+		{% if site.vk-support %}
 		<!-- VK Widget -->
 		<div id="vk_community_messages"></div>
+		{% endif %}
 
 		{% include jm_inline_script.html %}
 
+		{% if site.vk-support %}
+		<!-- VK Scripts -->
 		<script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
 
 		<script type="text/javascript">
 			VK.Widgets.CommunityMessages(
-				"vk_community_messages", 149345104, {
-					disableExpandChatSound: "1",
-					disableNewMessagesSound: "1"
-				}
+					"vk_community_messages", 149345104, {
+						disableExpandChatSound: "1",
+						disableNewMessagesSound: "1"
+					}
 			);
 			VK.Widgets.Group(
-				"vk_groups", {
-					mode: 3,
-					width: "250",
-					color3: '428BCA'},
-				149345104
+					"vk_groups", {
+						mode: 3,
+						width: "250",
+						color3: '428BCA'},
+					149345104
 			);
 		</script>
+		{% endif %}
+
 		<!-- Google Analytics -->
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
