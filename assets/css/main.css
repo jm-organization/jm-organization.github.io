@@ -251,13 +251,14 @@ footer {
           text-align: left;
           font-weight: bold; }
     .page-width .page-content .jm-social-sender {
-      display: block;
+      display: flex;
       margin-bottom: 15px;
       height: auto; }
       .page-width .page-content .jm-social-sender [class^="jm-ss-"],
       .page-width .page-content .jm-social-sender [class*=" jm-ss-"] {
         display: inline-block;
-        padding-right: 6px; }
+        padding-right: 6px;
+        float: left; }
       .page-width .page-content .jm-social-sender .jm-ss-vk a {
         padding-bottom: 3px !important; }
     .page-width .page-content .jm-comments .jm-comments-title {
