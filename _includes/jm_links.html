@@ -1,0 +1,19 @@
+<!-- head::icon -->
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="/favicon.ico" rel="icon" type="image/x-icon" />
+
+<!-- head::css -->
+<link rel="stylesheet" href="/assets/css/main.css" />
+<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
+
+<!-- head::js -->
+<script src="/assets/js/jquery.min.js" ></script>
+<script src="/assets/bootstrap/js/bootstrap.js" ></script>
+<script src="/assets/js/jm.js" ></script>
+{% if page.url == '/' %}<script src="/assets/js/jm_header.js" ></script>{% endif %}
+{% if page.url == '/about/' %}<script src="/assets/js/jm_about.js" ></script>{% endif %}
+<script src="/assets/js/jm_tags.js" ></script>
+
+{% if site.vk-support %}
+<script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
+{% endif %}
