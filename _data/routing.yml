@@ -1,18 +1,14 @@
-jmorg:
-  title: "JM Organization"
+main-title: "JM Organization"
+main-url: "https://jm-organization.github.io/"
+
+- title: "Главная"
   url: "https://jm-organization.github.io/"
 
-  - home:
-    title: "Главная"
-    url: "https://jm-organization.github.io/"
+- title: "О нас"
+  url: "https://jm-organization.github.io/"
 
-  - about:
-    title: "О нас"
-    url: "https://jm-organization.github.io/"
-    - contacts:
-      title: "Контакты"
-      url: "https://jm-organization.github.io/"
+- title: "Контакты"
+  url: "https://jm-organization.github.io/"
 
-  - portfolio:
-    title: "Портфолио"
-    url: "https://jm-organization.github.io/"
+- title: "Портфолио"
+  url: "https://jm-organization.github.io/"
