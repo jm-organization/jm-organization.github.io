@@ -5,7 +5,7 @@
     "@gray": "lighten(#000, 33.5%)",
     "@gray-light": "lighten(#000, 60%)",
     "@gray-lighter": "lighten(#000, 93.5%)",
-    "@brand-primary": "#428bca",
+    "@brand-primary": "#EB5D42",
     "@brand-success": "#5cb85c",
     "@brand-info": "#5bc0de",
     "@brand-warning": "#f0ad4e",
@@ -82,7 +82,7 @@
     "@input-color": "@gray",
     "@input-border": "#ccc",
     "@input-border-radius": "@border-radius-base",
-    "@input-border-focus": "#66afe9",
+    "@input-border-focus": "#E97766",
     "@input-color-placeholder": "@gray-light",
     "@input-height-base": "(@line-height-computed + (@padding-base-vertical * 2) + 2)",
     "@input-height-large": "(ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2)",
@@ -409,5 +409,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://bootstrap-3.ru/customize.php?id=4a03b99217a07556d67c43bb1b968fb7"
+  "customizerUrl": "http://bootstrap-3.ru/customize.php?id=28c619446f592b0780c3f4070b4fad89"
 }
