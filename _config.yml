@@ -16,4 +16,6 @@ paginate_path: "/posts/page-:num/"
 url: 'http://teamcofh.com'
 
 comments: true
+hidecollaboratorinfo: false
+
 vk-support: true
