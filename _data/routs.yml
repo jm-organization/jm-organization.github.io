@@ -1,0 +1,19 @@
+jmorg:
+  title: "JM Organization"
+  url: "/"
+
+  - home:
+    title: "Главная"
+    url: "/home/"
+
+  - about:
+    title: "О нас"
+    url: "/about/"
+
+  - portfolio:
+    title: "Портфолио"
+    url: "/portfolio/"
+
+  - contacts:
+    title: "Контакты"
+    url: "/contact/"
