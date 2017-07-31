@@ -17,6 +17,36 @@ footer
  * JMORG USER INTERFACE
  * by @Magicfar4 (https://vk.com/jmagicmen)
  */
+//JmorgUi
+.jmorgui[tohome]
+  width: $width
+  height: auto
+  text-align: center
+
+//Head-navigation
+.jmorgui-head
+  @extend .jmorgui-page
+  height: $menuHeight
+  padding: ($logotypeHeight - $menuHeight) 0
+
+//Logotype
+
+//Page-warper
+.jmorgui-page
+  width: $pageWidth
+  margin: 0 auto
+
+//Footer
+.jmorgui-footer
+  @extend .jmorgui-page
+
+//Images
+.jmorgui-image
+  background: $canvasColor no-repeat center 0
+.image-jm-organization
+  background-image: url(/assets/img/jm-background.png)
+
+//Buttons
 .jmorgui-button
   display: inline-block
   margin-bottom: 0
@@ -40,11 +70,6 @@ footer
 .btn-white
   border-color: $baseColor!important
   &:hover
-    background: rgba(255, 255, 255, 0.1)
+    background: rgba(255, 255, 255, 0.8)
   &:active, &:focus
     background: $baseColor
-
-.jmorgui-image
-  background: $canvasColor no-repeat center 0
-.image-jm-organization
-  background-image: url(/assets/img/jm-background.png)
