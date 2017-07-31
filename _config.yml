@@ -1,5 +1,5 @@
-- main-title: "JM Organization"
-  main-url: "https://jm-organization.github.io/"
+main-title: "JM Organization"
+main-url: "https://jm-organization.github.io/"
 
 exclude:
   - README.md
