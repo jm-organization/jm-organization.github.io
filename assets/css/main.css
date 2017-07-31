@@ -11,6 +11,12 @@ footer {
   width: 100%; }
 
 /* Page */
+.jmorg {
+  background: #f4f4f4 no-repeat center 0; }
+
+.image-jm-organization {
+  background-image: url(/assets/img/jm-background.png); }
+
 .page-width {
   width: 92%;
   max-width: 1024px;
