@@ -12,198 +12,39 @@ footer
   margin-bottom: 48px
   width: 100%
 
-/* Page */
-.jmorg
+/*
+ * @jmorgui
+ * JMORG USER INTERFACE
+ * by @Magicfar4 (https://vk.com/jmagicmen)
+ */
+.jmorgui-button
+  display: inline-block
+  margin-bottom: 0
+  font-weight: 400
+  text-align: center
+  vertical-align: middle
+  cursor: pointer
+  background-image: none
+  border: $heavyBorder transparent
+  white-space: nowrap
+  padding: 6px 12px
+  font-size: 14px
+  line-height: 1.42857143
+  border-radius: 0
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  outline: none
+  background: transparent
+.btn-white
+  border-color: $baseColor!important
+  &:hover
+    background: rgba(255, 255, 255, 0.1)
+  &:active, &:focus
+    background: $baseColor
+
+.jmorgui-image
   background: $canvasColor no-repeat center 0
 .image-jm-organization
   background-image: url(/assets/img/jm-background.png)
-
-.page-width
-  width: $pageWidth
-  max-width: $maxWidth
-  margin: 0 auto 48px
-  padding-top: 20px
-  display: flex
-  @media (max-width: 728px)
-    width: $width - 5%
-    margin: 0 auto 48px
-    padding: 0
-    display: flex
-
-  .page-content
-    width: calc(100% - 265px)
-    height: auto
-    display: inline-block
-    @media (max-width: 728px)
-      width: $width
-      height: auto
-      float: left
-
-  .jm-a-co-workers
-    $dateWidth: 116px
-    $dateSDWidth: 56px
-    $marginLineWidth: 12px
-    $lineWidth: 3px
-    $deviderWH: 15px
-    $paddingCoWorker: 15.5px
-
-    position: relative
-
-    .jm-a-line
-      width: $lineWidth
-      margin: 0 $marginLineWidth
-      height: 100%
-      position: absolute
-      z-index: -1
-      left: $dateWidth
-      @media (max-width: 728px)
-        left: $dateSDWidth
-      &:before
-        position: absolute
-        z-index: 1
-        left: -6px
-        bottom: -6px
-        content: ''
-        width: $deviderWH
-        height: $deviderWH
-        border: ($lineWidth * 2) solid $baseColor
-          radius: 50%
-        background: $supportColor
-      &:after
-        content: ''
-        position: absolute
-        z-index: 2
-        left: -6px
-        bottom: -6px
-        width: $deviderWH
-        height: $deviderWH
-        background: transparent
-        border: $lineWidth solid $supportColor
-          radius: 50%
-        padding: $lineWidth
-
-    .jm-a-collaborators
-      position: relative
-      width: 100%
-      display: inline-block
-
-      .jm-a-year-block > .jm-a-year
-        background: $baseColor
-        border-bottom: $lineWidth solid $supportColor
-        line-height: 36px
-        font-size: 26px
-
-      .jm-a-collaborator
-        margin-top: 15px
-
-      .jm-a-collaborator > .jm-ac-date
-        position: relative
-        width: $dateWidth
-        display: inline-block
-        text-align: right
-        float: left
-        line-height: 25px
-        @media (max-width: 728px)
-          width: $dateSDWidth
-        &:after
-          position: absolute
-          z-index: 1
-          right: -21px
-          top: 4px
-          content: ''
-          width: $deviderWH
-          height: $deviderWH
-          border: ($lineWidth * 2) solid $baseColor
-            radius: 50%
-          background: $supportColor
-      .jm-a-collaborator > .jm-ac-date
-        height: 26px
-        padding: 15.5px 0
-        &:after
-          top: 21px
-      .jm-a-collaborator > .jm-ac-co-worker
-        position: relative
-        display: inline-block
-        padding-left: $marginLineWidth * 2
-        line-height: 25px
-        font-size: 23px
-        float: left
-        @media (max-width: 728px)
-          word-wrap: break-word
-          width: calc(100% - 56px)!important
-        &:before
-          content: ''
-          position: absolute
-          z-index: 2
-          left: 6px
-          top: 4px
-          width: $deviderWH
-          height: $deviderWH
-          background: transparent
-          border: $lineWidth solid $supportColor
-            radius: 50%
-          padding: $lineWidth
-      .jm-a-collaborator > .jm-ac-co-worker
-        position: relative
-        width: calc(100% - 143px)
-        &:before
-          top: 21px
-        .jm-acc-min-info
-          display: flex
-        .jm-acc-min-info > img
-          float: left
-          margin-right: 9px
-          border-radius: 50%
-          padding: 4px
-          border: $standardBorder $supportColor
-        .jm-acc-min-info > h3
-          float: left
-          margin: 7.5px 0
-          @media (max-width: 728px)
-            display: inline-block
-            width: calc(100% - 65px)
-            float: right
-            font-size: 16px
-          small
-            width: 100%
-            display: block
-        .jm-acc-open-more-info > .accordion-collaborator
-          position: absolute
-          height: 48px
-          width: 48px
-          right: 0
-          margin: 8px
-          border-radius: 4px
-          &:hover
-            background: $supportColor
-          &:before
-            position: absolute
-            content: ''
-            width: 9px
-            height: 9px
-            border:
-              right: $standardBorder $darkSupportColor
-              bottom: $standardBorder $darkSupportColor
-            transform: rotate(45deg)
-            top: 19px
-            left: 19px
-            display: inline-block
-      .jm-a-collaborator > .jm-ac-cinfo
-        display: inline-block
-        margin-left: $dateWidth + ($marginLineWidth * 2) + $lineWidth
-        padding-top: 9px
-        width: calc(100% - 143px)
-        @media (max-width: 728px)
-          margin-left: $dateSDWidth + ($marginLineWidth * 2) + $lineWidth
-      .jm-a-collaborator > .jm-ac-cinfo
-        margin-left: ($dateWidth + ($marginLineWidth * 2) + $lineWidth) + 56px + 8px
-        width: calc(100% - 207px)
-        .other-names
-          border-top: $standardBorder $lightSupportColor
-          padding-top:  6px
-        @media (max-width: 728px)
-          margin-left: $dateSDWidth + ($marginLineWidth * 2) + $lineWidth
-
-  .jm-a-co-workers
-    .jm-a-line
-      background: linear-gradient(to top, $supportColor 88%, $baseColor)
