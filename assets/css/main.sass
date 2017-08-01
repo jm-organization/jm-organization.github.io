@@ -1,8 +1,5 @@
 @import "variables"
 
-@function setBackgroundCenter($image)
-  @return url($image) no-repeat center 0
-
 /* Sample */
 body
   background: $baseColor
@@ -16,7 +13,7 @@ footer
   width: 100%
 
 .b1-verstka
-  background: setBackgroundCenter('/assets/img/jm-background/b1-verstka.png')
+  background: url(/assets/img/jm-background/b1-verstka.png) no-repeat center 0
   background-position-y: 25px
   width: 100%
   height: 628px
