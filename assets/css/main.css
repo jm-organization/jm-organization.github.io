@@ -14,18 +14,37 @@ footer {
  * JMORG USER INTERFACE
  * by @Magicfar4 (https://vk.com/jmagicmen)
  */
-.jmorgui[tohome] {
+.jmorgui[jm-action="tosrc"] {
+  float: right;
+  margin: 14.5px 0;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.jmorgui[jm-action="tohome"] {
   width: 100%;
   height: auto;
-  text-align: center; }
+  text-align: center;
+  padding: 35px 0; }
+  .jmorgui[jm-action="tohome"] .jmorgui-button {
+    font-size: 25px;
+    font-weight: bold; }
 
 .jmorgui-head {
   height: 96px;
-  padding: -16px 0; }
+  padding: 16px 0; }
+
+.jmorgui-logotype {
+  width: auto;
+  display: inline-block; }
 
 .jmorgui-page, .jmorgui-head, .jmorgui-footer {
   width: 92%;
   margin: 0 auto; }
+
+.jmorgui-page, .jmorgui-head, .jmorgui-footer {
+  font-size: 35px;
+  color: #e2e2e2;
+  text-align: center; }
 
 .jmorgui-image {
   background: #f4f4f4 no-repeat center 0; }
@@ -52,13 +71,19 @@ footer {
   -ms-user-select: none;
   user-select: none;
   outline: none;
-  background: transparent; }
+  background: transparent;
+  text-decoration: none; }
+  .jmorgui-button:hover {
+    text-decoration: none; }
 
 .btn-white {
-  border-color: white !important; }
+  border-color: white !important;
+  color: white; }
   .btn-white:hover {
-    background: rgba(255, 255, 255, 0.8); }
+    background: rgba(255, 255, 255, 0.8);
+    color: #868686; }
   .btn-white:active, .btn-white:focus {
-    background: white; }
+    background: white;
+    color: #2e2e2e; }
 
 /*# sourceMappingURL=main.css.map */

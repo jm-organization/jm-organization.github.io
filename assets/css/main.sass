@@ -18,23 +18,41 @@ footer
  * by @Magicfar4 (https://vk.com/jmagicmen)
  */
 //JmorgUi
-.jmorgui[tohome]
+.jmorgui[jm-action="tosrc"]
+  float: right
+  margin: 14.5px 0
+  font-weight: bold
+  text-transform: uppercase
+.jmorgui[jm-action="tohome"]
   width: $width
   height: auto
   text-align: center
+  padding: 35px 0
+  .jmorgui-button
+    font-size: 25px
+    font-weight: bold
 
 //Head-navigation
 .jmorgui-head
   @extend .jmorgui-page
   height: $menuHeight
-  padding: (($logotypeHeight - $menuHeight) / 2) 0
+  padding: (($menuHeight - $logotypeHeight) / 2) 0
 
 //Logotype
+.jmorgui-logotype
+  width: auto
+  display: inline-block
 
 //Page-warper
 .jmorgui-page
   width: $pageWidth
   margin: 0 auto
+
+.jmorgui-page
+  @extend .jmorgui-page
+  font-size: 35px
+  color: #e2e2e2
+  text-align: center
 
 //Footer
 .jmorgui-footer
@@ -67,9 +85,15 @@ footer
   user-select: none
   outline: none
   background: transparent
+  text-decoration: none
+  &:hover
+    text-decoration: none
 .btn-white
-  border-color: $baseColor!important
+  border-color: white!important
+  color: white
   &:hover
     background: rgba(255, 255, 255, 0.8)
+    color: $mediumTextColor
   &:active, &:focus
-    background: $baseColor
+    background: white
+    color: $ultraTextColor
