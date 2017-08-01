@@ -7,6 +7,26 @@
     {% include jm_links.html %}
 </head>
 <body class="jmorgui-image image-jm-organization">
-    {{ content }}
+<div class="jmorgui-preview">
+    <div class="jmorgui-head">
+        <div class="jmorgui-logotype">
+            <img src="/assets/img/jm-logotypes/jm-logotype-standart.png">
+        </div>
+        <a class="jmorgui jmorgui-button btn-white"
+           href="https://github.com/jm-organization/jm-organization.github.io"
+           jm-action="tosrc"
+        >SRC</a>
+    </div>
+
+    <div class="jmorgui-about">
+        {{ content }}
+    </div>
+
+    <div class="jmorgui" jm-action="tohome">
+        <a class="jmorgui-button btn-white" href="/home">Подробнее</a>
+    </div>
+
+    <div class="jmorgui-footer preview-footer"></div>
+</div>
 </body>
 </html>
