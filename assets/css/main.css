@@ -37,11 +37,11 @@ footer {
   width: auto;
   display: inline-block; }
 
-.jmorgui-page, .jmorgui-head, .jmorgui-footer {
+.jmorgui-page, .jmorgui-head, .jmorgui-preview, .jmorgui-footer {
   width: 92%;
   margin: 0 auto; }
 
-.jmorgui-page, .jmorgui-head, .jmorgui-footer {
+.jmorgui-preview {
   font-size: 35px;
   color: #e2e2e2;
   text-align: center; }
