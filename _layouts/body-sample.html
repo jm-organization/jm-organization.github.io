@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>JM Organization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% include jm_links.html %}
 </head>
 <body>
     {% include jm_nav-bar.html %}
 
-    {{ content }}
+    <section class="page-warp">
+        {{ content }}
+    </section>
+
+    {% include jm_footer.html %}
 </body>
 </html>

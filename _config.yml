@@ -13,4 +13,6 @@ gems:
 comments: true
 hidecollaboratorinfo: false
 
-vk-support: true
+vk-support: false
+fb-support: false
+tweeter-dupport: false
