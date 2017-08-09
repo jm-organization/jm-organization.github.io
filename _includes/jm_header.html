@@ -1,12 +1,3 @@
-<div class="navigation {% if page.url == '/' %}navbar-fixed-top{% endif %}" {% if page.url != '/' %} style="border-bottom: 1px solid #e2e2e2" {% endif %} id="navigation" >
-	{% if page.url == '/' %}<div class="jm-layer nav-layer"></div>{% endif %}
-
-	<nav class="nav nav-pills page-width" >
-		{% include jm_navigation.html %}
-	</nav>
-</div>
-
-
 {% if page.url == '/' %}
 <header class="jm-header hidden-xs visible-md visible-lg">
 	<div class="jm-layer" ></div>
@@ -52,4 +43,12 @@
 	</div>
 </header>
 {% endif %}
+
+<div class="navigation {% if page.url == '/' %}navbar-fixed-top{% endif %}" {% if page.url != '/' %} style="border-bottom: 1px solid #e2e2e2" {% endif %} id="navigation" >
+	{% if page.url == '/' %}<div class="jm-layer nav-layer"></div>{% endif %}
+
+	<nav class="nav nav-pills page-width" >
+		{% include jm_navigation.html %}
+	</nav>
+</div>
 
