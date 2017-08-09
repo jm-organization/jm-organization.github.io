@@ -62,26 +62,31 @@
 				{% include jm_navigation.html %}
 			</ul>
 
-			<!-- <form class="navbar-form navbar-left" role="search">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search">
-				</div>
-				<button type="submit" class="btn btn-default">Отправить</button>
-			</form> -->
+			<form class="navbar-form navbar-left" role="search">
+				<fieldset disabled>
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control">
+
+							<div class="input-group-btn">
+								<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right">
+									<li><a href="#">Действие</a></li>
+									<li><a href="#">Другое действие</a></li>
+									<li><a href="#">Что-то иное</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Отдельная ссылка</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>
 
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="https://github.com/jm-organization/jm-organization.github.io" target="_blank">Src</a></li>
-
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Действие</a></li>
-						<li><a href="#">Другое действие</a></li>
-						<li><a href="#">Что-то еще</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Отдельная ссылка</a></li>
-					</ul>
-				</li>
 			</ul>
 		</div>
 	</div>
