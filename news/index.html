@@ -4,7 +4,6 @@ title: Новости
 ---
 
 {% for post in paginator.posts %}
-{% if post.published %}
 <article class="panel panel-default">
     <div class="panel-body">
         <div class="jm-a-header">
@@ -28,7 +27,6 @@ title: Новости
         <p class="jm-a-category"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;{{ post.category }}</p>
     </div>
 </article>
-{% endif %}
 {% endfor %}
 
 <center class="jm-pagination">
