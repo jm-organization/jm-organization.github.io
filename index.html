@@ -1,6 +1,92 @@
 ---
-layout: body-preview
+layout: body-sample
+title: Главная
 ---
 
-<a href="/news" >more >></a>
+{% for post in paginator.posts %}
+{% if post.published %}
+<article class="panel panel-default">
+    <div class="panel-body">
+        <div class="jm-a-header">
+            <div class="jm-ah-picture">
+                <img src="/assets/img/news_picture/{{ post.picture }}" width="56px" height="56px">
+            </div>
+            <h2 class="jm-ah-header"><b>{{ post.title }}</b></h2>
+        </div>
+
+        {% if post.author or post.date %}
+        <p class="text-muted">{% if post.date %}{{ post.date | date: '%d.%m.%Y' }}{% endif %}, {% if post.author %}Опубликовал <strong>{% if post.author_url %}<a href="{{ post.author_url }}" target="_blank">{% endif %}{{ post.author }}{% if post.author_url %}</a>{% endif %}</strong>{% endif %}</p>
+        {% endif %}
+
+        {{ post.excerpt }}
+
+        <ul class="pager">
+            <li class="next" style="float: left!important;"><a href="{{ post.url }}">Подробнее &rarr;</a></li>
+        </ul>
+    </div>
+    <div class="panel-footer">
+        <p class="jm-a-category"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;{{ post.category }}</p>
+    </div>
+</article>
+{% endif %}
+{% endfor %}
+
+<center class="jm-pagination">
+    <ul class="pagination">
+        {% assign max_buttons = 5 %}
+
+        {% assign max_buttons_sides = max_buttons | minus: 1 | divided_by: 2 %}
+        {% assign max_buttons_left = max_buttons_sides | floor %}
+        {% assign max_buttons_right = max_buttons_sides | ceil %}
+
+        {% assign start = paginator.page | minus: max_buttons_left %}
+        {% if start < 1 %}{% assign start = 1 %}{% endif %}
+        {% assign end = paginator.page | plus: max_buttons_right %}
+        {% if end > paginator.total_pages %}{% assign end = paginator.total_pages %}{% endif %}
+
+        {% assign current_start_diff = paginator.page | minus: start %}
+        {% assign current_end_diff = end | minus: paginator.page %}
+
+        {% if current_start_diff < max_buttons_left %}
+        {% assign start = 1 %}
+        {% assign end = max_buttons %}
+        {% if end > paginator.total_pages %}{% assign end = paginator.total_pages %}{% endif %}
+        {% endif %}
+        {% if current_end_diff < max_buttons_right %}
+        {% assign start = paginator.total_pages | plus: 1 | minus: max_buttons %}
+        {% if start < 1 %}{% assign start = 1 %}{% endif %}
+        {% assign end = paginator.total_pages %}
+        {% endif %}
+
+        <li>
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}">&laquo;</a>
+            {% else %}
+            <span>&laquo;</span>
+            {% endif %}
+        </li>
+
+        {% for page in (start..end) %}
+        {% if page == paginator.page %}
+        {% capture link %}<span>{{ page }}</span>{% endcapture %}
+        {% elsif page == 1 %}
+        {% capture link %}<a href="/">{{ page }}</a>{% endcapture %}
+        {% else %}
+        {% capture link %}<a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>{% endcapture %}
+        {% endif %}
+
+        <li{% if page == paginator.page %} class="active"{% endif %}>
+        {{ link }}
+        </li>
+        {% endfor %}
+
+        <li>
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}">&raquo;</i></a>
+            {% else %}
+            <span>&raquo;</span>
+            {% endif %}
+        </li>
+    </ul>
+</center>
 

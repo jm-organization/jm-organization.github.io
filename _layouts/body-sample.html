@@ -18,7 +18,7 @@
 	<body>
 		{% include jm_header.html %}
 
-		<section style="padding-top: 0">
+		<section{% if page.url != '/' %} style="padding-top: 0"{% endif %}>
 			<div class="page-width">
 				<div class="page-content" data-name="content">{{ content }}</div>
 

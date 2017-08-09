@@ -6,3 +6,50 @@
 	</nav>
 </div>
 
+
+{% if page.url == '/' %}
+<header class="jm-header hidden-xs visible-md visible-lg">
+	<div class="jm-layer" ></div>
+
+	<div id="header_carousel" class="carousel slide" data-ride="carousel" style="z-index: 5">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#header_carousel" data-slide-to="0" class="active"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+
+			<div class="item active" id="header0" >
+				<div class="jm-layer2 to-bottom" ></div>
+
+				<div data-role="img" style="background-image: url('/assets/img/background-picture/header1.png')"></div>
+
+				<div class="carousel-caption">
+					<h3 class="text">Чат La Friend</h3>
+					<p class="text">Социальная сеть, общение в которой<br>Происходит в общедоступном<br>чате</p>
+					<p><a href="/projects/la-friend" onclick="return false" disabled class="btn btn-primary btn-lg" role="button">Узнать больше</a></p>
+				</div>
+
+				<div class="jm-layer2 to-top" ></div>
+			</div>
+
+		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#header_carousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#header_carousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+
+	<a name="news"></a>
+
+	<div class="jm-warp warp-button-to-content">
+		<a data-href="@content" data-toggle="tooltip" data-placement="top" title="Перейти к содержанию"><span class="glyphicon glyphicon-arrow-down"></span></a>
+	</div>
+</header>
+{% endif %}
+
