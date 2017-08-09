@@ -34,7 +34,7 @@ $(document).ready(function () {
             //$('body').scrollTop($('.jm-header').height() - 48);
             //$('.jm-warp.warp-button-to-top').css({'z-index':'1', 'opacity':'1'});
 
-            $('header.jm-header').css({"display": "none!important"});
+            $('header.jm-header').css({"display": "none"});
             $('body').css({"overflow": "auto"});
 
             $('.jm-warp.warp-button-to-top').css({'z-index':'1', 'opacity':'1'});
