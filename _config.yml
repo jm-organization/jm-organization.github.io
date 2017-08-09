@@ -10,9 +10,10 @@ gems:
   - jekyll-feed
   - jekyll-redirect-from
 
-comments: true
-hidecollaboratorinfo: false
+permalink: '/posts/:day-:month-:year/:title.html'
+paginate: 5
+paginate_path: "/posts/page-:num/"
+url: 'http://teamcofh.com'
 
-vk-support: false
-fb-support: false
-tweeter-dupport: false
+comments: true
+vk-support: true

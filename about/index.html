@@ -3,26 +3,26 @@ layout: body-sample
 title: О нас
 ---
 
-<div class="jm-about pw-content">
+<div class="jm-about">
     <!-- О компании -->
     <div class="jm-a-company">
-        <h3>Об организации</h3>
+        <h3>О организации</h3>
         <p>  
-            Мы начали свою работу с конца <i>2016 года</i>. За это время у нас появилось множество мелких наработок и большой опыт.
-            Поэтому у нас появилось решение приняться за реализацию проекта, который требует очень чётких и одновременно продуманых действий.
-            Для этого потребовалось создать мелкую организацую, занимающуюся проектом "<b>Социальная сеть La Friend</b>"
+            Мы начали свою работу с конца 2016 года. За это время у нас появилось множество мелких наработок и большой опыт.
+            По этому мы у нас появилось решение приняться за реализщацию проекта, который требeет очень чётких и одновременно верных действий.
+            Для этого потребовалось создать мелкую организацую, занимающуюся проектом "Социальная сеть La Friend"
         </p>
 
         <h3>Социальная сеть La Friend</h3>
         <p>
-            Это проект, который появился раньше, чем сама организация. Говорить о нём особо не стоит, это социальная сеть.
-            Больше информации вы можете узнать на странице проекта: <a data-href="404 - Project not found">La Friend</a>
+            Это проект, который появился раньше, чем сама организация. Говорить о нём особо не стоит. Это социальная сеть.
+            Больше информации вы можете узнать на странице проекта: <span data-href="404 - Project not found">La Friend</span>
         </p>
 
         <h3>Сотрудники</h3>
         <p>
-            Организация ещё так молода, проект ещё только находится в анонсе, а команда сотрудников уже нужна сейчас...
-            На данный момент команда состоит из нижеперечисленных людей, по графику видно, что это <i>80% из того персонала, который нужен для старта</i>.
+            Организация ещё так молода, проект ещё только находиться в анонсе, а команда сотрудников уже нужна сейчас...
+            На данный момент команда состоит из нижеперечисленных людей, по графику видно, что это 80% из того персонала, который нужен для старта.
         </p>
     </div>
 
@@ -64,14 +64,12 @@ title: О нас
                 <div class="jm-ac-date" data-toggle="tooltip" data-placement="bottom" title="В компании с">{{ cw.date-of-adopted }}</div>
                 <div class="jm-ac-co-worker">
                     <div class="jm-acc-min-info">
-                        <img src="/assets/img/jm-co-worker-avatars/{{ cw.co-worker }}.png" width="56px" height="56px">
+                        <img src="/assets/img/co-worker-avatars/{{ cw.co-worker }}.png" width="56px" height="56px">
                         <h3>{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}<small id="position">{{ cw.position }}</small></h3>
                     </div>
-                    {% if site.hidecollaboratorinfo %}
-                    <div class="jm-acc-open-more-info" data-toggle="tooltip" data-placement="top" title="Больше информации">
+                    <!-- <div class="jm-acc-open-more-info" data-toggle="tooltip" data-placement="top" title="Больше информации">
                         <a class="accordion-collaborator" data-toggle="collapse" data-parent="#accordion" href="#{{ cw.co-worker }}Info"></a>
-                    </div>
-                    {% endif %}
+                    </div> -->
                 </div>
                 <div class="jm-ac-cinfo" style="padding-top: 2px">
                     <div class="panel-collapse collapse in" id="{{ cw.co-worker }}Info">
@@ -89,4 +87,9 @@ title: О нас
             {% endfor %}
         </div>
     </div>
+
+    <div class="jm-a-our-goals">{% include about/our_goals.html %}</div>
+
+    <!-- Статистика -->
+    <div class="jm-a-statistics">{% include about/statistics.html %}</div>
 </div>

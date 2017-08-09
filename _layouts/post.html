@@ -1,0 +1,55 @@
+---
+layout: body-sample
+title: page.title
+---
+
+<div class="jm-article">
+    {% if page.title %}
+    <div class="jm-a-title">
+        <h1>{{ page.title }}</h1>
+    </div>
+    {% endif %}
+    {{ content }}
+</div>
+
+<div class="jm-social-sender">
+    {% if site.vk-support %}
+    <div class="jm-ss-vk">
+        <script type="text/javascript">
+            document.write(VK.Share.button(false,{
+                type: "round_nocount", text: "Поделиться"
+            }));
+        </script>
+    </div>
+    {% endif %}
+
+    <div class="jm-ss-tweeter">
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Твитнуть</a>
+    </div>
+</div>
+
+{% if site.comments %}
+<div class="jm-comments">
+    <div class="jm-comments-title">
+        <ul class="jm-pager pager">
+            <li class="previous"><a href="/#news">&larr; К списку новостей</a></li>
+            <li class="jm-comments-title">Комментарии</li>
+        </ul>
+    </div>
+    <div id="disqus_thread"></div>
+</div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = 'article'+window.location.pathname;
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://jm-organization.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
