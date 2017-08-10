@@ -26,13 +26,16 @@
 			</div>
 		</section>
 		
-		<footer style="
-		    background: #222222;
-		    border: 1px solid transparent;
-		    border-color: #080808;
-	       	    margin: 0;
-		    padding-bottom: 56px;
-		">{% include jm_footer.html %}</footer>
+		<footer {% if site.data.settings.dark-theme %}
+				style="
+					background: #222222;
+					border: 1px solid transparent;
+					border-color: #080808;
+					margin: 0;
+					padding-bottom: 56px;
+				"
+				{% endif %}
+		>{% include jm_footer.html %}</footer>
 
 		<div class="jm-warp warp-button-to-top">
 			<a data-href="@to-top" data-toggle="tooltip" data-placement="top" title="Наверх"><span class="glyphicon glyphicon-arrow-up"></span></a>
