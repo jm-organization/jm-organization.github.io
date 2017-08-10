@@ -62,6 +62,7 @@
 				{% include jm_navigation.html %}
 			</ul>
 
+			{% if page.url == '/' %}
 			<form class="navbar-form navbar-left" role="search">
 				<fieldset{% if site.data.settings.search-news == false %} disabled{% endif %}>
 					<div class="form-group">
@@ -84,6 +85,7 @@
 					</div>
 				</fieldset>
 			</form>
+			{% endif %}
 
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="https://github.com/jm-organization/jm-organization.github.io" target="_blank">Src</a></li>
