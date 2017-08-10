@@ -5,11 +5,13 @@
 var input = $('#search');
 
 input.oninput = function() {
+    $('.jm-news-found').show();
+
     $('#article').each(function () {
         
     })
 };
 
-$('#search').click(function () {
+$('#go-search').click(function () {
     $('.jm-news-found').show();
 });
