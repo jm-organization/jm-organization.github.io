@@ -3,13 +3,13 @@
  */
 
 function search_news(news, filter) {
-    var pattern = new RegExp(news, "ig");
+    var pattern = new RegExp(news, "i");
 
     $('.short-article').each(function () {
-        var search_string = $(this).data('article');
+        var title = $(this).data('article');
 
         if (news == '' && news == ' ') {
-            if (search_string.match(pattern).index >= 0) {
+            if (pattern.test(title)) {
                 $(this).show();
             } else {
                 $('.short-article').hide();
