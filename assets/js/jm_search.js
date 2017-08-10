@@ -11,7 +11,7 @@ function search_news(news, filter) {
 
             if (pattern.test(title)) {
                 $(this).show();
-            } else {
+            } else if (news != '' && news != ' ') {
                 $('.short-article').hide();
             }
 
