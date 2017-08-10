@@ -5,7 +5,10 @@ title: Главная
 
 <div class="jm-news-found">
     {% for post in site.posts %}
-    <div class="panel panel-default" style="display: none">
+    <div id="article"
+         class="panel panel-default" style="display: none"
+         data-article="{{ post.title }}"
+    >
         <div class="panel-body">
             <div class="jm-nf-header">
                 <div class="jm-a-picture">
@@ -27,6 +30,7 @@ title: Главная
     {% endfor %}
 </div>
 
+<!-- Articles -->
 {% for post in paginator.posts %}
 {% if post.published %}
 <article class="panel panel-default">
@@ -55,6 +59,7 @@ title: Главная
 {% endif %}
 {% endfor %}
 
+<!-- Paginator -->
 <center class="jm-pagination">
     <ul class="pagination">
         {% assign max_buttons = 5 %}
