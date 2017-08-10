@@ -242,7 +242,7 @@ footer {
       border-bottom: 2px solid #e2e2e2;
       margin-bottom: 15px; }
       .page-width .page-content .jm-news-found .jm-nf-header {
-        display: flex;
+        display: inline-flex;
         width: calc(100% - 56px);
         height: auto; }
         .page-width .page-content .jm-news-found .jm-nf-header .jm-a-picture {
@@ -260,7 +260,9 @@ footer {
         width: 56px;
         height: 56px;
         border-radius: 4px;
-        background-color: #efefef; }
+        background-color: #efefef;
+        display: inline-block;
+        float: right; }
         .page-width .page-content .jm-news-found .jm-nf-href:hover {
           background-color: #e2e2e2; }
     .page-width .page-content .jm-article {
