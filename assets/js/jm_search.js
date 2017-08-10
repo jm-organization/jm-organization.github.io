@@ -4,7 +4,7 @@
 
 function search_news(news, filter) {
     $('.short-article').each(function () {
-        var string = new RegExp(news, "igm");
+        var string = new RegExp(news, "ig");
 
         if ($(this).data('article').search(string) >= 0
             && news != ''
