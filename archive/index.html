@@ -27,8 +27,8 @@ title: Архив
                 <div class="jm-aa-date">{{ post.date | date: '%d %B' }}</div>
                 <div class="jm-aa-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
                 <div class="jm-aa-body">{{ post.excerpt }}</div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>
