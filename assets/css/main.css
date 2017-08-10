@@ -178,8 +178,8 @@ footer {
 .page-width {
   width: 92%;
   max-width: 1024px;
-  margin: 0 auto 48px;
-  padding-top: 20px;
+  margin: 0 auto;
+  padding: 20px 0 48px 0;
   display: flex; }
   @media (max-width: 728px) {
     .page-width {
