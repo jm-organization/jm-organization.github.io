@@ -4,15 +4,15 @@
 
 function search_news(news, filter) {
     $('.short-article').each(function () {
-        var string = new RegExp(news, "ig");
+        var pattern = new RegExp(news, "ig");
+        var search_string = $(this).data('article');
 
-        if ($(this).data('article').search(string) >= 0
-            && news != ''
-            && news != ' '
-        ) {
-            $(this).show();
-        } else {
-            $('.short-article').hide();
+        if (news == '' && news == ' ') {
+            if (search_string.match(pattern).index >= 0) {
+                $(this).show();
+            } else {
+                $('.short-article').hide();
+            }
         }
     });
 }
