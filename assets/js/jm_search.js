@@ -8,7 +8,7 @@ function search_news(news, filter) {
     $('.short-article').each(function () {
         var title = $(this).data('article');
 
-        if (news == '' && news == ' ') {
+        if (news != '' && news != ' ') {
             if (pattern.test(title)) {
                 $(this).show();
             } else {
