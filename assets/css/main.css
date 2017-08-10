@@ -241,8 +241,13 @@ footer {
       width: 100%;
       border-bottom: 2px solid #e2e2e2;
       margin-bottom: 15px; }
-      .page-width .page-content .jm-news-found .no-results {
-        margin: 15px auto; }
+      .page-width .page-content .jm-news-found .jm-no-results {
+        display: inline-block;
+        height: 21px;
+        line-height: 21px; }
+      .page-width .page-content .jm-news-found .jm-close {
+        display: inline-block;
+        float: right; }
       .page-width .page-content .jm-news-found .jm-nf-header {
         display: inline-flex;
         width: calc(100% - 56px);

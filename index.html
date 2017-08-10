@@ -7,7 +7,7 @@ title: Главная
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="jm-no-results">Ничего не найдено</div>
-            <div class="jm-close"><span class="close">&times;</span></div>
+            <div class="jm-close"><span class="close" onclick="$('.jm-news-found').hide();">&times;</span></div>
         </div>
 
         <ul class="list-group">
@@ -27,9 +27,9 @@ title: Главная
                         {% endif %}
                     </p>
                 </div>
-                <div class="jm-nf-href">
+                <a class="jm-nf-href" href="{{ post.url }}">
                     <span class="glyphicon glyphicon-chevron-right" style="padding: 20px 21px 22px;"></span>
-                </div>
+                </a>
             </li>
             {% endfor %}
         </ul>
