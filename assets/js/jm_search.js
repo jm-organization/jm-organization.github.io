@@ -4,6 +4,10 @@
 
 function search_news(news, filter) {
     $('#article').each(function () {
-        $('#article[data-article="'+news+'"]').show();
+        if ($(this).data('article').search(news) > 0) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
     });
 }
