@@ -10,6 +10,6 @@ input.oninput = function() {
     })
 };
 
-input.onclick = function () {
+input.click(function () {
     $('.jm-news-found').show();
-};
+});
