@@ -3,6 +3,27 @@ layout: body-sample
 title: Главная
 ---
 
+<div class="jm-news-found">
+    {% for post in site.posts %}
+    <div class="panel panel-default" style="display: none">
+        <div class="panel-body">
+            <div class="jm-nf-header">
+                <div class="jm-nf-picture">
+                    <img src="/assets/img/news_picture/{{ post.picture }}" width="56px" height="56px">
+                </div>
+                <p class="jm-a-header">
+                    <span>{{ post.title }}</span>
+
+                    {% if post.author or post.date %}
+                    <span class="text-muted">{% if post.date %}{{ post.date | date: '%d.%m.%Y' }}{% endif %}, {% if post.author %}Опубликовал <strong>{% if post.author_url %}<a href="{{ post.author_url }}" target="_blank">{% endif %}{{ post.author }}{% if post.author_url %}</a>{% endif %}</strong>{% endif %}</span>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 {% for post in paginator.posts %}
 {% if post.published %}
 <article class="panel panel-default">

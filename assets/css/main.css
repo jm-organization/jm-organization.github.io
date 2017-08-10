@@ -206,22 +206,22 @@ footer {
       margin-bottom: 9px; }
     .page-width .page-content article {
       margin-bottom: 15px; }
-      .page-width .page-content article .jm-a-header {
+      .page-width .page-content article .jm-a-header, .page-width .page-content article .jm-news-found .jm-nf-header, .page-width .page-content .jm-news-found article .jm-nf-header {
         display: flex;
         width: 100%;
         height: auto;
         margin-bottom: 7px; }
-        .page-width .page-content article .jm-a-header .jm-ah-picture {
+        .page-width .page-content article .jm-a-header .jm-ah-picture, .page-width .page-content article .jm-news-found .jm-nf-header .jm-ah-picture, .page-width .page-content .jm-news-found article .jm-nf-header .jm-ah-picture {
           width: 61px;
           padding-right: 5px;
           display: inline-block;
           height: 100%;
           float: left; }
-          .page-width .page-content article .jm-a-header .jm-ah-picture img {
+          .page-width .page-content article .jm-a-header .jm-ah-picture img, .page-width .page-content article .jm-news-found .jm-nf-header .jm-ah-picture img, .page-width .page-content .jm-news-found article .jm-nf-header .jm-ah-picture img {
             border: 1px solid #e2e2e2;
               border-radius: 50%;
             padding: 3px; }
-        .page-width .page-content article .jm-a-header .jm-ah-header {
+        .page-width .page-content article .jm-a-header .jm-ah-header, .page-width .page-content article .jm-news-found .jm-nf-header .jm-ah-header, .page-width .page-content .jm-news-found article .jm-nf-header .jm-ah-header, .page-width .page-content .jm-news-found .jm-nf-header article .jm-a-header .jm-a-header, .page-width .page-content article .jm-news-found .jm-nf-header .jm-a-header, .page-width .page-content .jm-news-found article .jm-nf-header .jm-a-header, .page-width .page-content .jm-news-found .jm-nf-header article .jm-a-header .jm-nf-header, .page-width .page-content article .jm-news-found .jm-nf-header .jm-nf-header, .page-width .page-content .jm-news-found article .jm-nf-header .jm-nf-header {
           display: inline;
           float: left;
           padding-bottom: 3px;
@@ -236,6 +236,8 @@ footer {
             margin-bottom: 0; } }
       .page-width .page-content article .jm-a-category {
         margin: 0; }
+    .page-width .page-content .jm-news-found {
+      display: none; }
     .page-width .page-content .jm-article {
       text-align: justify; }
       .page-width .page-content .jm-article p {
