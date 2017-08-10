@@ -5,15 +5,17 @@
 function search_news(news, filter) {
     var pattern = new RegExp(news, "i");
 
-    $('.short-article').each(function () {
-        var title = $(this).data('article');
+    if (news != '' && news != ' ') {
+        $('.short-article').each(function () {
+            var title = $(this).data('article');
 
-        if (news != '' && news != ' ') {
             if (pattern.test(title)) {
                 $(this).show();
             } else {
                 $('.short-article').hide();
             }
-        }
-    });
+
+            console.log(pattern.test(title) + " / title: "+ title + " / pattern: "+ pattern)
+        });
+    }
 }
