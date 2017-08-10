@@ -6,8 +6,7 @@ title: Главная
 <div class="jm-news-found">
     <div class="no-results">Ничего не найдено</div>
     {% for post in site.posts %}
-    <div id="article"
-         class="panel panel-default" style="display: none"
+    <div class="short-article panel panel-default" style="display: none"
          data-article="{{ post.title }}"
     >
         <div class="panel-body">
