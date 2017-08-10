@@ -42,7 +42,7 @@
 {% endif %}
 
 <!-- Navigation -->
-<nav class="navbar {% unless site.data.settings.dark-theme %}navbar-inverse{% else %}navbar-default{% endunless %}" role="navigation" style="border-radius: 0; margin-bottom: 0">
+<nav class="navbar {% if site.data.settings.dark-theme %}navbar-inverse{% else %}navbar-default{% end %}" role="navigation" style="border-radius: 0; margin-bottom: 0">
 	<div class="container-fluid">
 
 		<div class="navbar-header">
