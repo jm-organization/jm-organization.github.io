@@ -245,11 +245,19 @@ footer
 
     .jm-news-found
       display: none
-
+      width: 100%
+      border-bottom: $heavyBorder $standardBorder
+      margin-bottom: 15px
       .jm-nf-header
-        @extend .jm-a-header
+        display: flex
+        width: 100%
+        height: auto
+
         .jm-a-header
-          @extend .jm-ah-header
+          display: inline
+          float: left
+          padding-bottom: 3px
+          margin: 0
 
     .jm-article
       text-align: justify
