@@ -3,8 +3,9 @@
  */
 
 function search_news(news, filter) {
+    var pattern = new RegExp(news, "ig");
+
     $('.short-article').each(function () {
-        var pattern = new RegExp(news, "ig");
         var search_string = $(this).data('article');
 
         if (news == '' && news == ' ') {
