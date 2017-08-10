@@ -246,18 +246,30 @@ footer
     .jm-news-found
       display: none
       width: 100%
-      border-bottom: $heavyBorder $standardBorder
+      border-bottom: $heavyBorder $supportColor
       margin-bottom: 15px
       .jm-nf-header
         display: flex
-        width: 100%
+        width: calc(100% - 56px)
         height: auto
-
+        .jm-a-picture
+          padding-right: 7px
+          img
+            border: $standardBorder $supportColor
+            border-radius: 50%
+            padding: 3px
         .jm-a-header
           display: inline
           float: left
           padding-bottom: 3px
           margin: 0
+      .jm-nf-href
+        width: 56px
+        height: 56px
+        border-radius: 4px
+        background-color: $lightSupportColor
+        &:hover
+          background-color: $supportColor
 
     .jm-article
       text-align: justify
