@@ -4,10 +4,15 @@
 
 function search_news(news, filter) {
     $('.short-article').each(function () {
-        if ($(this).data('article').search(news) >= 0) {
+        var string = new RegExp(news, "igm");
+
+        if ($(this).data('article').search(string) >= 0
+            && news != ''
+            && news != ' '
+        ) {
             $(this).show();
         } else {
-            $(this).hide();
+            $('.short-article').hide();
         }
     });
 }
