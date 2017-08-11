@@ -67,7 +67,17 @@
 				<fieldset{% if site.data.settings.search-news == false %} disabled{% endif %}>
 					<div class="form-group">
 						<div class="input-group">
-							<input type="text" id="search" class="form-control" onclick="$('.jm-news-found').show();" oninput="search_news($(this)[0].value)">
+							<input type="text"
+								   id="search"
+								   class="form-control"
+
+								   onclick="$('.jm-news-found').show();"
+								   oninput="search_news($(this)[0].value)"
+
+								   data-toggle="tooltip"
+								   data-placement="bottom"
+								   title="Быстрый поиск новостей по заголовку"
+							>
 
 							<div class="input-group-btn">
 								<button type="button" id="go-search" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>

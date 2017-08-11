@@ -20,6 +20,10 @@
 </li>
 
 
-<li class="disabled{% if page.url contains '/projects' %} active{% endif %}">
-	<a href="/projects" onclick="return false">Проекты</a>
+<li{% if page.url contains '/services' %} class="active"{% endif %}>
+	<a href="/services" onclick="return false">Услуги</a>
+</li>
+
+<li class="disabled{% if page.url contains '/portfolio' %} active{% endif %}">
+	<a href="/portfolio" onclick="return false">Портфолио</a>
 </li>
