@@ -4,24 +4,24 @@ title: О нас
 ---
 
 <div class="jm-about">
-    <!-- О компании -->
     <div class="jm-a-company">
         <h3>Об организации</h3>
         <p>  
             Мы начали свою работу с конца <i>2016 года</i>. За это время у нас появилось множество мелких наработок и большой опыт.
             Поэтому у нас появилось решение приняться за реализацию проекта, который требует очень чётких и одновременно продуманых действий.
-            Для этого потребовалось создать мелкую организацую, занимающуюся проектом "<b>Социальная сеть La Friend</b>"
+            Для этого потребовалось создать мелкую организацую, занимающуюся проектом "<b>Социальная сеть La Friend</b>".<br><br>
+            Вскоре из-за медленого развития проекта было принято <a href="https://jm-organization.github.io/posts/11-08-2017/close-la-friend-and-reorganized-org.html">решение</a> о его закрытии, а организация обрела, несколько, другое направление...
         </p>
 
-        <h3>Социальная сеть La Friend</h3>
+        <h3>Проект остановлен (<small>Социальная сеть La Friend</small>)</h3>
         <p>
-            Это проект, который появился раньше, чем сама организация. Говорить о нём особо не стоит, это социальная сеть.
-            Больше информации вы можете узнать на странице проекта: <a data-href="404 - Project not found">La Friend</a>
+            <span class="text-muted">Это проект, который появился раньше, чем сама организация. Говорить о нём особо не стоит, это социальная сеть.
+            Больше информации вы можете узнать на странице проекта: <a data-href="404 - Project not found">La Friend</a>.</span>
         </p>
 
         <h3>Сотрудники</h3>
         <p>
-            Организация ещё так молода, проект ещё только находится в анонсе, а команда сотрудников уже нужна сейчас...
+            Команда сотрудников, на данный момент, способна лишь на серверные и прикладные программы. Но этого современной web-организации мало.
             На данный момент команда состоит из нижеперечисленных людей, по графику видно, что это <i>80% из того персонала, который нужен для старта</i>.
         </p>
     </div>
@@ -55,7 +55,6 @@ title: О нас
         ><span class="sr-only">Нужно {{ progress_require }}% из ({{ max_collaborators }}) сотрудников.</span></div>
     </div>
 
-    <!-- Сотрудники -->
     <div class="jm-a-co-workers">
         <div class="jm-a-line"></div>
         <div class="jm-a-collaborators" id="accordion">
@@ -90,8 +89,32 @@ title: О нас
         </div>
     </div>
 
-    <div class="jm-a-our-goals">{% include about/our_goals.html %}</div>
+    <div class="jm-a-company">
+        <p>
+            Помимо тех сотрудников, которые у нас есть, нам нужны люди, которые имеют навыки в таких специальностях:
+        </p>
+        <ul>
+            <li><b>Frontend-разработчик</b><span> - разработчик клиентской части web-приложения</span></li>
+            <li><b>Рекламщик</b><span> - человек, который будет заниматься рекламой и продвижением компании.</span></li>
+            <li style="border-bottom: 1px dotted #999;"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Должность занята, но набор на неё продолжается"
+            ><b>Системный администратор</b><span class="text-muted"> - требуется навыки работы с клиентами в вопросах поддержки, а также настройки серверов и серверногог ПО</span></li>
+        </ul>
+    </div>
 
-    <!-- Статистика -->
-    <div class="jm-a-statistics">{% include about/statistics.html %}</div>
+    <div class="jm-a-contacts">
+        <address>
+            <strong>JM Организация</strong><br>
+            Мелитополь, Украина<br>
+            <p>
+                <span class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="top" title="e-mail"></span>
+                <a href="mailto:vany.58.98.2013@gmail.com">vany.58.98.2013@gmail.com</a>
+            </p>
+            <abbr title="Телефон">P:</abbr> +38 (---) 000 00 00
+            <abbr title="Вконтакте">VK:</abbr> <a href="https://vk.com/jm_organization">jm_organization</a>
+            <abbr title="Ukrainians">Ukrainians:</abbr> <a href="https://www.ukrainians.co/c242">www.ukrainians.co/c242</a>
+        </address>
+    </div>
 </div>
