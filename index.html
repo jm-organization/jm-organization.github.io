@@ -6,8 +6,11 @@ title: Главная
 <div class="jm-news-found">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <div class="jm-results" style="display: none">Найдено {records} из {all-records}:</div>
-            <div class="jm-no-results">Ничего не найдено</div>
+            <div class="jm-layout-results" style="display: none">
+                <div id="is-result">Найдено {records} из {all-records}:</div>
+                <div id="no-result">Ничего не найдено</div>
+            </div>
+            <div class="jm-result"></div>
             <div class="jm-close"><span class="close" onclick="$('.jm-news-found').hide();">&times;</span></div>
         </div>
 

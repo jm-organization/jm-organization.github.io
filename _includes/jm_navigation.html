@@ -6,9 +6,9 @@
 </li>
 
 <li class="dropdown{% if page.url contains '/posts'%} active{% endif %}{% if page.url contains '/archive' %} active{% endif %}">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Новости <b class="caret"></b></a>
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt" style="padding-right: 9px;"></span>Новости <b class="caret"></b></a>
 	<ul class="dropdown-menu">
-		<li role="presentation" class="dropdown-header"><span class="glyphicon glyphicon-star"></span> Важные новости</li>
+		<li role="presentation" class="dropdown-header"><span class="glyphicon glyphicon-pushpin"></span> Важные новости</li>
 		{% for post in site.posts %}
 		{% if post.published and post.fixed%}
 		<li style="max-width: 231px;" data-toggle="tooltip" data-placement="left" title="{{ post.title }}">
@@ -21,7 +21,7 @@
 
 
 <li{% if page.url contains '/services' %} class="active"{% endif %}>
-	<a href="/services" onclick="return false">Услуги</a>
+	<a href="/services" onclick="return false"><span class="glyphicon glyphicon-tags" style="padding-right: 9px;"></span>Услуги</a>
 </li>
 
 <li class="disabled{% if page.url contains '/portfolio' %} active{% endif %}">
