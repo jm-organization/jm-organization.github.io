@@ -3,6 +3,7 @@ title: Вместе - мы сила
 author: Magicmen
 author_url: https://vk.com/jmagicmen
 published: true
+fixed: false
 category: Набор в команду
 picture: invation-in-command.jpg
 ---

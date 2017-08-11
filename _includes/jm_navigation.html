@@ -9,9 +9,13 @@
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Новости <b class="caret"></b></a>
 	<ul class="dropdown-menu">
 		<li role="presentation" class="dropdown-header">Новости</li>
-		<li>
-			<a href="/archive">Архив</a>
+		{% for post in site.posts %}
+		{% if post.published and post.fixed%}
+		<li style="max-width: 231px;">
+			<a href="{{ post.url }}" style="white-space: nowrap; overflow: hidden; padding-right: 5px; text-overflow: ellipsis;">{{ post.title }}</a>
 		</li>
+		{% endif %}
+		{% endfor %}
 	</ul>
 </li>
 

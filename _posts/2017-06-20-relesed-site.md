@@ -3,6 +3,7 @@ title: Новые горизонты в Украинской web-индустр�
 author: Magicmen
 author_url: https://vk.com/jmagicmen
 published: true
+fixed: false
 category: Важные новости
 picture: relesed-site.png
 ---

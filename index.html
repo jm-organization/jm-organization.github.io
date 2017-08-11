@@ -12,6 +12,7 @@ title: Главная
 
         <ul class="list-group">
             {% for post in site.posts %}
+            {% if post.published %}
             <li class="short-article list-group-item" style="display: none"
                 data-article="{{ post.title }}"
             >
@@ -31,6 +32,7 @@ title: Главная
                     <span class="glyphicon glyphicon-chevron-right" style="padding: 20px 21px 22px;"></span>
                 </a>
             </li>
+            {% endif %}
             {% endfor %}
         </ul>
     </div>
