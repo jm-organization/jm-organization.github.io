@@ -1,4 +1,5 @@
 search-news: true
+search-with-filters: false
 dark-theme: false
 
 about-disable: false

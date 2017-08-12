@@ -84,7 +84,7 @@
 							<div class="input-group-btn">
 								<button type="button" id="go-search" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 
-								<button type="button" class="btn btn-default dropdown-toggle disabled" data-toggle="dropdown"><span class="caret"></span></button>
+								<button type="button" class="btn btn-default dropdown-toggle{% unless site.data.settings.search-with-filters %} disabled{% endunless %}" data-toggle="dropdown"><span class="caret"></span></button>
 								<ul class="dropdown-menu pull-right">
 									<li><a href="#">Действие</a></li>
 									<li><a href="#">Другое действие</a></li>
