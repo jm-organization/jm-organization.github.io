@@ -118,13 +118,20 @@ title: Услуги
                             };
 
                             function send_order(from_email, subject, html) {
-                                xmlhttp.send(JSON.stringify({'key': 'KFICJ5kjVMYKIiIVgciH5A', 'message': {
-                                            'from_email': from_email,
-                                            'to': [{'email': 'vany.58.98.2013@gmail.com', 'type': 'to'}],
-                                            'autotext': 'true',
-                                            'subject': subject,
-                                            'html': html
-                                        }}
+                                xmlhttp.send(JSON.stringify({
+                                    'key': 'KFICJ5kjVMYKIiIVgciH5A',
+                                    'message': {
+                                        'from_email': from_email,
+                                        'to': [{
+                                            'email': 'vany.58.98.2013@gmail.com',
+                                            "name": "Ваня Водяницкий",
+                                            "type": "to"
+                                        }],
+                                        //'autotext': 'true',
+                                        "important": true,
+                                        'subject': subject,
+                                        'text': html
+                                    }}
                                 ));
                             }
                         </script>

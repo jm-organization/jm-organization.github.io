@@ -4,5 +4,5 @@ dark-theme: false
 
 about-disable: false
 news-disable: false
-service-disable: false
+service-disable: true
 portfolio-disable: true
