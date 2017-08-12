@@ -5,72 +5,33 @@ layout: body-service-layout
 <div class="jm-services">
     <div id="carousel-example-generic" class="jm-s-carusel carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            {% for caption in site.data.services %}
+            <li data-target="#carousel-example-generic" data-slide-to="{{ forloop.index0 }}" class="{% if caption.fixed-state and caption.fixed-state == 'active' %}active{% endif %}"></li>
+            {% endfor %}
         </ol>
 
         <div class="carousel-inner">
-            <div class="item">
-                <div class="img" style="background-image: url(/assets/img/background-picture/services/tech-support.png)"></div>
+            {% for caption in site.data.services %}
+            <div class="item{% if caption.fixed-state and caption.fixed-state == 'active' %} active{% endif %}">
+                <div class="img" style="background-image: url(/assets/img/background-picture/services/{{ caption.id }}.png)"></div>
                 <div class="carousel-caption">
-                    <h3>Техническая поддержка</h3>
+                    <h3>{{ caption.service }}</h3>
                     <div class="btn-group dropup" style="padding-bottom: 5px">
-                        <a class="btn btn-success" href="#tech-support">Подробнее</a>
+                        <a class="btn btn-success" href="#{{ caption.id }}">Подробнее</a>
                         <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                             <span class="sr-only">Меню с переключением</span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Действие</a></li>
-                            <li><a href="#">Другое действие</a></li>
-                            <li><a href="#">Что-то иное</a></li>
+                            <li><a href="#">Заказать</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Отдельная ссылка</a></li>
+                            <li role="presentation" class="dropdown-header">Цена</li>
+                            <li><a href="#">{{ caption.price }}</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="item active">
-                <div class="img" style="background-image: url(/assets/img/background-picture/services/sites-in-key.png)"></div>
-                <div class="carousel-caption">
-                    <h3>Сайты под ключ</h3>
-                    <div class="btn-group dropup" style="padding-bottom: 5px">
-                        <a class="btn btn-danger" href="#sites-in-key">Подробнее</a>
-                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                            <span class="sr-only">Меню с переключением</span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Действие</a></li>
-                            <li><a href="#">Другое действие</a></li>
-                            <li><a href="#">Что-то иное</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Отдельная ссылка</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="img"  style="background-image: url(/assets/img/background-picture/services/minecraft-servers-support.png)"></div>
-                <div class="carousel-caption">
-                    <h3>Техническая поддержка серверов майнкрафт</h3>
-                    <div class="btn-group dropup" style="padding-bottom: 5px">
-                        <a class="btn btn-warning" href="#tech-support-minecraft-servers">Подробнее</a>
-                        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                            <span class="sr-only">Меню с переключением</span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Действие</a></li>
-                            <li><a href="#">Другое действие</a></li>
-                            <li><a href="#">Что-то иное</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Отдельная ссылка</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -84,9 +45,9 @@ layout: body-service-layout
     <div class="jm-s-services">
         <div class="page-width">
             <div class="page-content">
-                <div id="tech-support"></div>
-                <div id="sites-in-key"></div>
-                <div id="tech-support-minecraft-servers"></div>
+                {% for caption in site.data.services %}
+                <div id="{{ caption.id }}"></div>
+                {% endfor %}
             </div>
         </div>
     </div>

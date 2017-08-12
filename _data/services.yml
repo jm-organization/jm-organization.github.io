@@ -1,0 +1,35 @@
+#---------------------
+#  Шаблон
+#---------------------
+#- service:
+#  id:
+#  fixed:
+#  fixed-state:
+#  small-background:
+#  price:
+#  info:
+#----------------------
+
+- service: "Техническая поддержка"
+  id: "tech-support"
+  fixed: true
+  fixed-state:
+  small-background:
+  price:
+  info:
+
+- service: "Сайты под ключ"
+  id: "sites-in-key"
+  fixed: true
+  fixed-state: active
+  small-background:
+  price:
+  info:
+
+- service: "Техническая поддержка серверов майнкрафт"
+  id: "minecraft-servers-support"
+  fixed: true
+  fixed-state:
+  small-background:
+  price:
+  info:
