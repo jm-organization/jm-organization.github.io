@@ -1,18 +1,22 @@
 <!DOCTYPE HTML>
 <html xml:lang="ru" lang="ru">
 	<head>
-		<title>{% if page.title %}{{ page.title }} | {% endif %}JM Organization - Организация WEB-разработок</title>
+		<title>{% if page.title %}{{ page.title }} | {% endif %}JM Organization - Организация WEB и Прикладных разработок</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}JM Organization - Организация WEB-разработок">
+		<meta name="author" content="Magicmen">
+		<meta name="description" content="Оффициальный портал JM органицации. Последние новости и описание наших проектов. Поможем в реализации сайта, программы. Также помогаем с созданием серверов Minecraft. Исправляем проблем в работе модификаций для Minecraft">
+		<meta name="keywords" content="minecraft, майнкрафт, маинкрафт, минекрафт, создать сервер minecraft, создать сервер minecraft с модами, создать сайт, создать программу, поднять сервера, сделать сервер, сделать сайт, как программировать сайт, создание новостных блогов, создание новостных порталов, создать портал, создать блог">
+
+		<meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}JM Organization - Организация WEB и Прикладных разработок">
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="https://jm-organization.github.io/favicon.ico">
 		<meta property="og:image:type" content="image/png">
 		<meta property="og:url" content="https://jm-organization.github.io/">
-		<meta property="og:description" content="Оффициальный портал JM органицации. Последние новости и описание наших проектов.">
-		
+		<meta property="og:description" content="Оффициальный портал JM органицации. Последние новости и описание наших проектов. Поможем в реализации сайта, программы. Также помогаем с созданием серверов Minecraft. Исправляем проблем в работе модификаций для Minecraft">
+
 		{% include jm_links.html %}
 	</head>
 	<body{% if page.url == '/test/' %} style="overflow: hidden;"{% endif %}>
