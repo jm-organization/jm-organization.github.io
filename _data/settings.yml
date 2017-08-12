@@ -1,2 +1,6 @@
 search-news: true
 dark-theme: false
+service-disable: true
+portfolio-disable: true
+news-disable: false
+about-disable: false
