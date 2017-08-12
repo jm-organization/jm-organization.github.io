@@ -421,7 +421,7 @@ footer {
   .jm-services .jm-s-carusel .carousel-inner .item .img {
     width: 100%;
     height: 253px;
-    background: #e2e2e2 center no-repeat 0; }
+    background: no-repeat center; }
 .jm-services .jm-s-services {
   width: 100%;
   height: auto;
