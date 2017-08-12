@@ -119,11 +119,11 @@ title: Услуги
 
                             function send_order() {
                                 xmlhttp.send(JSON.stringify({'key': 'KFICJ5kjVMYKIiIVgciH5A', 'message': {
-                                            'from_email': $("#{{ caption.id }}-e-mail-order")[0].text(),
+                                            'from_email': $("#{{ caption.id }}-e-mail-order")[0].value,
                                             'to': [{'email': 'vany.58.98.2013@gmail.com', 'type': 'to'}],
                                             'autotext': 'true',
-                                            'subject': $("#{{ caption.id }}-order-theme")[0].text(),
-                                            'html': $("#{{ caption.id }}-content-order")[0].text()
+                                            'subject': $("#{{ caption.id }}-order-theme")[0].value,
+                                            'html': $("#{{ caption.id }}-content-order")[0].value
                                         }}
                                 ));
                             }
