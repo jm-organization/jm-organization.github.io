@@ -75,7 +75,7 @@ title: Услуги
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                     <h4 class="modal-title" id="{{ caption.id }}-modaleLabel">
                                         <span class="text-muted" style="padding-right: 5px">Заказ:</span>
-                                        <input type="text" class="form-control" placeholder="Тема вашего заказа" name="{{ caption.id }}-theme-order" id="{{ caption.id }}-order-theme">
+                                        <input type="text" class="form-control" placeholder="Тема вашего заказа" name="{{ caption.id }}-theme-order" id="{{ caption.id }}-theme-order">
                                     </h4>
                                 </div>
                                 <div class="modal-body">
@@ -95,7 +95,7 @@ title: Услуги
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" id="{{ caption.id }}-confirm-order" onclick="send_order()">Заказать</button>
+                                    <button type="button" class="btn btn-primary" id="{{ caption.id }}-confirm-order" onclick="send_order($('#{{ caption.id }}-e-mail-order')[0].value, $('#{{ caption.id }}-theme-order')[0].value, $('#{{ caption.id }}-content-order')[0].value)">Заказать</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
                                 </div>
                             </div>
@@ -117,13 +117,13 @@ title: Услуги
                                 }
                             };
 
-                            function send_order() {
+                            function send_order(from_email, subject, html) {
                                 xmlhttp.send(JSON.stringify({'key': 'KFICJ5kjVMYKIiIVgciH5A', 'message': {
-                                            'from_email': $("#{{ caption.id }}-e-mail-order")[0].value,
+                                            'from_email': from_email,
                                             'to': [{'email': 'vany.58.98.2013@gmail.com', 'type': 'to'}],
                                             'autotext': 'true',
-                                            'subject': $("#{{ caption.id }}-order-theme")[0].value,
-                                            'html': $("#{{ caption.id }}-content-order")[0].value
+                                            'subject': subject,
+                                            'html': html
                                         }}
                                 ));
                             }
