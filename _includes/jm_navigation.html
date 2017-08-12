@@ -3,13 +3,13 @@
 <li{% if page.url == '/' %} class="active"{% endif %}>
 	<a href="/">Главная</a>
 </li>
-<li class="{% if settings.about-disable %}disabled{% endif %}{% if page.url contains '/about/' %} active{% endif %}">
-	<a href="/about" {% if settings.about-disable %}onclick="return false"{% endif %}>О нас</a>
+<li class="{% if site.data.settings.about-disable %}disabled{% endif %}{% if page.url contains '/about/' %} active{% endif %}">
+	<a href="/about" {% if site.data.settings.about-disable %}onclick="return false"{% endif %}>О нас</a>
 </li>
 
-<li class="{% if settings.news-disable %}disabled{% endif %}dropdown{% if page.url contains '/posts'%} active{% endif %}{% if page.url contains '/archive' %} active{% endif %}">
+<li class="{% if site.data.settings.news-disable %}disabled{% endif %}dropdown{% if page.url contains '/posts'%} active{% endif %}{% if page.url contains '/archive' %} active{% endif %}">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt" style="padding-right: 9px;"></span>Новости <b class="caret"></b></a>
-	{% unless settings.news-disable %}
+	{% unless site.data.settings.news-disable %}
 	<ul class="dropdown-menu">
 		<li role="presentation" class="dropdown-header"><span class="glyphicon glyphicon-pushpin"></span> Важные новости</li>
 		{% for post in site.posts %}
@@ -24,10 +24,10 @@
 </li>
 
 
-<li class="{% if settings.service-disable %}disabled{% endif %}{% if page.url contains '/services' %} active{% endif %}">
-	<a href="/services" {% if settings.service-disable %}onclick="return false"{% endif %}><span class="glyphicon glyphicon-tags" style="padding-right: 9px;"></span>Услуги</a>
+<li class="{% if site.data.settings.service-disable %}disabled{% endif %}{% if page.url contains '/services' %} active{% endif %}">
+	<a href="/services" {% if site.data.settings.service-disable %}onclick="return false"{% endif %}><span class="glyphicon glyphicon-tags" style="padding-right: 9px;"></span>Услуги</a>
 </li>
 
 <li class="{% if settings.portfolio-disable %}disabled{% endif %}{% if page.url contains '/portfolio' %} active{% endif %}">
-	<a href="/portfolio" {% if settings.portfolio-disable %}onclick="return false"{% endif %}>Портфолио</a>
+	<a href="/portfolio" {% if site.data.settings.portfolio-disable %}onclick="return false"{% endif %}>Портфолио</a>
 </li>
