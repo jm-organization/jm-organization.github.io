@@ -114,8 +114,7 @@ footer {
   margin: 0 auto;
   padding: 20px 0 48px 0;
   display: flex;
-  /* About */
-  /* Services */ }
+  /* About */ }
   @media (max-width: 728px) {
     .page-width {
       width: 95%;
@@ -412,23 +411,25 @@ footer {
         @media (max-width: 728px) {
           .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo {
             margin-left: 83px; } }
-  .page-width .jm-services .jm-s-carusel {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 253px; }
-  .page-width .jm-services .jm-s-services {
-    width: 100%;
-    height: auto;
-    padding-top: 27px;
-    padding-bottom: 48px;
-    border: 1px solid #e2e2e2; }
-    .page-width .jm-services .jm-s-services .page-width {
-      padding: 0; }
-      .page-width .jm-services .jm-s-services .page-width .page-content {
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        display: flex; }
+
+/* Services */
+.jm-services .jm-s-carusel {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 253px; }
+.jm-services .jm-s-services {
+  width: 100%;
+  height: auto;
+  padding-top: 27px;
+  padding-bottom: 48px;
+  border: 1px solid #e2e2e2; }
+  .jm-services .jm-s-services .page-width {
+    padding: 0; }
+    .jm-services .jm-s-services .page-width .page-content {
+      width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: flex; }
 
 /*# sourceMappingURL=main.css.map */
