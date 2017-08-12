@@ -28,6 +28,6 @@
 	<a href="/services" {% if site.data.settings.service-disable %}onclick="return false"{% endif %}><span class="glyphicon glyphicon-tags" style="padding-right: 9px;"></span>Услуги</a>
 </li>
 
-<li class="{% if settings.portfolio-disable %}disabled{% endif %}{% if page.url contains '/portfolio' %} active{% endif %}">
+<li class="{% if site.data.settings.portfolio-disable %}disabled{% endif %}{% if page.url contains '/portfolio' %} active{% endif %}">
 	<a href="/portfolio" {% if site.data.settings.portfolio-disable %}onclick="return false"{% endif %}>Портфолио</a>
 </li>
