@@ -6,7 +6,7 @@ body
 
 section
   @media (max-width: 728px)
-    padding-top: 48px
+    padding-top: 18px
 
 footer
   margin-bottom: 48px
@@ -77,77 +77,6 @@ footer
           padding-left: 0!important
           li
             list-style: none
-
-.jm-layer
-  position: absolute
-  top: 0
-  z-index: 4
-  height: inherit
-  width: inherit
-  background: $baseColor
-  opacity: 0
-  &.nav-layer
-    position: absolute
-    z-index: $maxZIndex - 1
-
-.jm-layer2
-  position: absolute
-  width: 100%
-  &.to-top
-    background: linear-gradient(to top, #ffffff, transparent)
-  &.to-bottom
-    background: linear-gradient(to bottom, #ffffff, transparent)
-
-
-/* Header */
-.navigation
-  top: 0
-  width: $width
-  height: $menuHeight
-  padding: 4px 0
-  background: transparent
-  z-index: $maxZIndex!important
-  @media (max-width: 728px)
-    background: $baseColor
-
-  nav
-    position: relative
-    padding: 0 4px
-    z-index: $maxZIndex - 1
-
-.carousel-indicators li
-  border-color: $mediumDarkSupportColor!important
-
-.jm-header
-  position: relative
-  height: auto
-  width: 100%
-  display: inline-table
-  //border-bottom: 2px solid #929292
-
-  .carousel-control
-    z-index: 14
-    &.right, &.left
-      background: transparent!important
-    &.right
-      left: auto
-      right: 0
-
-  .carousel-inner > .item
-    .jm-layer2.to-bottom
-      top: 0
-      height: 100px
-    .jm-layer2.to-top
-      bottom: 0
-      height: 320px
-    [data-role="img"]
-      background: $supportColor no-repeat center 0
-      min-height: $headerMinHeight
-      width: 100%
-      @media (min-width: 1024px)
-        background-size: cover
-    .text
-      color: $mediumTextColor
 
 .jm-warp
   position: absolute
@@ -338,7 +267,7 @@ footer
       display: none
 
 
-  .jm-archive, .jm-about, .jm-a-co-workers
+  .jm-about, .jm-a-co-workers
     $dateWidth: 116px
     $dateSDWidth: 56px
     $marginLineWidth: 12px
@@ -355,6 +284,7 @@ footer
       position: absolute
       z-index: -1
       left: $dateWidth
+      background: linear-gradient(to top, $supportColor 88%, $baseColor)
       @media (max-width: 728px)
         left: $dateSDWidth
       &:before
@@ -381,22 +311,14 @@ footer
           radius: 50%
         padding: $lineWidth
 
-    .jm-a-events, .jm-a-collaborators
+    .jm-a-collaborators
       position: relative
       width: 100%
       display: inline-block
 
-      .jm-a-year-block > .jm-a-year
-        background: $baseColor
-        border-bottom: $lineWidth solid $supportColor
-        line-height: 36px
-        font-size: 26px
-
-      .jm-a-year-block > .jm-archive-article,
       .jm-a-collaborator
         margin-top: 15px
 
-      .jm-a-year-block > .jm-archive-article > .jm-aa-date,
       .jm-a-collaborator > .jm-ac-date
         position: relative
         width: $dateWidth
@@ -422,7 +344,6 @@ footer
         padding: 15.5px 0
         &:after
           top: 21px
-      .jm-a-year-block > .jm-archive-article > .jm-aa-title,
       .jm-a-collaborator > .jm-ac-co-worker
         position: relative
         display: inline-block
@@ -492,7 +413,6 @@ footer
             top: 19px
             left: 19px
             display: inline-block
-      .jm-a-year-block > .jm-archive-article > .jm-aa-body,
       .jm-a-collaborator > .jm-ac-cinfo
         display: inline-block
         margin-left: $dateWidth + ($marginLineWidth * 2) + $lineWidth
@@ -508,10 +428,3 @@ footer
           padding-top:  6px
         @media (max-width: 728px)
           margin-left: $dateSDWidth + ($marginLineWidth * 2) + $lineWidth
-
-  .jm-archive
-    .jm-a-line
-      background: $supportColor
-  .jm-a-co-workers
-    .jm-a-line
-      background: linear-gradient(to top, $supportColor 88%, $baseColor)
