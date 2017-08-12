@@ -13,19 +13,19 @@
   id: "tech-support"
   fixed: true
   fixed-state:
-  price:
-  info:
+  price: Бесплатно
+  info: Информация
 
 - service: "Сайты под ключ"
   id: "sites-in-key"
   fixed: true
   fixed-state: active
-  price:
-  info:
+  price: В зависимости от заказа
+  info: Информация
 
 - service: "Техническая поддержка серверов майнкрафт"
   id: "minecraft-servers-support"
   fixed: true
   fixed-state:
-  price:
-  info:
+  price: 1000 грн/мес.
+  info: Информация
