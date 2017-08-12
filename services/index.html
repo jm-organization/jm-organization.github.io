@@ -56,7 +56,7 @@ title: Услуги
                         <h3>{{ caption.service }}</h3>
                         <p>{{ caption.info }}</p>
                         <div class="btn-group">
-                            <a type="button" class="btn btn-success" href="#">Заказать</a>
+                            <a type="button" class="btn btn-success" href="#{{ caption.id }}-modale" data-toggle="modal" data-target="#{{ caption.id }}-modale">Заказать</a>
                             <div class="btn btn-default"
                                  data-toggle="tooltip"
                                  data-placement="right"
@@ -66,6 +66,27 @@ title: Услуги
                     </div>
                     <div class="jm-c-image">
                         <img src="/assets/img/background-picture/services/small_bg-{{ caption.id }}.png" alt="{{ caption.service }}" class="img-thumbnail">
+                    </div>
+
+                    <div class="modal fade" id="{{ caption.id }}-modale" tabindex="-1" role="dialog" aria-labelledby="{{ caption.id }}-modaleLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="{{ caption.id }}-modaleLabel">
+                                        <span class="text-muted" style="padding-right: 5px">Заказ:</span>
+                                        <input type="text" placeholder="Тема вашего заказа" name="theme-order" id="order-theme">
+                                    </h4>
+                                </div>
+                                <div class="modal-body">
+                                    <textarea name="content-order" id="content-theme"></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Заказать</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
