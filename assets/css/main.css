@@ -113,7 +113,9 @@ footer {
   max-width: 1024px;
   margin: 0 auto;
   padding: 20px 0 48px 0;
-  display: flex; }
+  display: flex;
+  /* About */
+  /* Services */ }
   @media (max-width: 728px) {
     .page-width {
       width: 95%;
@@ -255,9 +257,9 @@ footer {
     @media (max-width: 728px) {
       .page-width .jm-sidebar {
         display: none; } }
-  .page-width .jm-about, .page-width .jm-a-co-workers {
+  .page-width .jm-about, .page-width .jm-services, .page-width .jm-a-co-workers {
     position: relative; }
-    .page-width .jm-about .jm-a-line, .page-width .jm-a-co-workers .jm-a-line {
+    .page-width .jm-about .jm-a-line, .page-width .jm-services .jm-a-line, .page-width .jm-a-co-workers .jm-a-line {
       width: 3px;
       margin: 0 12px;
       height: 100%;
@@ -266,9 +268,9 @@ footer {
       left: 116px;
       background: linear-gradient(to top, #e2e2e2 88%, white); }
       @media (max-width: 728px) {
-        .page-width .jm-about .jm-a-line, .page-width .jm-a-co-workers .jm-a-line {
+        .page-width .jm-about .jm-a-line, .page-width .jm-services .jm-a-line, .page-width .jm-a-co-workers .jm-a-line {
           left: 56px; } }
-      .page-width .jm-about .jm-a-line:before, .page-width .jm-a-co-workers .jm-a-line:before {
+      .page-width .jm-about .jm-a-line:before, .page-width .jm-services .jm-a-line:before, .page-width .jm-a-co-workers .jm-a-line:before {
         position: absolute;
         z-index: 1;
         left: -6px;
@@ -279,7 +281,7 @@ footer {
         border: 6px solid white;
           border-radius: 50%;
         background: #e2e2e2; }
-      .page-width .jm-about .jm-a-line:after, .page-width .jm-a-co-workers .jm-a-line:after {
+      .page-width .jm-about .jm-a-line:after, .page-width .jm-services .jm-a-line:after, .page-width .jm-a-co-workers .jm-a-line:after {
         content: "";
         position: absolute;
         z-index: 2;
@@ -291,13 +293,13 @@ footer {
         border: 3px solid #e2e2e2;
           border-radius: 50%;
         padding: 3px; }
-    .page-width .jm-about .jm-a-collaborators, .page-width .jm-a-co-workers .jm-a-collaborators {
+    .page-width .jm-about .jm-a-collaborators, .page-width .jm-services .jm-a-collaborators, .page-width .jm-a-co-workers .jm-a-collaborators {
       position: relative;
       width: 100%;
       display: inline-block; }
-      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator {
+      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator {
         margin-top: 15px; }
-      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-date, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-date {
+      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-date, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-date, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-date {
         position: relative;
         width: 116px;
         display: inline-block;
@@ -305,9 +307,9 @@ footer {
         float: left;
         line-height: 25px; }
         @media (max-width: 728px) {
-          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-date, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-date {
+          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-date, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-date, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-date {
             width: 56px; } }
-        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-date:after, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-date:after {
+        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-date:after, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-date:after, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-date:after {
           position: absolute;
           z-index: 1;
           right: -21px;
@@ -318,12 +320,12 @@ footer {
           border: 6px solid white;
             border-radius: 50%;
           background: #e2e2e2; }
-      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-date, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-date {
+      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-date, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-date, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-date {
         height: 26px;
         padding: 15.5px 0; }
-        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-date:after, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-date:after {
+        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-date:after, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-date:after, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-date:after {
           top: 21px; }
-      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker {
+      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker {
         position: relative;
         display: inline-block;
         padding-left: 24px;
@@ -331,10 +333,10 @@ footer {
         font-size: 23px;
         float: left; }
         @media (max-width: 728px) {
-          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker {
+          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker {
             word-wrap: break-word;
             width: calc(100% - 56px) !important; } }
-        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before {
+        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before {
           content: "";
           position: absolute;
           z-index: 2;
@@ -346,43 +348,43 @@ footer {
           border: 3px solid #e2e2e2;
             border-radius: 50%;
           padding: 3px; }
-      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker {
+      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker {
         position: relative;
         width: calc(100% - 143px); }
-        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before {
+        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker:before {
           top: 21px; }
-        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info {
+        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info {
           display: flex; }
-        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > img, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > img {
+        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > img, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > img, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > img {
           float: left;
           margin-right: 9px;
           border-radius: 50%;
           padding: 4px;
           border: 1px solid #e2e2e2;
           width: 56px; }
-        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3 {
+        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3 {
           float: left;
           margin: 7.5px 0;
           width: calc(100% - 56px); }
           @media (max-width: 728px) {
-            .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3 {
+            .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3 {
               display: inline-block;
               width: calc(100% - 65px);
               float: right;
               font-size: 16px; } }
-          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3 small, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3 small {
+          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3 small, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3 small, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-min-info > h3 small {
             width: 100%;
             display: block; }
-        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator {
+        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator {
           position: absolute;
           height: 48px;
           width: 48px;
           right: 0;
           margin: 8px;
           border-radius: 4px; }
-          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator:hover, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator:hover {
+          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator:hover, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator:hover, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator:hover {
             background: #e2e2e2; }
-          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator:before, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator:before {
+          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator:before, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator:before, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-co-worker .jm-acc-open-more-info > .accordion-collaborator:before {
             position: absolute;
             content: "";
             width: 9px;
@@ -393,22 +395,40 @@ footer {
             top: 19px;
             left: 19px;
             display: inline-block; }
-      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo {
+      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo {
         display: inline-block;
         margin-left: 143px;
         padding-top: 9px;
         width: calc(100% - 143px); }
         @media (max-width: 728px) {
-          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo {
+          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo {
             margin-left: 83px; } }
-      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo {
+      .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo {
         margin-left: 207px;
         width: calc(100% - 207px); }
-        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo .other-names, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo .other-names {
+        .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo .other-names, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo .other-names, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo .other-names {
           border-top: 1px solid #efefef;
           padding-top: 6px; }
         @media (max-width: 728px) {
-          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo {
+          .page-width .jm-about .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-services .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo, .page-width .jm-a-co-workers .jm-a-collaborators .jm-a-collaborator > .jm-ac-cinfo {
             margin-left: 83px; } }
+  .page-width .jm-services .jm-s-carusel {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 253px; }
+  .page-width .jm-services .jm-s-services {
+    width: 100%;
+    height: auto;
+    padding-top: 27px;
+    padding-bottom: 48px;
+    border: 1px solid #e2e2e2; }
+    .page-width .jm-services .jm-s-services .page-width {
+      padding: 0; }
+      .page-width .jm-services .jm-s-services .page-width .page-content {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex; }
 
 /*# sourceMappingURL=main.css.map */

@@ -267,6 +267,7 @@ footer
       display: none
 
 
+  /* About */
   .jm-about, .jm-a-co-workers
     $dateWidth: 116px
     $dateSDWidth: 56px
@@ -428,3 +429,27 @@ footer
           padding-top:  6px
         @media (max-width: 728px)
           margin-left: $dateSDWidth + ($marginLineWidth * 2) + $lineWidth
+
+  /* Services */
+  .jm-services
+    @extend .jm-about
+
+    .jm-s-carusel
+      margin: 0
+      padding: 0
+      width: 100%
+      height: 253px
+
+    .jm-s-services
+      width: 100%
+      height: auto
+      padding-top: 27px
+      padding-bottom: 48px
+      border: $standardBorder $supportColor
+      .page-width
+        padding: 0
+        .page-content
+          width: 100%!important
+          padding: 0!important
+          margin: 0!important
+          display: flex
