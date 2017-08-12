@@ -1,93 +1,11 @@
-<!DOCTYPE HTML>
-<html xml:lang="ru" lang="ru">
-	<head>
-		<title>{% if page.title %}{{ page.title }} | {% endif %}JM Organization - Организация WEB-разработок</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+---
+layout: body-main-layout
+---
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<section{% if page.url != '/' %} style="padding-top: 0"{% endif %}>
+    <div class="page-width">
+        <div class="page-content" data-name="content">{{ content }}</div>
 
-		<meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}JM Organization - Организация WEB-разработок">
-		<meta property="og:type" content="website">
-		<meta property="og:image" content="https://jm-organization.github.io/favicon.ico">
-		<meta property="og:image:type" content="image/png">
-		<meta property="og:url" content="https://jm-organization.github.io/">
-		<meta property="og:description" content="Оффициальный портал JM органицации. Последние новости и описание наших проектов.">
-		
-		{% include jm_links.html %}
-	</head>
-	<body{% if page.url == '/test/' %} style="overflow: hidden;"{% endif %}>
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.9";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-		
-		{% include jm_header.html %}
-
-		<section{% if page.url != '/' %} style="padding-top: 0"{% endif %}>
-			<div class="page-width">
-				<div class="page-content" data-name="content">{{ content }}</div>
-
-				{% include jm_sidebar.html %}
-			</div>
-		</section>
-		
-		<footer {% if site.data.settings.dark-theme %}
-				style="
-					background: #222222;
-					border: 1px solid transparent;
-					border-color: #080808;
-					margin: 0;
-					padding-bottom: 56px;
-				"
-				{% endif %}
-		>{% include jm_footer.html %}</footer>
-
-		<div class="jm-warp warp-button-to-top">
-			<a data-href="@to-top" data-toggle="tooltip" data-placement="top" title="Наверх"><span class="glyphicon glyphicon-arrow-up"></span></a>
-		</div>
-
-		{% if site.vk-support %}
-		<!-- VK Widget -->
-		<div id="vk_community_messages"></div>
-		{% endif %}
-
-		{% include jm_inline_script.html %}
-
-		{% if site.vk-support %}
-		<!-- VK Scripts -->
-		<script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
-
-		<script type="text/javascript">
-			VK.Widgets.CommunityMessages(
-					"vk_community_messages", 149345104, {
-						disableExpandChatSound: "1",
-						disableNewMessagesSound: "1"
-					}
-			);
-			VK.Widgets.Group(
-					"vk_groups", {
-						mode: 3,
-						width: "250",
-						color3: '428BCA'},
-					149345104
-			);
-		</script>
-		{% endif %}
-
-		<!-- Google Analytics -->
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-75991602-2', 'auto');
-		  ga('send', 'pageview');
-
-		</script>
-	</body>
-</html>
+        {% include jm_sidebar.html %}
+    </div>
+</section>
