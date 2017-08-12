@@ -23,7 +23,7 @@
   price: В зависимости от заказа
   info: Информация
 
-- service: "Техническая поддержка серверов майнкрафт"
+- service: "Техническая поддержка серверов Minecraft"
   id: "minecraft-servers-support"
   fixed: true
   fixed-state:

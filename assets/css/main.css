@@ -446,6 +446,8 @@ footer {
           float: left; }
           .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-info h3 {
             margin-top: 2px; }
+          .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-info .btn-group {
+            width: 100%; }
         .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-image {
           width: 168px;
           margin-left: 12px;
