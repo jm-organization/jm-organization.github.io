@@ -3,14 +3,20 @@
         <div class="panel-heading"><span class="glyphicon glyphicon-home"></span> JM Organization</div>
 
         <div class="panel-body text-center">
-            <strong>JM Organization</strong> <em>- открытая украинская организация, занимающаяся различными видами web-разработок.</em>
+            <p><strong>JM Organization</strong> <em>- открытая украинская организация, занимающаяся различными видами web-разработок.</em></p>
+            <p>Оффициальный портал JM органицации. Последние новости и описание наших проектов. Поможем в реализации сайта, программы. Также помогаем с созданием серверов Minecraft. Исправляем проблем в работе модификаций для Minecraft</p>
         </div>
 
         <ul class="list-group">
             {% for sw in site.data.contacts.social-webs %}
             {% if sw.href != '' %}
             <li class="list-group-item">
-                <a href="{{ sw.href }}" target="_blank"><span class="glyphicon glyphicon-arrow-right"></span>{{ sw.abbr-title }}</a>
+                <span class="glyphicon glyphicon-link"
+                      style="padding-right: 7px; border-right: 1px solid #dddddd; margin-right: 7px"
+                      data-toggle="tooltip" data-placement="top"
+                      title='Открыть страницу {{ sw.title }} {{ sw.prefix }} "{{ sw.abbr-title }}"'
+                ></span>
+                <a href="{{ sw.href }}" target="_blank">{{ sw.abbr-title }}</a>
             </li>
             {% endif %}
             {% endfor %}

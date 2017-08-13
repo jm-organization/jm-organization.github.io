@@ -18,21 +18,25 @@ social-webs:
     title: "JM Organization"
     abbr: "VK"
     abbr-title: "Вконтакте"
+    prefix: "во"
 
   # ukrainians
   - href: "https://www.ukrainians.co/c242"
     title: "JM Organization"
     abbr: "UKRAINIANS"
     abbr-title: "Ukrainians"
+    prefix: "на"
 
   # facebook
   - href: ""
     title: ""
     abbr: "FB"
     abbr-title: "Facebook"
+    prefix: "на"
 
   # github
   - href: "https://github.com/jm-organization"
     title: "JM Organization"
     abbr: "GITHUB"
     abbr-title: "GitHub"
+    prefix: "на"
