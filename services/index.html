@@ -76,7 +76,7 @@ title: Услуги
     </div>
 
     <!-- Form -->
-    <form class="modal fade" id="order-modale" tabindex="-1" role="dialog" aria-labelledby="order-modaleLabel" aria-hidden="true">
+    <form class="modal fade" id="order-modale" tabindex="-1" role="dialog" aria-labelledby="order-modaleLabel" aria-hidden="true" method="post" action="//formspree.io/offers@jm-org.net">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -84,10 +84,16 @@ title: Услуги
                     <h4 class="modal-title" id="order-modaleLabel">Название модали</h4>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <input type="hidden" name="_next" value="/services/" />
+                    <input type="hidden" name="_subject" value="Сообщение с моего сайта" />
+                    <input type="text" name="_gotcha" style="display:none" />
+
+                    <input type="text" name="Имя" required placeholder="Имя" />
+                    <input type="email" name="email" required placeholder="Email" />
+                    <textarea name="Сообщение" required placeholder="Ваше сообщение" rows="7"></textarea>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Заказать</button>
+                    <button type="submit" class="btn btn-primary">Заказать</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
                 </div>
             </div>
