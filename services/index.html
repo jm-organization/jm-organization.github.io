@@ -4,6 +4,7 @@ title: Услуги
 ---
 
 <div class="jm-services">
+    <!-- Fixed services -->
     <div id="carousel-example-generic" class="jm-s-carusel carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             {% for caption in site.data.services %}
@@ -47,6 +48,7 @@ title: Услуги
         </a>
     </div>
 
+    <!-- All services -->
     <div class="jm-s-services">
         <div class="page-width">
             <div class="page-content">
@@ -72,4 +74,23 @@ title: Услуги
             </div>
         </div>
     </div>
+
+    <!-- Form -->
+    <form class="modal fade" id="order-modale" tabindex="-1" role="dialog" aria-labelledby="order-modaleLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="order-modaleLabel">Название модали</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Заказать</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
