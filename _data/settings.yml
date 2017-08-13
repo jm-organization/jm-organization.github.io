@@ -6,3 +6,14 @@ about-disable: false
 news-disable: false
 service-disable: true
 portfolio-disable: true
+
+#---------------#
+# Contacts info #
+#---------------#
+emails:
+  - email: "admin@jm-org.net"
+    title: "Административная почта, для деловых предложений."
+  - email: "info@jm-org.net"
+    title: "Почтда для информирования, входящие письма игнорируются."
+  - email: "offers@jm-org.net"
+    title: "Почта для заказов."

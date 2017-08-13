@@ -107,14 +107,18 @@ title: О нас
         <h3>Контакты</h3>
         <address>
             <strong>JM Организация.</strong><br>
-                Мелитополь, Украина<br>
+            Мелитополь, Украина<br>
+
+            {% for email in site.data.settings.emails %}
             <p>
-                <span class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="top" title="e-mail"></span>
-                <a href="mailto:vany.58.98.2013@gmail.com">vany.58.98.2013@gmail.com</a>
+                <span class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="top" title="{{ email.email }}"></span>
+                <a href="mailto:{{ email.email }}">{{ email.email }}</a>
             </p>
+            {%  %}
+
             <!-- <abbr title="Телефон">P:</abbr> +38 (---) 000 00 00 -->
-            <abbr title="Вконтакте">VK:</abbr> <a href="https://vk.com/jm_organization">jm_organization</a>
-            <abbr title="Ukrainians">Ukrainians:</abbr> <a href="https://www.ukrainians.co/c242">www.ukrainians.co/c242</a>
+            <abbr title="Вконтакте">VK:</abbr> <a href="https://vk.com/jm_organization" target="_blank">jm_organization</a>;&nbsp;&nbsp;
+            <abbr title="Ukrainians">Ukrainians:</abbr> <a href="https://www.ukrainians.co/c242">www.ukrainians.co/c242</a>;&nbsp;&nbsp;
         </address>
     </div>
 </div>
