@@ -10,14 +10,16 @@
                 <h4>JM Organization <small>Организация web-разработок</small></h4>
                 <div class="jm-f-contacts">
                     <ul class="jm-contact">
+                        {% for email in site.data.settings.emails %}
                         <li>
-                        <span class="glyphicon glyphicon-envelope"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="e-mail"
-                        ></span>
-                            <a href="mailto:vany.58.98.2013@gmail.com" {% if site.data.settings.dark-theme %}style="color: #e2e2e2;"{% endif %}>vany.58.98.2013@gmail.com</a>
+                            <span class="glyphicon glyphicon-envelope"
+                                  data-toggle="tooltip"
+                                  data-placement="top"
+                                  title="{{ email.title }}"
+                            ></span>
+                            <a href="mailto:{{ email.email }}" {% if site.data.settings.dark-theme %}style="color: #e2e2e2;"{% endif %}>{{ email.email }}</a>
                         </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

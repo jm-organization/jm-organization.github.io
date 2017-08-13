@@ -7,17 +7,18 @@
         </div>
 
         <ul class="list-group">
+            {% for sw in site.data.settings.social-webs %}
+            {% if sw.href %}
             <li class="list-group-item">
-                <a href="https://github.com/jm-organization" target="_blank"><span class="glyphicon glyphicon-arrow-right"></span> Git Hub</a>
+                <a href="{{ sw.href }}" target="_blank"><span class="glyphicon glyphicon-arrow-right"></span>{{ sw.abbr-title }}</a>
             </li>
-            <li class="list-group-item">
-                <a href="https://vk.com/jmagicmen" target="_blank"><span class="glyphicon glyphicon-arrow-right"></span> Вконтакте</a>
-            </li>
-            <li class="list-group-item">
-                <a href="https://www.facebook.com/jmagicmen" target="_blank"><span class="glyphicon glyphicon-arrow-right"></span> Фейсбук</a>
-            </li>
+            {% endif %}
+            {% endfor %}
         </ul>
     </div>
 
+    {% if site.data.settings.social-webs.vk-widget-supports and site.data.settings.social-webs.vk-widgets.groups %}
+    <!-- VK Widget -->
     <div id="vk_groups"></div>
+    {% endif %}
 </div>

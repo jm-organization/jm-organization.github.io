@@ -17,3 +17,33 @@ emails:
     title: "Почтда для информирования, входящие письма игнорируются."
   - email: "offers@jm-org.net"
     title: "Почта для заказов."
+
+social-webs:
+  # vk
+  - href: "https://vk.com/jm_organization"
+    title: "JM Organization"
+    abbr: "VK"
+    abbr-title: "Вконтакте"
+
+    vk-widget-supports: true
+    vk-widgets:
+      community_messages: true
+      groups: true
+
+  # ukrainians
+  - href: "https://www.ukrainians.co/c242"
+    title: "JM Organization"
+    abbr: "UKRAINIANS"
+    abbr-title: "Ukrainians"
+
+  # facebook
+  - href: ""
+    title: ""
+    abbr: "FB"
+    abbr-title: "Facebook"
+
+  # github
+  - href: "https://github.com/jm-organization"
+    title: "JM Organization"
+    abbr: "GITHUB"
+    abbr-title: "GitHub"

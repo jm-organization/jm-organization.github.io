@@ -56,7 +56,7 @@ title: Услуги
                         <h3>{{ caption.service }}</h3>
                         <p>{{ caption.info }}</p>
                         <div class="btn-group">
-                            <a type="button" class="btn btn-success" href="#{{ caption.id }}-modale" data-toggle="modal" data-target="#{{ caption.id }}-modale">Заказать</a>
+                            <a type="button" class="btn btn-success" href="#order-modale" data-toggle="modal" data-target="#order-modale">Заказать</a>
                             <div class="btn btn-default"
                                  data-toggle="tooltip"
                                  data-placement="right"
@@ -66,75 +66,6 @@ title: Услуги
                     </div>
                     <div class="jm-c-image">
                         <img src="/assets/img/background-picture/services/small_bg-{{ caption.id }}.png" alt="{{ caption.service }}" class="img-thumbnail">
-                    </div>
-
-                    <div class="modal fade" id="{{ caption.id }}-modale" tabindex="-1" role="dialog" aria-labelledby="{{ caption.id }}-modaleLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="{{ caption.id }}-modaleLabel">
-                                        <span class="text-muted" style="padding-right: 5px">Заказ:</span>
-                                        <input type="text" class="form-control" placeholder="Тема вашего заказа" name="{{ caption.id }}-theme-order" id="{{ caption.id }}-theme-order">
-                                    </h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-horizontal" role="form">
-                                        <div class="form-group">
-                                            <label for="{{ caption.id }}-e-mail-order" class="col-sm-2 control-label">E-mail</label>
-                                            <div class="col-sm-10">
-                                                <input type="email" class="form-control" id="{{ caption.id }}-e-mail-order" placeholder="Введите ваш почтовый ящик" required="required">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="{{ caption.id }}-content-order" class="col-sm-2 control-label">Описание заказа</label>
-                                            <div class="col-sm-10">
-                                                <textarea class="form-control" name="{{ caption.id }}-content-order" id="{{ caption.id }}-content-order" rows="5" style="max-width: 100%" required="required" minlength="80"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" id="{{ caption.id }}-confirm-order" onclick="send_order($('#{{ caption.id }}-e-mail-order')[0].value, $('#{{ caption.id }}-theme-order')[0].value, $('#{{ caption.id }}-content-order')[0].value)">Заказать</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <script>
-                            var xmlhttp = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-                            xmlhttp.open('POST', 'https://mandrillapp.com/api/1.0/messages/send.json');
-                            xmlhttp.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-                            xmlhttp.onreadystatechange = function() {
-                                if (xmlhttp.readyState == 4) {
-                                    if (xmlhttp.status == 200) {
-                                        alert('Mail sended!');
-                                    } else if (xmlhttp.status == 500) {
-                                        alert('Check apikey');
-                                    } else {
-                                        alert('Request error');
-                                    }
-                                }
-                            };
-
-                            function send_order(from_email, subject, html) {
-                                xmlhttp.send(JSON.stringify({
-                                    'key': 'KFICJ5kjVMYKIiIVgciH5A',
-                                    'message': {
-                                        'from_email': from_email,
-                                        'to': [{
-                                            'email': 'vany.58.98.2013@gmail.com',
-                                            "name": "Ваня Водяницкий",
-                                            "type": "to"
-                                        }],
-                                        //'autotext': 'true',
-                                        "important": true,
-                                        'subject': subject,
-                                        'text': html
-                                    }}
-                                ));
-                            }
-                        </script>
                     </div>
                 </div>
                 {% endfor %}

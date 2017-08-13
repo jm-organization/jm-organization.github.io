@@ -109,16 +109,18 @@ title: О нас
             <strong>JM Организация.</strong><br>
             Мелитополь, Украина<br>
 
-            {% for email in site.data.settings.emails %}
-            <p>
-                <span class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="top" title="{{ email.email }}"></span>
+            <p style="margin-top: 3px">
+                {% for email in site.data.settings.emails %}
+                <span class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="top" title="{{ email.title }}"></span>
                 <a href="mailto:{{ email.email }}">{{ email.email }}</a>
+                {% endfor %}
             </p>
-            {% endfor %}
 
-            <!-- <abbr title="Телефон">P:</abbr> +38 (---) 000 00 00 -->
-            <abbr title="Вконтакте">VK:</abbr> <a href="https://vk.com/jm_organization" target="_blank">jm_organization</a>;&nbsp;&nbsp;
-            <abbr title="Ukrainians">Ukrainians:</abbr> <a href="https://www.ukrainians.co/c242">www.ukrainians.co/c242</a>;&nbsp;&nbsp;
+            {% for sw in site.data.settings.social-webs %}
+            {% if sw.href %}
+            <abbr title="{{ sw.abbr-title }}">{{ sw.abbr }}:</abbr> <a href="{{ sw.href }}" target="_blank">{{ sw.title }}</a>;&nbsp;&nbsp;
+            {% endif %}
+            {% endfor %}
         </address>
     </div>
 </div>
