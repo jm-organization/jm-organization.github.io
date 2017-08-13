@@ -109,12 +109,12 @@ title: О нас
             <strong>JM Организация.</strong><br>
             Мелитополь, Украина<br>
 
-            <p style="margin-top: 3px">
-                {% for email in site.data.settings.emails %}
+            {% for email in site.data.settings.emails %}
+            <p style="margin: 0; padding-top: 4px">
                 <span class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="top" title="{{ email.title }}"></span>
                 <a href="mailto:{{ email.email }}">{{ email.email }}</a>
-                {% endfor %}
             </p>
+            {% endfor %}
 
             {% for sw in site.data.settings.social-webs %}
             {% if sw.href %}
