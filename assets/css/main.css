@@ -51,11 +51,12 @@ footer {
             padding-right: 5px;
             line-height: 22px;
             font-size: 17px;
-            font-weight: bold; }
+            font-weight: bold;
+            float: left; }
           footer .page-width .jm-f-logo .jm-f-about .jm-f-contacts ul li > a {
             line-height: 22px;
             display: inline-block;
-            float: right;
+            float: left;
             color: #2e2e2e; }
   footer .page-width .jm-f-blocks {
     display: inline-table;
