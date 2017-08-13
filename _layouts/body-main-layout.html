@@ -61,7 +61,7 @@
 			<a data-href="@to-top" data-toggle="tooltip" data-placement="top" title="Наверх"><span class="glyphicon glyphicon-arrow-up"></span></a>
 		</div>
 
-		{% if site.data.settings.social-webs.vk-widget-supports and site.data.settings.social-webs.vk-widgets.community_messages %}
+		{% if site.data.settings.vk-widget-supports and site.data.settings.vk-widgets.community_messages %}
 		<!-- VK Widget -->
 		<div id="vk_community_messages"></div>
 		{% endif %}
@@ -69,11 +69,11 @@
 		<!-- Body-sripts -->
 		{% include jm_inline_script.html %}
 
-		{% if site.data.settings.social-webs.vk-widget-supports %}
+		{% if site.data.settings.vk-widget-supports %}
 		<!-- Body-sripts::vk_scripts -->
 		<script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
 
-		{% if site.data.settings.social-webs.vk-widgets.community_messages %}
+		{% if site.data.settings.vk-widgets.community_messages %}
 		<script type="text/javascript" id="community_messages">
 			VK.Widgets.CommunityMessages(
 					"vk_community_messages", 149345104, {
@@ -84,7 +84,7 @@
 		</script>
 		{% endif %}
 
-		{% if site.data.settings.social-webs.vk-widgets.groups %}
+		{% if site.data.settings.vk-widgets.groups %}
 		<script type="text/javascript" id="groups">
 			VK.Widgets.Group(
 					"vk_groups", {
