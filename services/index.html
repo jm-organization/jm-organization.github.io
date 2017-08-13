@@ -28,7 +28,11 @@ title: Услуги
                             <span class="sr-only">Меню с переключением</span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Заказать</a></li>
+                            <li><a type="button" href="#order-modale"
+
+                                   data-open="order-modale"
+                                   data-service="{{ caption.service }}"
+                            >Заказать</a></li>
                             <li class="divider"></li>
                             <li role="presentation" class="dropdown-header">Цена</li>
                             <li><a href="#">Стоимость услуги: {{ caption.price }}</a></li>
@@ -58,7 +62,7 @@ title: Услуги
                         <h3>{{ caption.service }}</h3>
                         <p>{{ caption.info }}</p>
                         <div class="btn-group">
-                            <a type="button" class="btn btn-success" href="#order-modale" data-toggle="modal" data-target="#order-modale">Заказать</a>
+                            <a type="button" class="btn btn-success" href="#order-modale" data-open="order-modale" data-service="{{ caption.service }}">Заказать</a>
                             <div class="btn btn-default"
                                  data-toggle="tooltip"
                                  data-placement="right"
@@ -81,16 +85,38 @@ title: Услуги
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="order-modaleLabel">Название модали</h4>
+                    <h4 class="modal-title" id="order-modaleLabel">Оформление заказа (<span class="text-muted">Обратная связь</span>)</h4>
                 </div>
                 <div class="modal-body">
-                    <input type="hidden" name="_next" value="/services/" />
-                    <input type="hidden" name="_subject" value="Сообщение с моего сайта" />
-                    <input type="text" name="_gotcha" style="display:none" />
+                    <div class="form-group">
+                        <label for="order-name" class="col-sm-2 control-label">Ваше имя:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="login" required placeholder="Как к вам обращаться?.." id="order-name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-email" class="col-sm-2 control-label">E-mail:</label>
+                        <div class="col-sm-10">
+                            <input type="email" name="email" required placeholder="Введите ваш электронный адрес" id="order-email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-subject-text" class="col-sm-2 control-label">Тема:</label>
+                        <div class="col-sm-10">
+                            <input type="hidden" name="_subject" value="Сообщение с моего сайта" id="order-subject-hidden">
+                            <input type="text" name="subject" disabled value="Сообщение с моего сайта" id="order-subject-text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-text" class="col-sm-2 control-label">Сообщение:</label>
+                        <div class="col-sm-10">
+                            <textarea name="content" required id="order-text" rows="7"></textarea>
+                        </div>
+                    </div>
 
-                    <input type="text" name="Имя" required placeholder="Имя" />
-                    <input type="email" name="email" required placeholder="Email" />
-                    <textarea name="Сообщение" required placeholder="Ваше сообщение" rows="7"></textarea>
+                    <input type="hidden" name="_next" value="/services/" />
+                    <input type="hidden" name="_language" value="ru" />
+                    <input type="text" name="_gotcha" style="display:none" />
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Заказать</button>
