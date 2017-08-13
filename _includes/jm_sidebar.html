@@ -7,7 +7,7 @@
         </div>
 
         <ul class="list-group">
-            {% for sw in site.data.settings.social-webs %}
+            {% for sw in site.data.contacts.social-webs %}
             {% if sw.href != '' %}
             <li class="list-group-item">
                 <a href="{{ sw.href }}" target="_blank"><span class="glyphicon glyphicon-arrow-right"></span>{{ sw.abbr-title }}</a>
