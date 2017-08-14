@@ -445,15 +445,23 @@ footer {
         @media (max-width: 728px) {
           .jm-services .jm-s-services .page-width .page-content .jm-caption {
             display: inline-block;
-            float: left; } }
+            float: left;
+            text-align: center;
+            margin-bottom: 37px; } }
         .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-info {
           width: calc(100% - 180px);
           display: inline-block;
           float: left; }
           .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-info h3 {
             margin-top: 2px; }
+            @media (max-width: 728px) {
+              .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-info h3 {
+                margin-top: 7px; } }
           .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-info .btn-group {
             width: 100%; }
+            @media (max-width: 728px) {
+              .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-info .btn-group {
+                width: auto; } }
           @media (max-width: 728px) {
             .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-info {
               width: 100%;
