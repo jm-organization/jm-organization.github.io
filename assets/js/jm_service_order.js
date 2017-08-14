@@ -22,7 +22,12 @@ $(document).ready(function () {
         var value_name = $(name).val();
         var value_email = $(email).val();
 
-        $('#client').append(value_name+' ('+value_email+')');
+        $('#client').html(value_name+' ('+value_email+')');
         $('#terms-of-use').val('Я, '+value_name+' ('+value_email+')'+', соглашаюсь с условием подачи заказов и обязуюсь заплатить за него полную суму, предявленную исполнитетелм.')
     });
+
+    $('a[data-toggle="cosoo"]').click(function () {
+        $('#cosoo').toggle();
+    });
+
 });
