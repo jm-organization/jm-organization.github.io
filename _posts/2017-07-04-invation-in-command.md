@@ -1,7 +1,7 @@
 ---
 title: Вместе - мы сила
 author: Magicmen
-author_url: https://vk.com/jmagicmen
+author_url: http://jm-org.net/about/#Magicmen
 published: true
 fixed: false
 category: Набор в команду

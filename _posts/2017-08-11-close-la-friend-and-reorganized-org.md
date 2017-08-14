@@ -1,7 +1,7 @@
 ---
 title: La Friend закрыт. JM Organization - реорганизирован.
 author: Magicmen
-author_url: https://vk.com/jmagicmen
+author_url: http://jm-org.net/about/#Magicmen
 published: true
 fixed: true
 category: Важные новости
@@ -12,7 +12,7 @@ picture: close-la-friend-and-reorganized-org.png
 
 ### Изменение сферы деятельности ###
 ***
-В команде было принято решение остановить разработку и заниматься заказами по разработке сайтов, техподдержке и так далее. С полным списком вы можете ознакомиться тут: _[О нас](https://jm-organization.github.io/about "О нас")_.
+В команде было принято решение остановить разработку и заниматься заказами по разработке сайтов, техподдержке и так далее. С полным списком вы можете ознакомиться тут: _[Услуги](http://jm-org.net/services/ "Услуги")_.
 
 ### Немного о сайте ###
 ***
@@ -30,10 +30,8 @@ picture: close-la-friend-and-reorganized-org.png
 * [VK](https://vk.com/jm_organization "JM Organization")
 * [Ukrainians](https://www.ukrainians.co/c242 "JM Organization")
 
-Так же можете отправлять свои письма на почту:
-
-* [vany.58.98.2013@gmail.com](mailto:vany.58.98.2013@gmail.com "Отправить письмо на почту")
-
-Чтобы ваши письма были более заметными отправляйте их с префиксом **[ЗАКАЗ]**
+Так же можете отправлять свои письма с заказами на [эту](mailto:offers@jm-org.net "offers@jm-org.net") почту, а с предлаожениями - на [эту](mailto:admin@jm-org.net "admin@jm-org.net").
+Чтобы ваши письма были более заметными отправляйте их с префиксом **[Заказ] _Заголовок услуги_**.
+Но лучше воспользоваться удобной утилитой на странице услуг и отправить почту через диалоговое окно обратной связи.
 
 На этом всё. Ждём ваших заказов. Удачи!
