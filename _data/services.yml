@@ -21,7 +21,7 @@ services:
     price: от 2499
     info: Информация
 
-  # -
+  # +
   - service: "Разработка дизайна для сайта"
     id: "site-design"
     fixed: true
@@ -29,7 +29,7 @@ services:
     price: от 1900
     info: Информация
 
-  # -
+  # +
   - service: "Оптимизация"
     id: "optimization"
     fixed: false
@@ -37,7 +37,7 @@ services:
     price: от 1000
     info: Информация
 
-  # -
+  # +
   - service: "Проектирование Баз данных"
     id: "base-date-create"
     fixed: true
@@ -45,7 +45,7 @@ services:
     price: 1399
     info: Информация
 
-  # -
+  # +
   - service: "Разработка плагинов под различные CMS"
     id: "develop-plugins-for-cms"
     fixed: false
