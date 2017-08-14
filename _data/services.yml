@@ -14,57 +14,57 @@ curr-title: "Гривен"
 
 services:
   # +
-  - service: "Сайты под ключ"
-    id: "sites-in-key"
+  - service: "Сайт под ключ"
+    id: "site-in-key"
     fixed: true
-    fixed-state: active
-    price: от 2499
-    info: Информация
+    fixed-state: "active"
+    price: "от 2499"
+    info: "Сделаем сайт с нуля на языке программирования PHP. Реализуем адаптивную вёрстку. В зависимости от заказа сделаем авторизацию на сайте."
 
   # +
   - service: "Разработка дизайна для сайта"
     id: "site-design"
     fixed: true
     fixed-state:
-    price: от 1900
-    info: Информация
+    price: "от 1900"
+    info: "Реализуем новый и современный дизайн для вашего сайта"
 
   # +
   - service: "Оптимизация"
     id: "optimization"
     fixed: false
     fixed-state:
-    price: от 1000
-    info: Информация
+    price: "от 1000"
+    info: "Оптимизируем код, адаптируем сайт под устройства. Оптимизируем работу программ. (Оптимизация работы компьютера не входит в эту услугу.)"
 
   # +
   - service: "Проектирование Баз данных"
     id: "base-date-create"
     fixed: true
     fixed-state:
-    price: 1399
-    info: Информация
+    price: "3399"
+    info: "Спроектируем Базу данных на вашем сайте для ваших потребностей"
 
   # +
   - service: "Разработка плагинов под различные CMS"
     id: "develop-plugins-for-cms"
     fixed: false
     fixed-state:
-    price: от 1000
-    info: Информация
+    price: "от 1000"
+    info: "Разрабатываем плагины под WordPress / Joomla"
 
   # +
   - service: "Техническая поддержка"
     id: "tech-support"
     fixed: true
     fixed-state:
-    price: от 50
-    info: Информация
+    price: "от 50"
+    info: "Помогаем в натройке компьютеров. Чистим от накопившегося мусора в нём (программного). Возможна установка Лицензиооного ПО."
 
   # +
   - service: "Техническая поддержка серверов Minecraft"
     id: "minecraft-servers-support"
     fixed: true
     fixed-state:
-    price: 1000
-    info: Информация
+    price: "от 500"
+    info: "Помогаем с настройкой сайтов, серверов. Помогаем в администрировании серверов."
