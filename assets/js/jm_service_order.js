@@ -23,11 +23,36 @@ $(document).ready(function () {
         var value_email = $(email).val();
 
         $('#client').html(value_name+' ('+value_email+')');
-        $('#terms-of-use').val('Я, '+value_name+' ('+value_email+')'+', соглашаюсь с условием подачи заказов и обязуюсь заплатить за него полную суму, предявленную исполнитетелм.')
+        $('#terms-of-use').val('Я, '+value_name+' ('+value_email+')'+', соглашаюсь с условием подачи заказов и обязуюсь заплатить за него полную суму, предявленную исполнителем.')
     });
 
     $('a[data-toggle="cosoo"]').click(function () {
         $('#cosoo').toggle();
     });
 
+    //order-text
+    $(document).on('input', '#order-text', function () {
+        var $item = $(this),
+            value = $item.val(),
+            length = value.length,
+            char_counter = '#char-counter';
+
+        if (length < 100) {
+            $(char_counter).addClass('text-danger');
+        } else if (length >= 100) {
+            $(char_counter).removeClass('text-danger');
+            $(char_counter).addClass('text-warning');
+        } else if (length >= 200) {
+            $(char_counter).removeClass('text-warning');
+            $(char_counter).addClass('text-success');
+        } else if (length >= 612) {
+            $(char_counter).removeClass('text-success');
+            $(char_counter).addClass('text-warning');
+        }  else if (length >= 712) {
+            $(char_counter).removeClass('text-warning');
+            $(char_counter).addClass('text-danger');
+        }
+
+        $(char_counter).html(length);
+    });
 });
