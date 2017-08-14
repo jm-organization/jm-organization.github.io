@@ -58,6 +58,10 @@ title: Услуги
             <div class="page-content">
                 {% for caption in site.data.services.services %}
                 <div id="{{ caption.id }}" class="jm-caption">
+                    <div class="jm-c-image-phone visible-xs">
+                        <img src="/assets/img/background-picture/services/small_bg-{{ caption.id }}.png" alt="{{ caption.service }}" class="img-thumbnail">
+                    </div>
+
                     <div class="jm-c-info">
                         <h3>{{ caption.service }}</h3>
                         <p>{{ caption.info }}</p>
@@ -70,7 +74,8 @@ title: Услуги
                             >{{ caption.price }} {{ site.data.services.currency }}</div>
                         </div>
                     </div>
-                    <div class="jm-c-image">
+
+                    <div class="jm-c-image-pc visible-md visible-lg">
                         <img src="/assets/img/background-picture/services/small_bg-{{ caption.id }}.png" alt="{{ caption.service }}" class="img-thumbnail">
                     </div>
                 </div>

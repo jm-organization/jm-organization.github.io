@@ -465,6 +465,9 @@ footer
           width: 100%
           position: relative
           display: flex
+          @media (max-width: 728px)
+            display: inline-block
+            float: left
           .jm-c-info
             width: calc(100% - 180px)
             display: inline-block
@@ -473,8 +476,17 @@ footer
               margin-top: 2px
             .btn-group
               width: 100%
-          .jm-c-image
+            @media (max-width: 728px)
+              width: 100%
+              display: block
+              float: left
+          .jm-c-image-pc
             width: 168px
             margin-left: 12px
             display: inline-block
             float: right
+          .jm-c-image-phone
+            width: 100%
+            margin: 0
+            display: block
+            float: left

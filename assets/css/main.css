@@ -442,6 +442,10 @@ footer {
         width: 100%;
         position: relative;
         display: flex; }
+        @media (max-width: 728px) {
+          .jm-services .jm-s-services .page-width .page-content .jm-caption {
+            display: inline-block;
+            float: left; } }
         .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-info {
           width: calc(100% - 180px);
           display: inline-block;
@@ -450,10 +454,20 @@ footer {
             margin-top: 2px; }
           .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-info .btn-group {
             width: 100%; }
-        .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-image {
+          @media (max-width: 728px) {
+            .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-info {
+              width: 100%;
+              display: block;
+              float: left; } }
+        .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-image-pc {
           width: 168px;
           margin-left: 12px;
           display: inline-block;
           float: right; }
+        .jm-services .jm-s-services .page-width .page-content .jm-caption .jm-c-image-phone {
+          width: 100%;
+          margin: 0;
+          display: block;
+          float: left; }
 
 /*# sourceMappingURL=main.css.map */
