@@ -21,6 +21,6 @@ $(document).ready(function () {
         var value_email = $(email).val();
 
         $('#client').append(value_name+' ('+value_email+')');
-        $('#terms-of-use').append('Я, '+value_name+' ('+value_email+')'+', соглашаюсь с условием подачи заказов и обязуюсь заплатить за него полную суму, предявленную исполнитетелм.')
+        $('#terms-of-use').val('Я, '+value_name+' ('+value_email+')'+', соглашаюсь с условием подачи заказов и обязуюсь заплатить за него полную суму, предявленную исполнитетелм.')
     });
 });
