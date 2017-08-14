@@ -35,7 +35,7 @@ title: Услуги
                             >Заказать</a></li>
                             <li class="divider"></li>
                             <li role="presentation" class="dropdown-header">Цена</li>
-                            <li><a href="#">Стоимость услуги: {{ caption.price }}</a></li>
+                            <li><a href="#">Стоимость услуги: {{ caption.price }} {{ site.data.services.currency }}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -65,9 +65,9 @@ title: Услуги
                             <a type="button" class="btn btn-success" href="#order-modale" data-open="order-modale" data-service="{{ caption.service }}">Заказать</a>
                             <div class="btn btn-default"
                                  data-toggle="tooltip"
-                                 data-placement="right"
-                                 title="Стоимость услуги: {{ caption.price }}"
-                            >{{ caption.price }}</div>
+                                 data-placement="top"
+                                 title="Стоимость услуги: {{ caption.price }} {{ site.data.services.curr-title }}"
+                            >{{ caption.price }} {{ site.data.services.currency }}</div>
                         </div>
                     </div>
                     <div class="jm-c-image">
