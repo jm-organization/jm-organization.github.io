@@ -56,30 +56,55 @@ title: Услуги
     <div class="jm-s-services">
         <div class="page-width">
             <div class="page-content">
-                {% for caption in site.data.services.services %}
-                <div id="{{ caption.id }}" class="jm-caption">
-                    <div class="jm-c-image-phone visible-xs">
-                        <img src="/assets/img/background-picture/services/small_bg-{{ caption.id }}.png" alt="{{ caption.service }}" class="img-thumbnail">
-                    </div>
+                <div id="services">
+                    {% for caption in site.data.services.services %}
+                    <div id="{{ caption.id }}" class="jm-caption">
+                        <div class="jm-c-image-phone visible-xs">
+                            <img src="/assets/img/background-picture/services/small_bg-{{ caption.id }}.png" alt="{{ caption.service }}" class="img-thumbnail">
+                        </div>
 
-                    <div class="jm-c-info">
-                        <h3>{{ caption.service }}</h3>
-                        <p>{{ caption.info }}</p>
-                        <div class="btn-group">
-                            <a type="button" class="btn btn-success" href="#order-modale" data-open="order-modale" data-service="{{ caption.service }}" onclick="return false">Заказать</a>
-                            <div class="btn btn-default"
-                                 data-toggle="tooltip"
-                                 data-placement="top"
-                                 title="Стоимость услуги: {{ caption.price }} {{ site.data.services.curr-title }}"
-                            >{{ caption.price }} {{ site.data.services.currency }}</div>
+                        <div class="jm-c-info">
+                            <h3>{{ caption.service }}</h3>
+                            <p>{{ caption.info }}</p>
+                            <div class="btn-group">
+                                <a type="button" class="btn btn-success" href="#order-modale" data-open="order-modale" data-service="{{ caption.service }}" onclick="return false">Заказать</a>
+                                <div class="btn btn-default"
+                                     data-toggle="tooltip"
+                                     data-placement="top"
+                                     title="Стоимость услуги: {{ caption.price }} {{ site.data.services.curr-title }}"
+                                >{{ caption.price }} {{ site.data.services.currency }}</div>
+                            </div>
+                        </div>
+
+                        <div class="jm-c-image-pc visible-md visible-lg">
+                            <img src="/assets/img/background-picture/services/small_bg-{{ caption.id }}.png" alt="{{ caption.service }}" class="img-thumbnail">
                         </div>
                     </div>
-
-                    <div class="jm-c-image-pc visible-md visible-lg">
-                        <img src="/assets/img/background-picture/services/small_bg-{{ caption.id }}.png" alt="{{ caption.service }}" class="img-thumbnail">
-                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+
+                <div class="jm-comments">
+                    <div class="jm-comments-title">
+                        <ul class="jm-pager pager">
+                            <li class="jm-comments-title">Отзывы</li>
+                        </ul>
+                    </div>
+                    <div id="disqus_thread"></div>
+                </div>
+
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = window.location.href;
+                        this.page.identifier = 'services'+window.location.pathname;
+                    };
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://jm-organization.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
         </div>
     </div>
