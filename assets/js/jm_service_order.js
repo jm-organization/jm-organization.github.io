@@ -12,4 +12,15 @@ $(document).ready(function () {
         $(subject).val(subject_text);
         $(subject_view).val(subject_text);
     });
+
+    var name = '#order-name';
+    var email = '#order-email';
+
+    $(document).on('change', name+', '+email, function () {
+        var value_name = $(name).val();
+        var value_email = $(email).val();
+
+        $('#client').append(name+' ('+email+')');
+        $('#terms-of-use').append('Я, '+name+' ('+email+')'+', соглашаюсь с условием подачи заказов и обязуюсь заплатить за него полную суму, предявленную исполнитетелм.')
+    });
 });

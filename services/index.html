@@ -110,7 +110,7 @@ title: Услуги
                     <div class="form-group">
                         <label for="order-email" class="col-sm-3 control-label">E-mail:</label>
                         <div class="col-sm-9">
-                            <input type="email" name="Электронный адрес:" class="form-control" required placeholder="Введите ваш электронный адрес" id="order-email">
+                            <input type="email" name="Электронный адрес:" class="form-control" required placeholder="Введите ваш электронный адрес..." id="order-email">
                         </div>
                     </div>
                     <div class="form-group">
@@ -129,11 +129,13 @@ title: Услуги
 
                     <input type="hidden" name="_next" value="/services/" />
                     <input type="hidden" name="_language" value="ru" />
+                    <input type="hidden" name="Пользовательское соглашение:" value="---" id="terms-of-use" />
                     <input type="text" name="_gotcha" style="display:none" />
 
                     <div class="jm-terms-of-use" style="display: none">
-                        <label class="text-info"><input type="checkbox" id="assent">Я, {client}, соглашаюсь</label> с: <a class="text-info" data-toggle="open-cosoo">условием подачи заказов</a> и обязуюсь заплатить за него полную суму, предявленную исполнитетелм.
-                        <div id="open-cosoo">
+                        <label class="text-info"><input type="checkbox" required id="assent">Я, <span id="client"></span>, соглашаюсь</label> с <a class="text-info" data-toggle="open-cosoo" style="cursor: pointer">условием подачи заказов</a> и обязуюсь заплатить за него полную суму, предявленную исполнитетелм.
+
+                        <div class="jm-open-cosoo well" id="open-cosoo">
                             Informacy
                         </div>
                     </div>

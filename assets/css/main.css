@@ -477,5 +477,11 @@ footer {
           margin: 0;
           display: block;
           float: left; }
+.jm-services .jm-terms-of-use label > input[type="checkbox"] {
+  margin-right: 5px;
+  margin-top: 0; }
+.jm-services .jm-terms-of-use .jm-open-cosoo {
+  margin-top: 15px;
+  margin-bottom: 5px; }
 
 /*# sourceMappingURL=main.css.map */
