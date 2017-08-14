@@ -26,7 +26,7 @@ $(document).ready(function () {
         $('#terms-of-use').val('Я, '+value_name+' ('+value_email+')'+', соглашаюсь с условием подачи заказов и обязуюсь заплатить за него полную суму, предявленную исполнителем.')
     });
 
-    $('a[data-toggle="cosoo"]').click(function () {
+    $('a[data-jm-toggle="cosoo"]').click(function () {
         $('#cosoo').toggle();
     });
 
