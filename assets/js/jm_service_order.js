@@ -17,6 +17,8 @@ $(document).ready(function () {
     var email = '#order-email';
 
     $(document).on('change', name+', '+email, function () {
+        $('.jm-terms-of-use').show();
+
         var value_name = $(name).val();
         var value_email = $(email).val();
 
