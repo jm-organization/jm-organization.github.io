@@ -25,12 +25,13 @@ title: Главная
             $("#search").click(function( event ) {
                 event.preventDefault();
 
-                $("#progress").html('<p>Loading...</p><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" style="width: 100%"></div></div>');
                 var string = $("#query").val();
                 var pattern = new RegExp(string, 'i');
 
                 if (string.length > 4) {
                     $('#searchModal').modal('show');
+
+                    $("#progress").html('<p>Loading...</p><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" style="width: 100%"></div></div>');
 
                     setTimeout($.showFeed('http://www.jm-org.net/feed.xml', pattern), 10000);
                 }
