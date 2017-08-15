@@ -28,7 +28,9 @@ title: Главная
                 var string = $("#query").val();
 
                 // При пустом запросе и при запросе, в котором менее 4 символов, выводим сообщение об ошибке.
-                if (string.length > 4) $('#searchModal').modal('show');
+                if (string.length > 4) {
+                    $('#searchModal').modal('show');
+                }
 
                 var html = "";
 
