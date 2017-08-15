@@ -46,7 +46,7 @@ title: Главная
 
         <script>
             $(document).ready(function () {
-                var articles_list = $("#articles").data("articles"),
+                var articles_list = $("#articles-list").data("articles"),
                     articles_list_array = articles_list.substring(0, articles_list.length - 1).split('/');
 
                 $(document).on('input', '#search', function () {
