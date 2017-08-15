@@ -22,7 +22,7 @@ title: Главная
              {% endif %}{% endfor %} ]'
         ></div>
 
-        <ul class="list-group">
+        <ul class="list-group" id="articles-list">
             {% for post in site.posts %}
             {% if post.published %}
             <li class="short-article list-group-item" style="display: none" id="article-{{ forloop.index0 }}">

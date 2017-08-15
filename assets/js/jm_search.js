@@ -21,11 +21,22 @@ function search_news(news, filter) {
 }
 
 $(document).ready(function () {
+    var articles = $("#articles").data("articles");
+    
     $(document).on('input', '#search', function () {
         var $item = $(this),
             value = $item.val(),
             pattern = new RegExp(value, "i");
         
-        
+            articles.each(function () {
+                var article_title = this.title,
+                    article_id = this.id;
+
+                if (pattern.test(article_title)) {
+                    $("#article-"+article_id).show();
+                } else if (news != '' && news != ' ') {
+                    $('.short-article').hide();
+                }
+            });
     }); 
 });
