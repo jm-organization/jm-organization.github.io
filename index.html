@@ -20,12 +20,6 @@ title: Главная
     </div>
 
     <script>
-        jQuery.showFeeds = function (feeds) {
-            //feeds.each();
-
-            console.log(feeds);
-        };
-
         $(document).ready(function () {
             $("#search").click(function( event ) {
                 event.preventDefault();
@@ -58,7 +52,7 @@ title: Главная
                                 });
                             });
 
-                            jQuery.showFeeds(feeds);
+                            // feeds.each();
                         }
                     });
                 }
