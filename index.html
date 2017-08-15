@@ -8,7 +8,7 @@ title: Главная
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title">Результаты поиска</h4>
                 </div>
 
@@ -25,61 +25,71 @@ title: Главная
             $("#search").click(function( event ) {
                 event.preventDefault();
 
-                $("#progress").html('<div class="progress progress-striped active"><div class="progress-bar" role="progressbar" style="width: 100%"></div></div>');
+                $("#progress").html('<p>Loading...</p><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" style="width: 100%"></div></div>');
                 var string = $("#query").val();
                 var pattern = new RegExp(string, 'i');
 
                 if (string.length > 4) {
                     $('#searchModal').modal('show');
 
-                    $.ajax({
-                        url: 'http://www.jm-org.net/feed.xml',
-                        success: function(data){
-                            var feeds = [];
-
-                            $(data).find('entry').each(function() {
-                                var title = $(this).find('title').text();
-                                var url = $(this).find('id').text();
-                                var description = $(this).find('summary').text();
-
-                                var pattern = /([0-9]{4})\/([0-9]{1,2})\/([0-9]{1,2})/g;
-
-                                var dop = $(this).find('id').text().replace(pattern, '$&'); // date of publication
-
-                                feeds.push({
-                                    title: title,
-                                    href: url,
-                                    description: description
-                                    ,date: dop
-                                });
-                            });
-
-                            feeds.forEach(function (element) {
-                                var description = element.description.replace(/<.*?>/g, '');
-                                if (pattern.test(element.title) || pattern.test(description)) {
-                                    $('#results').append(tags.tag({
-                                        tag: 'div',
-                                        attributes: { class: 'panel panel-default' },
-                                        tagContent: tags.tag({
-                                            tag: 'div',
-                                            attributes: { class: 'panel-heading' },
-                                            tagContent: tags.tag({
-                                                tag: 'h3',
-                                                attributes: { class: 'panel-title' },
-                                                tagContent: element.title
-                                            })
-                                        })+tags.tag({
-                                            tag: 'div',
-                                            attributes: { class: 'panel-body' },
-                                            tagContent: description
-                                        })
-                                    }));
-                                }
-                            });
-                        }
-                    });
+                    setTimeout($.showFeed('http://www.jm-org.net/feed.xml', pattern), 2000);
                 }
             });
+
+            $('#searchModal').on('hidden.bs.modal', function (e) {
+                $('#results').html('');
+            });
+
+            $.showFeed = function (url, pattern) {
+                $("#progress").html('');
+
+                $.ajax({
+                    url: url,
+                    success: function(data){
+                        var feeds = [];
+
+                        $(data).find('entry').each(function() {
+                            var title = $(this).find('title').text();
+                            var url = $(this).find('id').text();
+                            var description = $(this).find('summary').text();
+
+                            var pattern = /([0-9]{4})\/([0-9]{1,2})\/([0-9]{1,2})/g;
+
+                            var dop = $(this).find('id').text().replace(pattern, '$&'); // date of publication
+
+                            feeds.push({
+                                title: title,
+                                href: url,
+                                description: description
+                                ,date: dop
+                            });
+                        });
+
+                        feeds.forEach(function (element) {
+                            var description = element.description.replace(/<.*?>/g, '');
+                            if (pattern.test(element.title) || pattern.test(description)) {
+                                $('#results').append(tags.tag({
+                                    tag: 'div',
+                                    attributes: { class: 'panel panel-default' },
+                                    tagContent: tags.tag({
+                                        tag: 'div',
+                                        attributes: { class: 'panel-heading' },
+                                        tagContent: tags.tag({
+                                            tag: 'h3',
+                                            attributes: { class: 'panel-title' },
+                                            tagContent: element.title
+                                        })
+                                    })+tags.tag({
+                                        tag: 'div',
+                                        attributes: { class: 'panel-body' },
+                                        tagContent: description
+                                    })
+                                }));
+                            }
+                        });
+                    }
+                });
+            }
         });
     </script>
 </div>
