@@ -16,11 +16,11 @@ title: Главная
             <div class="jm-close"><span class="close" onclick="$('.jm-news-found').hide();">&times;</span></div>
         </div>
 
-        <div id="articles_list" style="display:none;"
+        <div id="articles-list" style="display:none;"
              data-articles='{% for post in site.posts %}{% if post.published %}{{ post.title }}/{% endif %}{% endfor %}'
         ></div>
 
-        <ul class="list-group" id="articles-list">
+        <ul class="list-group">
             {% for post in site.posts %}
             {% if post.published %}
             <li class="short-article list-group-item" style="display: none" id="article-{{ forloop.index0 }}">
@@ -47,7 +47,7 @@ title: Главная
         <script>
             $(document).ready(function () {
                 var articles_list = $("#articles").data("articles"),
-                        articles_list_array = articles_list.substring(0, articles_list.length - 1).split('/');
+                    articles_list_array = articles_list.substring(0, articles_list.length - 1).split('/');
 
                 $(document).on('input', '#search', function () {
                     var $item = $(this),
