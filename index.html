@@ -4,67 +4,75 @@ title: Главная
 ---
 
 <div class="jm-news-found">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="jm-layout-results" style="display: none">
-                <div id="is-result">Найдено {records} из {all-records}:</div>
-                <div id="no-result">Ничего не найдено</div>
-            </div>
-
-            <div class="jm-result"></div>
-
-            <div class="jm-close"><span class="close" onclick="$('.jm-news-found').hide();">&times;</span></div>
-        </div>
-
-        <div id="articles-list" style="display:none;"
-             data-articles='{% for post in site.posts %}{% if post.published %}{{ post.title }}/{% endif %}{% endfor %}'
-        ></div>
-
-        <ul class="list-group">
-            {% for post in site.posts %}
-            {% if post.published %}
-            <li class="short-article list-group-item" style="display: none" id="article-{{ forloop.index0 }}">
-                <div class="jm-nf-header">
-                    <div class="jm-a-picture">
-                        <img src="/assets/img/news_picture/{{ post.picture }}" width="56px" height="56px">
-                    </div>
-                    <p class="jm-a-header">
-                        <span style="display: block; font-size: 18px;">{{ post.title }}</span>
-
-                        {% if post.author or post.date %}
-                        <span class="text-muted">{% if post.date %}{{ post.date | date: '%d.%m.%Y' }}{% endif %}, {% if post.author %}Опубликовал <strong>{% if post.author_url %}<a href="{{ post.author_url }}" target="_blank">{% endif %}{{ post.author }}{% if post.author_url %}</a>{% endif %}</strong>{% endif %}</span>
-                        {% endif %}
-                    </p>
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Результаты поиска</h4>
                 </div>
-                <a class="jm-nf-href" href="{{ post.url }}">
-                    <span class="glyphicon glyphicon-chevron-right" style="padding: 20px 21px 22px;"></span>
-                </a>
-            </li>
-            {% endif %}
-            {% endfor %}
-        </ul>
 
-        <script>
-            $(document).ready(function () {
-                var articles_list = $("#articles-list").data("articles"),
-                    articles_list_array = articles_list.substring(0, articles_list.length - 1).split('/');
-
-                $(document).on('input', '#search', function () {
-                    var $item = $(this),
-                            value = $item.val(),
-                            pattern = new RegExp(value, "i");
-
-                    articles_list_array.each(function (index, title) {
-                        if (pattern.test(title)) {
-                            $("#article-"+index).show();
-                        } else if (news != '' && news != ' ') {
-                            $('.short-article').hide();
-                        }
-                    });
-                });
-            });
-        </script>
+                <div class="modal-body">
+                    <div id="progress"></div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#search").submit(function( event ) {
+                event.preventDefault();
+
+                $("#progress").html('<div class="progress progress-striped active"><div class="progress-bar" role="progressbar" style="width: 100%"></div></div>');
+                var string = $("#query").val();
+
+                // При пустом запросе и при запросе, в котором менее 4 символов, выводим сообщение об ошибке.
+                if (string.length > 4) $('#searchModal').modal('show');
+
+                var html = "";
+
+                // Получаем RSS
+                jQuery.getFeed({
+                    url: '{{ root_url }}/feed.xml',
+                    success: function(feed) {
+                        for(var i = 0; i < feed.items.length; i++) {
+
+                            var item = feed.items[i];
+
+                            // Убираем все html теги.
+                            item.description = item.description.replace(/\<.*?>/g, '');
+
+                            // Ищем по описанию и названию
+                            if (item.description.toLowerCase().indexOf(string.toLowerCase()) !== -1 || item.title.toLowerCase().indexOf(string.toLowerCase()) !== -1)  {
+                                html += '<div class="panel panel-default search-panel"> <div class="panel-body"> <div class="entry-title"><h3><a href="' + item.link + '">' + item.title + '</a></h3></div>';
+
+                                // Если ключевое слово встречается в описании, выводим его + по 30 символов слева/справа от него. Причем делаем ключевое слово выделенным
+                                if (item.description.toLowerCase().indexOf(string.toLowerCase()) !== -1) {
+                                    html += '<hr /><div>...' + item.description.substring(item.description.toLowerCase().indexOf(string.toLowerCase()) -30 ,item.description.toLowerCase().indexOf(string.toLowerCase())) + '<strong>' + item.description.substring(item.description.toLowerCase().indexOf(string.toLowerCase()),item.description.toLowerCase().indexOf(string.toLowerCase()) + string.length) + '</strong>' + item.description.substring(item.description.toLowerCase().indexOf(string.toLowerCase()) + string.length,item.description.toLowerCase().indexOf(string.toLowerCase()) + string.length + 30) + '...</div>';
+                                }
+
+
+                                // Показываем в углу дату
+                                html += '<p class="text-muted"><span class="glyphicon glyphicon-calendar"></span>' + dateParse(item.updated) + '</p></div></div>'
+                            }
+
+
+                        }
+                        if (html == "") {
+
+
+                            html += '<div class="alert alert-warning">Ничего не найдено</div>';
+                        }
+                        $(".modal-body").html(html);
+
+                    }
+                });
+
+
+            });
+        });
+    </script>
 </div>
 
 <!-- Articles -->
