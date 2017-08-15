@@ -20,6 +20,35 @@ title: Главная
     </div>
 
     <script>
+        jQuery.getFeed = function (feedUrl) {
+            $.get(feedUrl, function(data) {
+                var feeds = [];
+
+                $(data).find('entry').each(function() {
+                    var title = $(this).find('title').text();
+                    var url = $(this).find('id').text();
+                    var description = $(this).find('summary').text();
+
+                    var pattern = /([0-9]{4})\/([0-9]{1,2})\/([0-9]{1,2})/g;
+
+                    var dop = $(this).find('id').replace(pattern, '$&'); // date of publication
+
+                    feeds.push({
+                        title: title,
+                        href: url,
+                        description: description,
+                        date: dop
+                    });
+                });
+
+                return feeds;
+            });
+        };
+
+        jQuery.showFeeds = function (feeds) {
+            feeds.each();
+        };
+
         $(document).ready(function () {
             $("#search").click(function( event ) {
                 event.preventDefault();
@@ -27,51 +56,12 @@ title: Главная
                 $("#progress").html('<div class="progress progress-striped active"><div class="progress-bar" role="progressbar" style="width: 100%"></div></div>');
                 var string = $("#query").val();
 
-                // При пустом запросе и при запросе, в котором менее 4 символов, выводим сообщение об ошибке.
                 if (string.length > 4) {
                     $('#searchModal').modal('show');
+
+                    var feeds = jQuery.getFeed();
+                    console.log(feeds);
                 }
-
-                var html = "";
-
-                // Получаем RSS
-                jQuery.getFeed({
-                    url: '{{ root_url }}/feed.xml',
-                    success: function(feed) {
-                        for(var i = 0; i < feed.items.length; i++) {
-
-                            var item = feed.items[i];
-
-                            // Убираем все html теги.
-                            item.description = item.description.replace(/\<.*?>/g, '');
-
-                            // Ищем по описанию и названию
-                            if (item.description.toLowerCase().indexOf(string.toLowerCase()) !== -1 || item.title.toLowerCase().indexOf(string.toLowerCase()) !== -1)  {
-                                html += '<div class="panel panel-default search-panel"> <div class="panel-body"> <div class="entry-title"><h3><a href="' + item.link + '">' + item.title + '</a></h3></div>';
-
-                                // Если ключевое слово встречается в описании, выводим его + по 30 символов слева/справа от него. Причем делаем ключевое слово выделенным
-                                if (item.description.toLowerCase().indexOf(string.toLowerCase()) !== -1) {
-                                    html += '<hr /><div>...' + item.description.substring(item.description.toLowerCase().indexOf(string.toLowerCase()) -30 ,item.description.toLowerCase().indexOf(string.toLowerCase())) + '<strong>' + item.description.substring(item.description.toLowerCase().indexOf(string.toLowerCase()),item.description.toLowerCase().indexOf(string.toLowerCase()) + string.length) + '</strong>' + item.description.substring(item.description.toLowerCase().indexOf(string.toLowerCase()) + string.length,item.description.toLowerCase().indexOf(string.toLowerCase()) + string.length + 30) + '...</div>';
-                                }
-
-
-                                // Показываем в углу дату
-                                html += '<p class="text-muted"><span class="glyphicon glyphicon-calendar"></span>' + dateParse(item.updated) + '</p></div></div>'
-                            }
-
-
-                        }
-                        if (html == "") {
-
-
-                            html += '<div class="alert alert-warning">Ничего не найдено</div>';
-                        }
-                        $(".modal-body").html(html);
-
-                    }
-                });
-
-
             });
         });
     </script>
