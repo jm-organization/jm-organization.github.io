@@ -78,7 +78,11 @@ title: Главная
                                         tagContent: tags.tag({
                                             tag: 'h3',
                                             attributes: { class: 'panel-title' },
-                                            tagContent: element.title
+                                            tagContent: tags.tag({
+                                                tag: 'a',
+                                                attributes: { href: element.url },
+                                                tagContent: element.title
+                                            })
                                         })
                                     })+tags.tag({
                                         tag: 'div',
