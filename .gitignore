@@ -2,3 +2,5 @@
 assets/css/*.css.map
 variables.css
 #_posts/
+start.bat
+_site/
