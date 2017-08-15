@@ -17,7 +17,7 @@ title: Главная
         </div>
 
         <div id="articles" style="display:none;"
-             data-articles='[{% for post in site.posts %}{% if post.published %}{"id":"article-{{ forloop.index0 }}", "title":"{{ post.title }}"}{% if post.next != nil %},{% endif %}{% endif %}{% endfor %}]'
+             data-articles='[{% for post in site.posts %}{% if post.published %}{"id":"article-{{ forloop.index0 }}", "title":"{{ post.title }}"},{% endif %}{% endfor %}]'
         ></div>
 
         <ul class="list-group" id="articles-list">
