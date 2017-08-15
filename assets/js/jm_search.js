@@ -19,3 +19,13 @@ function search_news(news, filter) {
         });
     }
 }
+
+$(document).ready(function () {
+    $(document).on('input', '#search', function () {
+        var $item = $(this),
+            value = $item.val(),
+            pattern = new RegExp(value, "i");
+        
+        
+    }); 
+});
