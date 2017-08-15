@@ -20,33 +20,10 @@ title: Главная
     </div>
 
     <script>
-        jQuery.getFeed = function (feedUrl) {
-            $.get(feedUrl, function(data) {
-                var feeds = [];
-
-                $(data).find('entry').each(function() {
-                    var title = $(this).find('title').text();
-                    var url = $(this).find('id').text();
-                    var description = $(this).find('summary').text();
-
-                    var pattern = /([0-9]{4})\/([0-9]{1,2})\/([0-9]{1,2})/g;
-
-                    var dop = $(this).find('id').text().replace(pattern, '$&'); // date of publication
-
-                    feeds.push({
-                        title: title,
-                        href: url,
-                        description: description
-                        ,date: dop
-                    });
-                });
-
-                return feeds;
-            });
-        };
-
         jQuery.showFeeds = function (feeds) {
-            feeds.each();
+            //feeds.each();
+
+            console.log(feeds);
         };
 
         $(document).ready(function () {
@@ -59,8 +36,31 @@ title: Главная
                 if (string.length > 4) {
                     $('#searchModal').modal('show');
 
-                    var feeds = jQuery.getFeed('http://www.jm-org.net/feed.xml');
-                    console.log(feeds);
+                    $.ajax({
+                        url: 'http://www.jm-org.net/feed.xml',
+                        success: function(data){
+                            var feeds = [];
+
+                            $(data).find('entry').each(function() {
+                                var title = $(this).find('title').text();
+                                var url = $(this).find('id').text();
+                                var description = $(this).find('summary').text();
+
+                                var pattern = /([0-9]{4})\/([0-9]{1,2})\/([0-9]{1,2})/g;
+
+                                var dop = $(this).find('id').text().replace(pattern, '$&'); // date of publication
+
+                                feeds.push({
+                                    title: title,
+                                    href: url,
+                                    description: description
+                                    ,date: dop
+                                });
+                            });
+
+                            jQuery.showFeeds(feeds);
+                        }
+                    });
                 }
             });
         });
