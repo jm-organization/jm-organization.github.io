@@ -31,13 +31,13 @@ title: Главная
 
                     var pattern = /([0-9]{4})\/([0-9]{1,2})\/([0-9]{1,2})/g;
 
-                    var dop = $(this).find('id').replace(pattern, '$&'); // date of publication
+                    //var dop = $(this).find('id').replace(pattern, '$&'); // date of publication
 
                     feeds.push({
                         title: title,
                         href: url,
-                        description: description,
-                        date: dop
+                        description: description
+                        //,date: dop
                     });
                 });
 
@@ -59,7 +59,7 @@ title: Главная
                 if (string.length > 4) {
                     $('#searchModal').modal('show');
 
-                    var feeds = jQuery.getFeed();
+                    var feeds = jQuery.getFeed('{{ root_url }}/feed.xml');
                     console.log(feeds);
                 }
             });
