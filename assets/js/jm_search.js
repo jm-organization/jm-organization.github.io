@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function () {
-    var articles_list = $("#articles").data("articles");
+    var articles_list = $("#articles").data("articles").substring(0, str.length - 1).split(',');
 
     $(document).on('input', '#search', function () {
         var $item = $(this),
