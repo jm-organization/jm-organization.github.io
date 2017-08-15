@@ -11,7 +11,7 @@ $(document).ready(function () {
             value = $item.val(),
             pattern = new RegExp(value, "i");
 
-        articles_list_array.each(function (index, title) {
+        $("#articles").data("articles").substring(0, $("#articles").data("articles").length - 1).split('/').each(function (index, title) {
             if (pattern.test(title)) {
                 $("#article-"+index).show();
             } else if (news != '' && news != ' ') {
