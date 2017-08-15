@@ -16,7 +16,7 @@ title: Главная
             <div class="jm-close"><span class="close" onclick="$('.jm-news-found').hide();">&times;</span></div>
         </div>
 
-        <div id="articles" style="display:none;"
+        <div id="articles_list" style="display:none;"
              data-articles='{% for post in site.posts %}{% if post.published %}{{ post.title }}/{% endif %}{% endfor %}'
         ></div>
 
