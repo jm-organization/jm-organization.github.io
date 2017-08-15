@@ -14,6 +14,7 @@ title: Главная
 
                 <div class="modal-body">
                     <div id="progress"></div>
+                    <div id="results"></div>
                 </div>
             </div>
         </div>
@@ -26,6 +27,7 @@ title: Главная
 
                 $("#progress").html('<div class="progress progress-striped active"><div class="progress-bar" role="progressbar" style="width: 100%"></div></div>');
                 var string = $("#query").val();
+                var pattern = new RegExp(string, 'i');
 
                 if (string.length > 4) {
                     $('#searchModal').modal('show');
@@ -52,7 +54,28 @@ title: Главная
                                 });
                             });
 
-                            // feeds.each();
+                            feeds.forEach(function (element) {
+                                var description = element.description.replace(/<.*?>/g, '');
+                                if (pattern.test(element.title) && pattern.test(description)) {
+                                    $('#results').append(tags.tag({
+                                        tag: 'div',
+                                        attributes: { class: 'panel panel-default' },
+                                        tagContent: tags.tag({
+                                            tag: 'div',
+                                            attributes: { class: 'panel-heading' },
+                                            tagContent: tags.tag({
+                                                tag: 'h3',
+                                                attributes: { class: 'panel-title' },
+                                                tagContent: element.title
+                                            })
+                                        })+tags.tag({
+                                            tag: 'div',
+                                            attributes: { class: 'panel-body' },
+                                            tagContent: description
+                                        })
+                                    }));
+                                }
+                            });
                         }
                     });
                 }
