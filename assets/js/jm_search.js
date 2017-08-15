@@ -3,13 +3,12 @@
  */
 
 $(document).ready(function () {
-    var articles_list = $("#articles").data("articles"),
-        articles_list_array = articles_list.substring(0, articles_list.length - 1).split(',');
-
     $(document).on('input', '#search', function () {
         var $item = $(this),
             value = $item.val(),
-            pattern = new RegExp(value, "i");
+            pattern = new RegExp(value, "i"),
+            articles_list = $("#articles").data("articles"),
+            articles_list_array = articles_list.substring(0, articles_list.length - 1).split(',');
 
         articles_list_array.each(function () {
             var article_title = this.title,
