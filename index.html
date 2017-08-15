@@ -56,7 +56,7 @@ title: Главная
 
                             feeds.forEach(function (element) {
                                 var description = element.description.replace(/<.*?>/g, '');
-                                if (pattern.test(element.title) && pattern.test(description)) {
+                                if (pattern.test(element.title) || pattern.test(description)) {
                                     $('#results').append(tags.tag({
                                         tag: 'div',
                                         attributes: { class: 'panel panel-default' },
