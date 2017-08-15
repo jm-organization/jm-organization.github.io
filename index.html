@@ -42,8 +42,6 @@ title: Главная
             });
 
             $.showFeed = function (url, pattern) {
-                $("#progress").html('');
-
                 $.ajax({
                     url: url,
                     success: function(data){
@@ -69,6 +67,8 @@ title: Главная
                         feeds.forEach(function (element) {
                             var description = element.description.replace(/<.*?>/g, '');
                             if (pattern.test(element.title) || pattern.test(description)) {
+                                $("#progress").html('');
+
                                 $('#results').append(tags.tag({
                                     tag: 'div',
                                     attributes: { class: 'panel panel-default' },
