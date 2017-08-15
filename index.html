@@ -18,7 +18,7 @@ title: Главная
 
         <div id="articles" style="display:none;"
              data-articles='[ {% for post in site.posts %}{% if post.published %}
-                {"id": "article-{{ forloop.index0 }}", "title": "{{ post.title }}"},
+                {id: "article-{{ forloop.index0 }}", title: "{{ post.title }}"},
              {% endif %}{% endfor %} ]'
         ></div>
 
