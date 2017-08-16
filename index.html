@@ -35,9 +35,9 @@ title: Главная
                     $('#searchModal').modal('show');
 
                     $('#find-string').html(string);
-                    $("#progress").html('<p>Loading...</p><div class="progress progress-striped active"><div id="search-progress-bar" class="progress-bar" role="progressbar" style="width: 0%"></div></div>');
+                    $("#progress").html('<p>Загрузка...</p><div class="progress progress-striped active"><div id="search-progress-bar" class="progress-bar" role="progressbar" style="width: 0%"></div></div>');
 
-                    for (var i=1; i<100; i++) {
+                    for (var i=1; i<=100; i++) {
                         $('#search-progress-bar').css({'width':i+'%'});
 
                         if (i = 100) {
@@ -114,6 +114,12 @@ title: Главная
                                             tagContent: description
                                         })
                                     })
+                                }));
+                            } else {
+                                $('#results').append(tags.tag({
+                                    tag: 'div',
+                                    attributes: { class: 'bg-warning', style: 'text-align: center;' },
+                                    tagContent: 'По данному запросу ничего не найдено'
                                 }));
                             }
                         });
