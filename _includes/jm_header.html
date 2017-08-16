@@ -63,14 +63,14 @@
 			</ul>
 
 			{% if page.url == '/' %}
-			<form class="navbar-form navbar-left">
+			<form class="navbar-form navbar-left" onsubmit="return false;">
 				<fieldset{% if site.data.settings.search-news == false %} disabled{% endif %}>
 					<div class="form-group">
 						<div class="input-group">
-							<input type="search" id="query" class="form-control" placeholder="Начните вводить слово...">
+							<input type="text" id="query" class="form-control" placeholder="Начните вводить слово...">
 
 							<div class="input-group-btn">
-								<button type="submit" id="search" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Быстрый поиск новостей по заголовку"><span class="glyphicon glyphicon-search"></span></button>
+								<button type="submit" id="search" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Быстрый поиск новостей по заголовку и содержанию"><span class="glyphicon glyphicon-search"></span></button>
 
 								<button type="button" class="btn btn-default dropdown-toggle{% unless site.data.settings.search-with-filters %} disabled{% endunless %}" data-toggle="dropdown"><span class="caret"></span></button>
 								<ul class="dropdown-menu pull-right">
