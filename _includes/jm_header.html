@@ -63,25 +63,14 @@
 			</ul>
 
 			{% if page.url == '/' %}
-			<form class="navbar-form navbar-left" role="search">
+			<form class="navbar-form navbar-left" id="search-form">
 				<fieldset{% if site.data.settings.search-news == false %} disabled{% endif %}>
 					<div class="form-group">
 						<div class="input-group">
-							<input type="text"
-								   id="query"
-								   class="form-control"
-
-								   onclick="$('.jm-news-found').show();"
-
-								   data-toggle="tooltip"
-								   data-placement="bottom"
-								   title="Быстрый поиск новостей по заголовку"
-
-								   placeholder="Начните вводить слово..."
-							>
+							<input type="text" id="query" class="form-control" placeholder="Начните вводить слово...">
 
 							<div class="input-group-btn">
-								<button type="button" id="search" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+								<button type="submit" id="search" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Быстрый поиск новостей по заголовку"><span class="glyphicon glyphicon-search"></span></button>
 
 								<button type="button" class="btn btn-default dropdown-toggle{% unless site.data.settings.search-with-filters %} disabled{% endunless %}" data-toggle="dropdown"><span class="caret"></span></button>
 								<ul class="dropdown-menu pull-right">

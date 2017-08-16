@@ -22,7 +22,7 @@ title: Главная
 
     <script>
         $(document).ready(function () {
-            $("#search").click(function( event ) {
+            $("#search-form").submit(function( event ) {
                 event.preventDefault();
 
                 var string = $("#query").val();
@@ -41,6 +41,10 @@ title: Главная
                         }
                     }
                 }
+
+                $("#query").val('');
+
+                return false;
             });
 
             $('#results .panel').hover(
