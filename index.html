@@ -28,7 +28,7 @@ title: Главная
                 var string = $("#query").val();
                 var pattern = new RegExp(string, 'i');
 
-                if (string.length > 4) {
+                if (string.length >= 3) {
                     $('#searchModal').modal('show');
 
                     $("#progress").html('<p>Loading...</p><div class="progress progress-striped active"><div id="search-progress-bar" class="progress-bar" role="progressbar" style="width: 0%"></div></div>');
