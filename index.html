@@ -9,7 +9,10 @@ title: Главная
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Результаты поиска</h4>
+                    <h4 class="modal-title">
+                        Результаты поиска
+                        <small style="display: block">По запросу: "<b id="find-string"></b>"</small>
+                    </h4>
                 </div>
 
                 <div class="modal-body">
@@ -31,6 +34,7 @@ title: Главная
                 if (string.length >= 3) {
                     $('#searchModal').modal('show');
 
+                    $('#find-string').html(string);
                     $("#progress").html('<p>Loading...</p><div class="progress progress-striped active"><div id="search-progress-bar" class="progress-bar" role="progressbar" style="width: 0%"></div></div>');
 
                     for (var i=1; i<100; i++) {
@@ -58,6 +62,7 @@ title: Главная
 
             $('#searchModal').on('hidden.bs.modal', function (e) {
                 $('#results').html('');
+                $('#find-string').html('');
             });
 
             $.showFeed = function (url, pattern) {
