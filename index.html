@@ -43,6 +43,16 @@ title: Главная
                 }
             });
 
+            $('.panel').hover(
+                function () {
+                    $(this).removeClass('panel-default');
+                    $(this).addClass('panel-success');
+                },function () {
+                    $(this).removeClass('panel-success');
+                    $(this).addClass('panel-default');
+                }
+            );
+
             $('#searchModal').on('hidden.bs.modal', function (e) {
                 $('#results').html('');
             });
@@ -82,8 +92,15 @@ title: Главная
                                         tag: 'div',
                                         attributes: { class: 'panel-body', style: 'border-left: 3px solid #e2e2e2;' },
                                         tagContent: tags.tag({
-                                            tag: 'h3',
-                                            tagContent: element.title
+                                            tag: 'h4',
+                                            tagContent: element.title + tags.tag({
+                                                tag: 'a',
+                                                attributes: { href: element.href },
+                                                tagContent: tags.tag({
+                                                    tag: 'span',
+                                                    attributes: { class: 'glyphicon glyphicon-link' }
+                                                })
+                                            })
                                         })+tags.tag({
                                             tag: 'p',
                                             tagContent: description
