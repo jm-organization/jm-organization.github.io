@@ -36,6 +36,11 @@ title: Главная
 
                     $('#find-string').html(string);
                     $("#progress").html('<p>Загрузка...</p><div class="progress progress-striped active"><div id="search-progress-bar" class="progress-bar" role="progressbar" style="width: 0%"></div></div>');
+                    $('#results').append(tags.tag({
+                        tag: 'div',
+                        attributes: { class: 'bg-warning', style: 'text-align: center;' },
+                        tagContent: 'По данному запросу ничего не найдено'
+                    }));
 
                     for (var i=1; i<=100; i++) {
                         $('#search-progress-bar').css({'width':i+'%'});
@@ -91,7 +96,7 @@ title: Главная
                         feeds.forEach(function (element) {
                             var description = element.description.replace(/<.*?>/g, '');
                             if (pattern.test(element.title) || pattern.test(description)) {
-                                $("#progress").html('');
+                                $("#progress, #results").html('');
 
                                 $('#results').append(tags.tag({
                                     tag: 'div',
@@ -114,12 +119,6 @@ title: Главная
                                             tagContent: description
                                         })
                                     })
-                                }));
-                            } else {
-                                $('#results').append(tags.tag({
-                                    tag: 'div',
-                                    attributes: { class: 'bg-warning', style: 'text-align: center;' },
-                                    tagContent: 'По данному запросу ничего не найдено'
                                 }));
                             }
                         });
