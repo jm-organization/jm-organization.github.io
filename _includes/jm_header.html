@@ -63,11 +63,11 @@
 			</ul>
 
 			{% if page.url == '/' %}
-			<form class="navbar-form navbar-left" id="search-form">
+			<form class="navbar-form navbar-left" onsubmit="return false;">
 				<fieldset{% if site.data.settings.search-news == false %} disabled{% endif %}>
 					<div class="form-group">
 						<div class="input-group">
-							<input type="text" id="query" class="form-control" placeholder="Начните вводить слово...">
+							<input type="search" id="query" class="form-control" placeholder="Начните вводить слово...">
 
 							<div class="input-group-btn">
 								<button type="submit" id="search" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Быстрый поиск новостей по заголовку"><span class="glyphicon glyphicon-search"></span></button>
