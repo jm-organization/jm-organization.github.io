@@ -31,9 +31,15 @@ title: Главная
                 if (string.length > 4) {
                     $('#searchModal').modal('show');
 
-                    $("#progress").html('<p>Loading...</p><div class="progress progress-striped active"><div class="progress-bar" role="progressbar" style="width: 100%"></div></div>');
+                    $("#progress").html('<p>Loading...</p><div class="progress progress-striped active"><div id="search-progress-bar" class="progress-bar" role="progressbar" style="width: 0%"></div></div>');
 
-                    setTimeout($.showFeed('http://www.jm-org.net/feed.xml', pattern), 10000);
+                    for (var i=1; i<100; i++) {
+                        $('#search-progress-bar').css({'width':i+'%'});
+
+                        if (i = 100) {
+                            setTimeout($.showFeed('http://www.jm-org.net/feed.xml', pattern), 2000);
+                        }
+                    }
                 }
             });
 
@@ -74,20 +80,14 @@ title: Главная
                                     attributes: { class: 'panel panel-default' },
                                     tagContent: tags.tag({
                                         tag: 'div',
-                                        attributes: { class: 'panel-heading' },
+                                        attributes: { class: 'panel-body', style: 'border-left: 3px solid #e2e2e2;' },
                                         tagContent: tags.tag({
                                             tag: 'h3',
-                                            attributes: { class: 'panel-title' },
-                                            tagContent: tags.tag({
-                                                tag: 'a',
-                                                attributes: { href: element.url },
-                                                tagContent: element.title
-                                            })
+                                            tagContent: element.title
+                                        })+tags.tag({
+                                            tag: 'p',
+                                            tagContent: description
                                         })
-                                    })+tags.tag({
-                                        tag: 'div',
-                                        attributes: { class: 'panel-body' },
-                                        tagContent: description
                                     })
                                 }));
                             }
