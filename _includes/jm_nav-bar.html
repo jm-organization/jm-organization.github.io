@@ -1,4 +1,4 @@
-<nav class="navbar {% unless site.data.settings.dark-theme %}navbar-default{% else %}navbar-inverse{% endunless %}" role="navigation" style="border-radius: 0; margin-bottom: 0">
+<nav class="navbar {% if site.data.settings.dark-theme or page.url == '/portfolio/' %}navbar-inverse{% else %}navbar-default{% endif %}" role="navigation" style="border-radius: 0; margin-bottom: 0">
 	<div class="container-fluid">
 
 		<div class="navbar-header">
