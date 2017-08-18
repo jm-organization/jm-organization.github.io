@@ -42,7 +42,7 @@
 {% endif %}
 
 <!-- Navigation -->
-<nav class="navbar {% if site.data.settings.dark-theme %}navbar-inverse{% endif %}{% if site.data.settings.dark-theme == false %}navbar-default{% endif %}" role="navigation" style="border-radius: 0; margin-bottom: 0">
+<nav class="navbar {% if site.data.settings.dark-theme and page.url == '/portfolio/' %}navbar-inverse{% endif %}{% if site.data.settings.dark-theme == false %}navbar-default{% endif %}" role="navigation" style="border-radius: 0; margin-bottom: 0">
 	<div class="container-fluid">
 
 		<div class="navbar-header">
