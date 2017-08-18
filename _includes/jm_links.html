@@ -3,7 +3,8 @@
 <link href="/favicon.ico" rel="icon" type="image/x-icon" />
 
 <!-- head::css -->
-<link rel="stylesheet" href="/assets/css/main.css" />
+{% if page.url != '/portfolio/' %}<link rel="stylesheet" href="/assets/css/main.css" />{% endif %}
+{% if page.url == '/portfolio/' %}<link rel="stylesheet" href="/assets/css/portfolio.css" />{% endif %}
 <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
 
 <!-- head::js -->
@@ -13,9 +14,10 @@
 
 <script src="/assets/js/jm.js" ></script>
 
+{% if page.url == '/about/' %}<script src="/assets/js/jm_about.js" ></script>{% endif %}
 {% if page.url == '/services/' %}<script src="/assets/js/jm_service_order.js" ></script>{% endif %}
 {% if page.url == '/test/' %}<script src="/assets/js/jm_header.js" ></script>{% endif %}
-{% if page.url == '/about/' %}<script src="/assets/js/jm_about.js" ></script>{% endif %}
+{% if page.url == '/portfolio/' %}<script src="/assets/js/jm_portfolio.js" ></script>{% endif %}
 
 {% if site.data.settings.vk-widget-supports %}
 <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
