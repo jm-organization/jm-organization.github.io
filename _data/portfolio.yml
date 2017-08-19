@@ -6,6 +6,6 @@
   id: 'jm-org-site'
   description: 'Разработка сайта под ключ для JM Organization'
 
-- project: 'Cilaster CMS'
-  id: 'cms-cilsater'
-  description: ''
+#- project: 'Cilaster CMS'
+#  id: 'cms-cilsater'
+#  description: ''
