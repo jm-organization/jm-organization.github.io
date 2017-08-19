@@ -34,16 +34,15 @@ section {
       overflow-x: scroll;
       white-space: nowrap; }
       section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar {
-        width: 10px; }
+        width: 10px;
+        border: 1px solid #651a1a; }
       section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar-button {
         background: #912525; }
       section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar-track {
-        background: #ad4e44;
-        border-left: 1px solid #651a1a;
-        border-right: 1px solid #651a1a; }
+        background: #ad4e44; }
       section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar-thumb {
         background: #d55c50;
-        border: 2px solid transparent; }
+        border: 2px solid #ad4e44; }
       section .jm-portfolio .jm-p-portfolio .jm-pp-list {
         height: 100%;
         padding: 24px; }
