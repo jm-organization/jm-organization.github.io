@@ -1,31 +1,11 @@
-- project: 'Test'
-  id: 'test'
-  description: 'this is decription'
+- project: 'Maggic Addons'
+  id: 'magic-addons'
+  description: 'Небольшой плагин на javascript для удобного написания html тегов при встраивании их в DOM средствами js.'
 
-- project: 'Test'
-  id: 'test'
-  description: 'this is decription'
+- project: 'Сайт для JM Organization'
+  id: 'jm-org-site'
+  description: 'Разработка сайта под ключ для JM Organization'
 
-- project: 'Test'
-  id: 'test'
-  description: 'this is decription'
-
-- project: 'Test'
-  id: 'test'
-  description: 'this is decription'
-
-- project: 'Test'
-  id: 'test'
-  description: 'this is decription'
-
-- project: 'Test'
-  id: 'test'
-  description: 'this is decription'
-
-- project: 'Test'
-  id: 'test'
-  description: 'this is decription'
-
-- project: 'Test'
-  id: 'test'
-  description: 'this is decription'
+- project: 'Cilaster CMS'
+  id: 'cms-cilsater'
+  description: ''
