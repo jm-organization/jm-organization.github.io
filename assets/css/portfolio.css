@@ -12,7 +12,7 @@ body {
 
 section {
   position: relative;
-  height: 100%;
+  height: calc(100% - 52px);
   width: 100%;
   display: inline-block;
   overflow: hidden; }
@@ -21,8 +21,13 @@ section {
     height: 100%;
     padding: 58px 0 79px; }
     section .jm-portfolio .jm-p-page-title {
-      height: 110px; }
+      height: 110px;
+      width: 100%;
+      max-width: 1024px;
+      color: white;
+      padding: 0 24px; }
     section .jm-portfolio .jm-p-portfolio {
-      height: calc(100% - 110px); }
+      height: calc(100% - 110px);
+      background: rgba(113, 31, 31, 0.69); }
 
 /*# sourceMappingURL=portfolio.css.map */
