@@ -33,11 +33,20 @@ section {
       overflow: hidden;
       overflow-x: scroll;
       white-space: nowrap; }
+      section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar {
+        width: 12px; }
+      section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px; }
+      section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
       section .jm-portfolio .jm-p-portfolio .jm-pp-list {
         height: 100%;
         padding: 24px; }
         section .jm-portfolio .jm-p-portfolio .jm-pp-list [class^="col-"],
         section .jm-portfolio .jm-p-portfolio .jm-pp-list [class*=" col-"] {
-          float: none !important; }
+          float: none !important;
+          display: inline-block; }
 
 /*# sourceMappingURL=portfolio.css.map */
