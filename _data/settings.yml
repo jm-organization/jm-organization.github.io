@@ -5,7 +5,7 @@ dark-theme: false
 about-disable: false
 news-disable: false
 service-disable: false
-portfolio-disable: true
+portfolio-disable: false
 
 vk-widget-supports: true
 vk-widgets:
