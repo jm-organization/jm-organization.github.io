@@ -9,7 +9,8 @@ title: Портфолио
         <p>Тут предствленны все наши работы.<br>Список пополняется по мере выполнения новых работ!</p>
     </div>
     <div class="jm-p-portfolio">
-        <div class="row">
+        <div class="row jm-pp-list">
+            {% for project in site.data.portfolio %}
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <img data-src="holder.js/300x200" alt="...">
@@ -20,6 +21,7 @@ title: Портфолио
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </div>
