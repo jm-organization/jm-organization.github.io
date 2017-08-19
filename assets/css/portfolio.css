@@ -22,13 +22,13 @@ section {
     display: inline-grid; }
     section .jm-portfolio .jm-p-page-title {
       height: 110px;
-      width: calc(100% - 480px);
+      width: calc(100% - 472px);
       max-width: 1024px;
       color: white;
       padding: 0 24px;
       display: inline-table; }
     section .jm-portfolio .jm-p-portfolio {
-      height: 480px;
+      height: 472px;
       background: rgba(113, 31, 31, 0.69);
       width: 100%;
       overflow: hidden;
@@ -49,13 +49,13 @@ section {
         padding: 24px; }
         section .jm-portfolio .jm-p-portfolio .jm-pp-list [class^="col-"],
         section .jm-portfolio .jm-p-portfolio .jm-pp-list [class*=" col-"] {
-          float: none !important;
+          float: left !important;
           display: inline-block; }
           section .jm-portfolio .jm-p-portfolio .jm-pp-list [class^="col-"] .thumbnail,
           section .jm-portfolio .jm-p-portfolio .jm-pp-list [class*=" col-"] .thumbnail {
             white-space: normal; }
             section .jm-portfolio .jm-p-portfolio .jm-pp-list [class^="col-"] .thumbnail .caption,
             section .jm-portfolio .jm-p-portfolio .jm-pp-list [class*=" col-"] .thumbnail .caption {
-              height: 21; }
+              height: 216px; }
 
 /*# sourceMappingURL=portfolio.css.map */
