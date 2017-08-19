@@ -16,5 +16,13 @@ section {
   width: 100%;
   display: inline-block;
   overflow: hidden; }
+  section .jm-portfolio {
+    width: 100%;
+    height: 100%;
+    padding: 58px 0 79px; }
+    section .jm-portfolio .jm-p-page-title {
+      height: 110px; }
+    section .jm-portfolio .jm-p-portfolio {
+      height: calc(100% - 110px); }
 
 /*# sourceMappingURL=portfolio.css.map */
