@@ -28,9 +28,16 @@ section {
       padding: 0 24px; }
     section .jm-portfolio .jm-p-portfolio {
       height: calc(100% - 110px);
-      background: rgba(113, 31, 31, 0.69); }
+      background: rgba(113, 31, 31, 0.69);
+      width: 100%;
+      overflow: hidden;
+      overflow-x: scroll;
+      white-space: nowrap; }
       section .jm-portfolio .jm-p-portfolio .jm-pp-list {
         height: 100%;
         padding: 24px; }
+        section .jm-portfolio .jm-p-portfolio .jm-pp-list [class^="col-"],
+        section .jm-portfolio .jm-p-portfolio .jm-pp-list [class*=" col-"] {
+          float: none !important; }
 
 /*# sourceMappingURL=portfolio.css.map */
