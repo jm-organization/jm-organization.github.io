@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   position: absolute;
   background-color: #cf4a40 !important;
@@ -36,10 +37,23 @@ section {
       section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar {
         width: 10px; }
       section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar-button {
-        background: #d55c50; }
+        background: #d55c50;
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        font-family: "Glyphicons Halflings";
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+        section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar-button:before {
+          content: ""; }
       section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar-track {
-        background: #bc5449;
-        border: 2px solid transparent; }
+        background: #ad4e44;
+        border: 1px solid transparent;
+        border-left: #651a1a;
+        border-right: #651a1a; }
       section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar-thumb {
         background: #d55c50;
         border: 2px solid transparent; }
