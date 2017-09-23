@@ -2,11 +2,17 @@
 <a href="/">Главная</a>
 </li>
 
-<li class="{% if site.data.settings.news-disable %}disabled{% endif %}dropdown{% if page.url contains '/posts'%} active{% endif %}{% if page.url contains '/archive' %} active{% endif %}">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt" style="padding-right: 9px;"></span>Новости <b class="caret"></b></a>
+<li class="{% if site.data.settings.news-disable %}disabled{% endif %}dropdown{% if page.url contains '/posts'%} active{% endif %}{% if page.url contains '/archive' %} active{% endif %}" style="max-width: 130px">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="white-space: nowrap; overflow: hidden; padding-right: 5px; text-overflow: ellipsis;"><span class="glyphicon glyphicon-list-alt" style="padding-right: 9px;"></span>Информационный центр <b class="caret"></b></a>
+
 	{% unless site.data.settings.news-disable %}
 	<ul class="dropdown-menu">
+		<li style="max-width: 231px;">
+			<a href="/blog/">Наш блог</a>
+		</li>
+
 		<li role="presentation" class="dropdown-header"><span class="glyphicon glyphicon-pushpin"></span> Важные новости</li>
+
 		{% for post in site.posts %}
 		{% if post.published and post.fixed%}
 		<li style="max-width: 231px;" data-toggle="tooltip" data-placement="left" title="{{ post.title }}">
