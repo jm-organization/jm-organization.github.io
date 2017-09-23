@@ -3,126 +3,218 @@ layout: body-sample
 title: Главная
 ---
 
-<div class="jm-about">
-    <a name="about"></a>
-    <div class="jm-a-company">
-        <h3>Об организации</h3>
-        <p>  
-            Мы начали свою работу с конца <i>2016 года</i>. За это время у нас появилось множество мелких наработок и большой опыт.
-            Поэтому у нас появилось решение приняться за реализацию проекта, который требует очень чётких и одновременно продуманых действий.
-            Для этого потребовалось создать мелкую организацую, занимающуюся проектом "<b>Социальная сеть La Friend</b>".<br><br>
-            Вскоре из-за медленого развития проекта было принято <a href="https://jm-organization.github.io/posts/11-08-2017/close-la-friend-and-reorganized-org.html">решение</a> о его закрытии, а организация обрела, несколько, другое направление...
-        </p>
-
-        <h3>Проект остановлен (<small>Социальная сеть La Friend</small>)</h3>
-        <p>
-            <span class="text-muted">Это проект, который появился раньше, чем сама организация. Говорить о нём особо не стоит, это социальная сеть.
-            Больше информации вы можете узнать на странице проекта: <a data-href="404 - Project not found">La Friend</a>.</span>
-        </p>
-
-        <a name="collabarator"></a>
-        <h3>Сотрудники</h3>
-        <p>
-            Команда сотрудников, на данный момент, способна лишь на серверные и прикладные программы. Но этого современной web-организации мало.
-            На данный момент команда состоит из нижеперечисленных людей, по графику видно, что это <i>80% из того персонала, который нужен для старта</i>.
-        </p>
-    </div>
-
-    {% capture max_collaborators %}10{% endcapture %}
-    {% capture min_collaborators %}1{% endcapture %}
-    {% capture require_collaborators %}4{% endcapture %}
-    {% capture value_now %}{{ site.data.projectteam | size }}{% endcapture %}
-
-    {% capture now_precept %}{{ value_now | times: 100 }}{% endcapture %}
-    {% capture progress_now %}{{ now_precept | divided_by: max_collaborators }}{% endcapture %}
-
-    {% capture require_precept %}{{ require_collaborators | times: 100 }}{% endcapture %}
-    {% capture progress_require %}{{ require_precept | divided_by: max_collaborators }}{% endcapture %}
-
-    <div class="progress">
-        <div class="progress-bar progress-bar-success"
-             data-role="progress-now"
-             style="width: {{ progress_now }}%"
-             data-toggle="tooltip"
-             data-placement="top"
-             title="На данный момент всего {{ progress_now }}% сотрудников или ({{ value_now }}) человека."
-        ><span class="sr-only">{{ progress_now }}%/{{ progress_require }}%</span></div>
-
-        <div class="progress-bar progress-bar-info"
-             data-role="progress-require"
-             style="width: {{ progress_require | minus: progress_now }}%"
-             data-toggle="tooltip"
-             data-placement="top"
-             title="Нужно {{ progress_require }}% от общего количества ({{ max_collaborators }}) чтобы началась работа."
-        ><span class="sr-only">Нужно {{ progress_require }}% из ({{ max_collaborators }}) сотрудников.</span></div>
-    </div>
-
-    <div class="jm-a-co-workers">
-        <div class="jm-a-line"></div>
-        <div class="jm-a-collaborators" id="accordion">
-            {% for cw in site.data.projectteam %}
-            <div class="jm-a-collaborator" id="{{ cw.co-worker }}">
-                <div class="jm-ac-date" data-toggle="tooltip" data-placement="bottom" title="В компании с">{{ cw.date-of-adopted }}</div>
-                <div class="jm-ac-co-worker">
-                    <div class="jm-acc-min-info">
-                        <img src="/assets/img/co-worker-avatars/{{ cw.co-worker }}.png" width="56px" height="56px">
-                        <h3>{{ cw.co-worker }} {% if cw.first-name %}({{ cw.first-name }}{% if cw.second-name %} {{ cw.second-name }}{% endif %}){% endif %}<small id="position">{{ cw.position }}</small></h3>
-                    </div>
-                    {% if site.hidecollaboratorinfo %}
-                    <div class="jm-acc-open-more-info" data-toggle="tooltip" data-placement="top" title="Больше информации">
-                        <a class="accordion-collaborator" data-toggle="collapse" data-parent="#accordion" href="#{{ cw.co-worker }}Info"></a>
-                    </div>
-                    {% endif %}
+<div class="jm-news-found">
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">
+                        Результаты поиска
+                        <small style="display: block">По запросу: "<b id="find-string"></b>"</small>
+                    </h4>
                 </div>
-                <div class="jm-ac-cinfo" style="padding-top: 2px">
-                    <div class="panel-collapse collapse in" id="{{ cw.co-worker }}Info">
-                        {% if cw.info.web-sites %}
-                        <p class="web-sites" data-ws='{{ cw.info.web-sites }}'></p>
-                        {% endif %}
-                        <p id="base-info" data-bi="{}"></p>
 
-                        {% if cw.other-names %}
-                        <p class="other-names" data-on='{{ cw.other-names }}'>Также известен, как: </p>
-                        {% endif %}
-                    </div>
+                <div class="modal-body">
+                    <div id="progress"></div>
+                    <div id="results"></div>
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
 
-    <div class="jm-a-company" style="margin-top: 35px">
-        <p>
-            Помимо тех сотрудников, которые у нас есть, нам нужны люди, которые имеют навыки в таких специальностях:
-        </p>
-        <ul>
-            <li class="bg-warning text-warning"><b>Front-end разработчик</b><span> - разработчик клиентской части web-приложения</span><span class="glyphicon glyphicon-warning-sign" style="float: right"  data-toggle="tooltip" data-placement="top" title="Высокий приоритет потребности"></span></li>
-            <li><b>Рекламщик</b><span> - человек, который будет заниматься рекламой и продвижением компании.</span></li>
-            <li><b style="border-bottom: 1px dotted #999;" data-toggle="tooltip" data-placement="top" title="Должность занята, но набор на неё продолжается">Системный администратор</b><span class="text-muted"> - требуется навыки работы с клиентами в вопросах поддержки, а также настройки серверов и серверногог ПО</span></li>
+    <script>
+        $(document).ready(function () {
+            $("#search-form").submit(function( event ) {
+                event.preventDefault();
+
+                var string = $("#query").val();
+                var pattern = new RegExp(string, 'i');
+
+                if (string.length >= 3) {
+                    $('#searchModal').modal('show');
+
+                    $('#find-string').html(string);
+                    $("#progress").html('<p>Загрузка...</p><div class="progress progress-striped active"><div id="search-progress-bar" class="progress-bar" role="progressbar" style="width: 0%"></div></div>');
+                    $('#results').append(tags.tag({
+                        tag: 'div',
+                        attributes: { class: 'bg-warning', style: 'text-align: center;' },
+                        tagContent: 'По данному запросу ничего не найдено'
+                    }));
+
+                    for (var i=1; i<=100; i++) {
+                        $('#search-progress-bar').css({'width':i+'%'});
+
+                        if (i = 100) {
+                            setTimeout($.showFeed('http://www.jm-org.net/feed.xml', pattern), 2000);
+                        }
+                    }
+                }
+
+                $("#query").val('');
+                return false;
+            });
+
+            $('#results .panel').hover(
+                function () {
+                    $(this).removeClass('panel-default');
+                    $(this).addClass('panel-success');
+                },function () {
+                    $(this).removeClass('panel-success');
+                    $(this).addClass('panel-default');
+                }
+            );
+
+            $('#searchModal').on('hidden.bs.modal', function (e) {
+                $('#results').html('');
+                $('#find-string').html('');
+            });
+
+            $.showFeed = function (url, pattern) {
+                $.ajax({
+                    url: url,
+                    success: function(data){
+                        var feeds = [];
+
+                        $(data).find('entry').each(function() {
+                            var title = $(this).find('title').text();
+                            var url = $(this).find('id').text();
+                            var description = $(this).find('summary').text();
+
+                            var pattern = /([0-9]{4})\/([0-9]{1,2})\/([0-9]{1,2})/g;
+
+                            var dop = $(this).find('id').text().replace(pattern, '$&'); // date of publication
+
+                            feeds.push({
+                                title: title,
+                                href: url,
+                                description: description
+                                ,date: dop
+                            });
+                        });
+
+                        feeds.forEach(function (element) {
+                            var description = element.description.replace(/<.*?>/g, '');
+                            if (pattern.test(element.title) || pattern.test(description)) {
+                                $("#progress, #results").html('');
+
+                                $('#results').append(tags.tag({
+                                    tag: 'div',
+                                    attributes: { class: 'panel panel-default' },
+                                    tagContent: tags.tag({
+                                        tag: 'div',
+                                        attributes: { class: 'panel-body', style: 'border-left: 3px solid #e2e2e2;' },
+                                        tagContent: tags.tag({
+                                            tag: 'h4',
+                                            tagContent: element.title + tags.tag({
+                                                tag: 'a',
+                                                attributes: { href: element.href },
+                                                tagContent: tags.tag({
+                                                    tag: 'span',
+                                                    attributes: { class: 'glyphicon glyphicon-link' }
+                                                })
+                                            })
+                                        })+tags.tag({
+                                            tag: 'p',
+                                            tagContent: description
+                                        })
+                                    })
+                                }));
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</div>
+
+<!-- Articles -->
+{% for post in paginator.posts %}
+{% if post.published %}
+<article class="panel panel-default">
+    <div class="panel-body">
+        <div class="jm-a-header">
+            <div class="jm-ah-picture">
+                <img src="/assets/img/news_picture/{{ post.picture }}" width="56px" height="56px">
+            </div>
+            <h2 class="jm-ah-header"><b>{{ post.title }}</b></h2>
+        </div>
+
+        {% if post.author or post.date %}
+        <p class="text-muted">{% if post.date %}{{ post.date | date: '%d.%m.%Y' }}{% endif %}, {% if post.author %}Опубликовал <strong>{% if post.author_url %}<a href="{{ post.author_url }}" target="_blank">{% endif %}{{ post.author }}{% if post.author_url %}</a>{% endif %}</strong>{% endif %}</p>
+        {% endif %}
+
+        {{ post.excerpt }}
+
+        <ul class="pager">
+            <li class="next" style="float: left!important;"><a href="{{ post.url }}">Подробнее &rarr;</a></li>
         </ul>
     </div>
-
-    <a name="contact"></a>
-    <div class="jm-a-contacts" style="margin-top: 47px">
-        <h3>Контакты</h3>
-        <address>
-            <strong>JM Организация.</strong><br>
-            Мелитополь, Украина<br>
-
-            <p>
-                {% for email in site.data.contacts.emails %}
-                <span style="margin: 0; padding-top: 4px; display: block; width: 100%">
-                    <span class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="top" title="{{ email.title }}"></span>
-                    <a href="mailto:{{ email.email }}">{{ email.email }}</a>
-                </span>
-                {% endfor %}
-            </p>
-
-            {% for sw in site.data.contacts.social-webs %}
-            {% if sw.href != '' %}
-            <abbr title="{{ sw.abbr-title }}">{{ sw.abbr }}:</abbr> <a href="{{ sw.href }}" target="_blank">{{ sw.title }}</a>;&nbsp;&nbsp;
-            {% endif %}
-            {% endfor %}
-        </address>
+    <div class="panel-footer">
+        <p class="jm-a-category"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;&nbsp;{{ post.category }}</p>
     </div>
-</div>
+</article>
+{% endif %}
+{% endfor %}
+
+<!-- Paginator -->
+<center class="jm-pagination">
+    <ul class="pagination">
+        {% assign max_buttons = 5 %}
+
+        {% assign max_buttons_sides = max_buttons | minus: 1 | divided_by: 2 %}
+        {% assign max_buttons_left = max_buttons_sides | floor %}
+        {% assign max_buttons_right = max_buttons_sides | ceil %}
+
+        {% assign start = paginator.page | minus: max_buttons_left %}
+        {% if start < 1 %}{% assign start = 1 %}{% endif %}
+        {% assign end = paginator.page | plus: max_buttons_right %}
+        {% if end > paginator.total_pages %}{% assign end = paginator.total_pages %}{% endif %}
+
+        {% assign current_start_diff = paginator.page | minus: start %}
+        {% assign current_end_diff = end | minus: paginator.page %}
+
+        {% if current_start_diff < max_buttons_left %}
+        {% assign start = 1 %}
+        {% assign end = max_buttons %}
+        {% if end > paginator.total_pages %}{% assign end = paginator.total_pages %}{% endif %}
+        {% endif %}
+        {% if current_end_diff < max_buttons_right %}
+        {% assign start = paginator.total_pages | plus: 1 | minus: max_buttons %}
+        {% if start < 1 %}{% assign start = 1 %}{% endif %}
+        {% assign end = paginator.total_pages %}
+        {% endif %}
+
+        <li>
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}">&laquo;</a>
+            {% else %}
+            <span>&laquo;</span>
+            {% endif %}
+        </li>
+
+        {% for page in (start..end) %}
+        {% if page == paginator.page %}
+        {% capture link %}<span>{{ page }}</span>{% endcapture %}
+        {% elsif page == 1 %}
+        {% capture link %}<a href="/">{{ page }}</a>{% endcapture %}
+        {% else %}
+        {% capture link %}<a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>{% endcapture %}
+        {% endif %}
+
+        <li{% if page == paginator.page %} class="active"{% endif %}>
+        {{ link }}
+        </li>
+        {% endfor %}
+
+        <li>
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}">&raquo;</i></a>
+            {% else %}
+            <span>&raquo;</span>
+            {% endif %}
+        </li>
+    </ul>
+</center>
+
