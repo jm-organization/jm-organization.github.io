@@ -1,0 +1,197 @@
+---
+layout: body-service-layout
+title: Услуги
+---
+
+<div class="jm-services">
+    <!-- Fixed services -->
+    <div id="carousel-example-generic" class="jm-s-carusel carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {% for caption in site.data.services.services %}
+            {% if caption.fixed %}
+            <li data-target="#carousel-example-generic" data-slide-to="{{ forloop.index0 }}" class="{% if caption.fixed-state and caption.fixed-state == 'active' %}active{% endif %}"></li>
+            {% endif %}
+            {% endfor %}
+        </ol>
+
+        <div class="carousel-inner">
+            {% for caption in site.data.services.services %}
+            {% if caption.fixed %}
+            <div class="item{% if caption.fixed-state and caption.fixed-state == 'active' %} active{% endif %}">
+                <div class="img" style="background-image: url(/assets/img/background-picture/services/{{ caption.id }}.png)"></div>
+                <div class="carousel-caption">
+                    <h3>{{ caption.service }}</h3>
+                    <div class="btn-group dropup" style="padding-bottom: 5px; text-shadow: none">
+                        <a class="btn btn-success" href="#{{ caption.id }}">Подробнее</a>
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Меню с переключением</span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a type="button" href="#order-modale"
+
+                                   data-open="order-modale"
+                                   data-service="{{ caption.service }}"
+                            >Заказать</a></li>
+                            <li class="divider"></li>
+                            <li role="presentation" class="dropdown-header">Цена</li>
+                            <li><a href="#">Стоимость услуги: {{ caption.price }} {{ site.data.services.currency }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+
+    <!-- All services -->
+    <div class="jm-s-services">
+        <div class="page-width">
+            <div class="page-content">
+                <div id="services" style="display: inline-block;">
+                    {% for caption in site.data.services.services %}
+                    <div id="{{ caption.id }}" class="jm-caption">
+                        <div class="jm-c-image-phone visible-xs">
+                            <img src="/assets/img/background-picture/services/small_bg-{{ caption.id }}.png" alt="{{ caption.service }}" class="img-thumbnail">
+                        </div>
+
+                        <div class="jm-c-info">
+                            <h3>{{ caption.service }}</h3>
+                            <p>{{ caption.info }}</p>
+                            <div class="btn-group">
+                                <a type="button" class="btn btn-success" href="#order-modale" data-open="order-modale" data-service="{{ caption.service }}" onclick="return false">Заказать</a>
+                                <div class="btn btn-default"
+                                     data-toggle="tooltip"
+                                     data-placement="top"
+                                     title="Стоимость услуги: {{ caption.price }} {{ site.data.services.curr-title }}"
+                                >{{ caption.price }} {{ site.data.services.currency }}</div>
+                            </div>
+                        </div>
+
+                        <div class="jm-c-image-pc visible-md visible-lg">
+                            <img src="/assets/img/background-picture/services/small_bg-{{ caption.id }}.png" alt="{{ caption.service }}" class="img-thumbnail">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="jm-comments">
+                    <div class="jm-comments-title">
+                        <ul class="jm-pager pager">
+                            <li class="jm-comments-title">Отзывы</li>
+                        </ul>
+                    </div>
+                    <div id="disqus_thread"></div>
+                </div>
+
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = window.location.href;
+                        this.page.identifier = 'services'+window.location.pathname;
+                    };
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://jm-organization.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <form class="modal fade form-horizontal" id="order-modale" tabindex="-1" role="dialog" aria-labelledby="order-modaleLabel" aria-hidden="true" method="post" action="//formspree.io/offers@jm-org.net">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="order-modaleLabel">Оформление заказа (<span class="text-muted">Обратная связь</span>)</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-warning">
+                        <h3 style="margin-top: 0"><span class="glyphicon glyphicon-warning-sign" style="padding-right: 12px"></span>Внимание!</h3>
+                        <p style="padding-left: 38px; margin-bottom: 7px">
+                            Наше ответное письмо может быть помещено в папку "<b>Спам</b>". Пожалуйста, проверте её, когда будете ждать наш ответ!
+                        </p>
+                        <span><b>Среднее время ответа:</b> 24 часа</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="order-name" class="col-sm-3 control-label">Ваше имя:</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="Имя:" class="form-control" required placeholder="Как к вам обращаться?.." id="order-name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-email" class="col-sm-3 control-label">E-mail:</label>
+                        <div class="col-sm-9">
+                            <input type="email" name="Электронный адрес:" class="form-control" required placeholder="Введите ваш электронный адрес..." id="order-email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-subject-text" class="col-sm-3 control-label">Тема:</label>
+                        <div class="col-sm-9">
+                            <input type="hidden" name="_subject" value="[---] ----" id="order-subject-hidden">
+                            <input type="text" name="subject" class="form-control" disabled id="order-subject-text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-text" class="col-sm-3 control-label">Сообщение:</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" name="Сообщение:" required id="order-text" rows="7" style="max-width: 100%" minlength="100" maxlength="712"></textarea>
+
+                            <div class="jm-char-counter">
+                                <p class="text-right">Количество символов:<b id="char-counter" style="padding: 0 15px"></b></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="_next" value="/services/" />
+                    <input type="hidden" name="_language" value="ru" />
+                    <input type="hidden" name="Пользовательское соглашение:" value="---" id="terms-of-use" />
+                    <input type="text" name="_gotcha" style="display:none" />
+
+                    <div class="jm-terms-of-use" style="display: none">
+                        <label class="text-info"><input type="checkbox" required id="assent">Я, <span id="client"></span>, соглашаюсь</label> с <a class="text-info" data-jm-toggle="cosoo" style="cursor: pointer" data-toggle="tooltip" data-placement="top" title="Открыть Условие подачи заказов">условием подачи заказов</a> и обязуюсь заплатить за него полную суму, предявленную исполнителем.
+
+                        <div class="jm-open-cosoo well" id="cosoo">
+                            <h3>Условие подачи заказов</h3>
+
+                            <h4>Оформление заказа</h4>
+                            <p>При оформлении заказа Вы обязаны заполнить всё поля и согласиться с данным соглашением.<br>В случае несоглашения - вы не имеете права отправлять заказ.</p>
+
+                            <h4>Общие права</h4>
+                            <ul class="bg-warning">
+                                <li>Вы имеете право просить снижение цены на те услуги, у которых цена имеет префикс "<b>от</b>".</li>
+                                <li>Вы имеете право скрівать свё имя, но почту должны указывать существующую.</li>
+                            </ul>
+
+                            <h4>Запрещено</h4>
+                            <ul class="bg-warning">
+                                <li>Запрещено отправлять письма с сервесов временной почты.</li>
+                                <li>Запрещено отправлять письма не имеющие смысла. <span class="text-muted">(будут игнорироваться)</span></li>
+                                <li>Отправлять письма содержание которых меньше 100 символов.</li>
+                            </ul>
+                            <br>
+                            <p>Сразу объясняйте то, что вы хотите реализовать, не нужно ограничиваться только заголовком темы.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Заказать</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

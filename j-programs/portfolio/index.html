@@ -1,0 +1,27 @@
+---
+layout: body-portfolio-layout
+title: Портфолио
+---
+
+<div class="jm-portfolio">
+    <div class="jm-p-page-title">
+        <h2>{{ page.title }}</h2>
+        <p>Тут предствленны все наши работы.<br>Список пополняется по мере выполнения новых работ!</p>
+    </div>
+    <div class="jm-p-portfolio">
+        <div class="row jm-pp-list">
+            {% for project in site.data.portfolio %}
+            <div class="col-sm-5 col-md-3" id="{{ project.id }}">
+                <div class="thumbnail">
+                    <img src="/assets/img/background-picture/portfolio/{{ project.id }}.png" alt="{{ project.id }}">
+                    <div class="caption">
+                        <h3>{{ project.project }}</h3>
+                        <p>{{ project.description }}</p>
+                        <!-- <p><a href="#" class="btn btn-primary" role="button">Кнопка</a> <a href="#" class="btn btn-default" role="button">Кнопка</a></p> -->
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

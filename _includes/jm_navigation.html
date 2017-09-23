@@ -1,10 +1,5 @@
-{% capture settings %}{{ site.data.settings }}{% endcapture %}
-
 <li{% if page.url == '/' %} class="active"{% endif %}>
-	<a href="/">Главная</a>
-</li>
-<li class="{% if site.data.settings.about-disable %}disabled{% endif %}{% if page.url contains '/about/' %} active{% endif %}">
-	<a href="/about" {% if site.data.settings.about-disable %}onclick="return false"{% endif %}>О нас</a>
+<a href="/">Главная</a>
 </li>
 
 <li class="{% if site.data.settings.news-disable %}disabled{% endif %}dropdown{% if page.url contains '/posts'%} active{% endif %}{% if page.url contains '/archive' %} active{% endif %}">
@@ -21,13 +16,4 @@
 		{% endfor %}
 	</ul>
 	{% endunless %}
-</li>
-
-
-<li class="{% if site.data.settings.service-disable %}disabled{% endif %}{% if page.url contains '/services' %} active{% endif %}">
-	<a href="/services" {% if site.data.settings.service-disable %}onclick="return false"{% endif %}><span class="glyphicon glyphicon-tags" style="padding-right: 9px;"></span>Услуги</a>
-</li>
-
-<li class="{% if site.data.settings.portfolio-disable %}disabled{% endif %}{% if page.url contains '/portfolio' %} active{% endif %}">
-	<a href="/portfolio" {% if site.data.settings.portfolio-disable %}onclick="return false"{% endif %}>Портфолио</a>
 </li>
