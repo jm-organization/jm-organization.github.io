@@ -10,7 +10,7 @@ gems:
   - jekyll-feed
   - jekyll-redirect-from
 
-permalink: '/posts/:year/:month/:day/:title.html'
+permalink: '/blog/posts/:year/:month/:day/:title.html'
 paginate: 5
 paginate_path: "/?page=:num"
 url: 'http://www.jm-org.net'
