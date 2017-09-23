@@ -3,7 +3,7 @@
 </li>
 
 <li class="{% if site.data.settings.news-disable %}disabled{% endif %}dropdown{% if page.url contains '/posts'%} active{% endif %}{% if page.url contains '/archive' %} active{% endif %}" style="max-width: 130px">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="white-space: nowrap; overflow: hidden; padding-right: 5px; text-overflow: ellipsis;"><span class="glyphicon glyphicon-list-alt" style="padding-right: 9px;"></span>Информационный центр <b class="caret"></b></a>
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="white-space: nowrap; overflow: hidden; padding-right: 5px; text-overflow: ellipsis;"><span class="glyphicon glyphicon-list-alt" style="padding-right: 9px;"></span>Информ. центр <b class="caret"></b></a>
 
 	{% unless site.data.settings.news-disable %}
 	<ul class="dropdown-menu">
@@ -22,4 +22,12 @@
 		{% endfor %}
 	</ul>
 	{% endunless %}
+</li>
+
+<li{% if page.url contains '/j-program' %} class="active"{% endif %}>
+<a href="/j-program/">jProgram</a>
+</li>
+
+<li{% if page.url contains '/j-engineering/' %} class="active"{% endif %}>
+<a href="/j-engineering/">jEngineering</a>
 </li>
