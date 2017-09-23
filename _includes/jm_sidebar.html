@@ -1,4 +1,5 @@
 <div class="jm-sidebar">
+    {% if page.url contains '/blog/' %}
     <div class="panel panel-default">
         <div class="panel-heading"><span class="glyphicon glyphicon-home"></span> Поиск</div>
 
@@ -27,14 +28,11 @@
             </form>
         </div>
     </div>
+    {% endif %}
 
+    {% if page.url contains '/j-programs/' %}
     <div class="panel panel-default">
-        <div class="panel-heading"><span class="glyphicon glyphicon-home"></span> JM Organization</div>
-
-        <div class="panel-body text-center">
-            <p><strong>JM Organization</strong> <em>- открытая украинская организация, занимающаяся различными видами web-разработок.</em></p>
-            <p>Официальный портал JM организации. Последние новости и описание наших проектов. Поможем в реализации сайта, программы. Также помогаем с созданием серверов Minecraft. Исправляем проблем в работе модификаций для Minecraft</p>
-        </div>
+        <div class="panel-heading"><span class="glyphicon glyphicon-home"></span> Поиск</div>
 
         <ul class="list-group">
             {% capture settings %}{{ site.data.settings }}{% endcapture %}
@@ -50,7 +48,19 @@
             <li class="list-group-item {% if site.data.settings.portfolio-disable %}disabled{% endif %}{% if page.url contains '/j-programs/portfolio' %} active{% endif %}">
                 <a href="/j-programs/portfolio" {% if site.data.settings.portfolio-disable %}onclick="return false"{% endif %}>Портфолио</a>
             </li>
+        </ul>
+    </div>
+    {% endif %}
 
+    <div class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-home"></span> JM Organization</div>
+
+        <div class="panel-body text-center">
+            <p><strong>JM Organization</strong> <em>- открытая украинская организация, занимающаяся различными видами web-разработок.</em></p>
+            <p>Официальный портал JM организации. Последние новости и описание наших проектов. Поможем в реализации сайта, программы. Также помогаем с созданием серверов Minecraft. Исправляем проблем в работе модификаций для Minecraft</p>
+        </div>
+
+        <ul class="list-group">
             {% for sw in site.data.contacts.social-webs %}
             {% if sw.href != '' %}
             <li class="list-group-item">
