@@ -4,12 +4,11 @@
         <div class="panel-heading"><span class="glyphicon glyphicon-globe"></span> Поиск</div>
 
         <div class="panel-body text-center">
-            <form class="navbar-form navbar-left" id="search-form">
+            <form class="navbar-form navbar-left" id="search-form" style="padding: 0; margin: 0;">
                 <fieldset{% if site.data.settings.search-news == false %} disabled{% endif %}>
                 <div class="form-group">
                     <div class="input-group">
-                        <input type="text" id="query" class="form-control" placeholder="Начните вводить слово..."
-                            style="padding: 0; margin: 0;">
+                        <input type="text" id="query" class="form-control" placeholder="Начните вводить слово...">
 
                         <div class="input-group-btn">
                             <button type="submit" id="search" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Быстрый поиск новостей по заголовку и содержанию"><span class="glyphicon glyphicon-search"></span></button>
