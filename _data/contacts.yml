@@ -21,11 +21,11 @@ social-webs:
     prefix: "во"
 
   # ukrainians
-  - href: "https://www.ukrainians.co/c242"
-    title: "JM Organization"
-    abbr: "UKRAINIANS"
-    abbr-title: "Ukrainians"
-    prefix: "на"
+  #- href: "https://www.ukrainians.co/c242"
+  #  title: "JM Organization"
+  #  abbr: "UKRAINIANS"
+  #  abbr-title: "Ukrainians"
+  #  prefix: "на"
 
   # facebook
   - href: ""
