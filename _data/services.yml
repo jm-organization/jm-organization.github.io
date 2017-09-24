@@ -42,7 +42,7 @@ services:
     id: "base-date-create"
     fixed: true
     fixed-state:
-    price: "3399"
+    price: "2999"
     info: "Спроектируем Базу данных на вашем сайте для ваших потребностей"
 
   # +
@@ -50,7 +50,7 @@ services:
     id: "develop-plugins-for-cms"
     fixed: false
     fixed-state:
-    price: "от 1000"
+    price: "от 399"
     info: "Разрабатываем плагины под WordPress / Joomla"
 
   # +
@@ -66,5 +66,5 @@ services:
     id: "minecraft-servers-support"
     fixed: true
     fixed-state:
-    price: "от 500"
+    price: "от 100"
     info: "Помогаем с настройкой сайтов, серверов. Помогаем в администрировании серверов."
