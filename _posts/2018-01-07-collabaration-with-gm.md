@@ -2,7 +2,7 @@
 title: Начало сотрудничества с проектом майнкрафт-серверов Grand-Mine.
 author: NESTLI
 author_url: http://jm-org.net/about/#NESTLI
-published: false
+published: true
 fixed: true
 category: Важные новости
 picture: collabaration-with-gm.png
