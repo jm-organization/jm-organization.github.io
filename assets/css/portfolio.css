@@ -1,61 +1,22 @@
-body {
-  position: absolute;
-  background-color: #cf4a40 !important;
-  background-image: url(/assets/img/background-picture/portfolio_bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-position-y: 8%;
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  overflow: hidden; }
+body, section {
+  background: #fff;
+  margin: 0;
+  padding: 0; }
 
-section {
-  position: relative;
-  height: calc(100% - 52px);
-  width: 100%;
-  display: inline-block;
-  overflow: hidden; }
-  section .jm-portfolio {
-    width: 100%;
-    height: 100%;
-    display: inline-grid; }
-    section .jm-portfolio .jm-p-page-title {
-      height: 110px;
-      width: calc(100% - 472px);
-      max-width: 1024px;
-      color: white;
-      padding: 0 24px;
-      display: inline-table; }
-    section .jm-portfolio .jm-p-portfolio {
-      height: 472px;
-      background: rgba(113, 31, 31, 0.69);
-      width: 100%;
-      overflow: hidden;
-      overflow-x: scroll;
-      white-space: nowrap; }
-      section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar {
-        width: 10px;
-        border: 1px solid #651a1a; }
-      section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar-button {
-        background: #912525; }
-      section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar-track {
-        background: #ad4e44; }
-      section .jm-portfolio .jm-p-portfolio::-webkit-scrollbar-thumb {
-        background: #d55c50;
-        border: 2px solid #ad4e44; }
-      section .jm-portfolio .jm-p-portfolio .jm-pp-list {
-        height: 100%;
-        padding: 24px; }
-        section .jm-portfolio .jm-p-portfolio .jm-pp-list [class^="col-"],
-        section .jm-portfolio .jm-p-portfolio .jm-pp-list [class*=" col-"] {
-          float: left !important;
-          display: inline-block; }
-          section .jm-portfolio .jm-p-portfolio .jm-pp-list [class^="col-"] .thumbnail,
-          section .jm-portfolio .jm-p-portfolio .jm-pp-list [class*=" col-"] .thumbnail {
-            white-space: normal; }
-            section .jm-portfolio .jm-p-portfolio .jm-pp-list [class^="col-"] .thumbnail .caption,
-            section .jm-portfolio .jm-p-portfolio .jm-pp-list [class*=" col-"] .thumbnail .caption {
-              height: 216px; }
+.wrapper {
+  background: #E0E6E9; }
+
+section .sidebar {
+  background: #465D67;
+  border-right: 1px solid #2E4650;
+  padding-left: 15px;
+  width: 240px;
+  padding-right: 5px; }
+section .container {
+  padding-left: 15px;
+  padding-right: 14px;
+  margin-top: 24px;
+  padding-top: 5px;
+  border-top: 1px solid #C0B2B2; }
 
 /*# sourceMappingURL=portfolio.css.map */
