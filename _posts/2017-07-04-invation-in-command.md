@@ -1,10 +1,11 @@
 ---
 title: Вместе - мы сила
+date: 2017-07-04 00:00:00 Z
+categories:
+- Набор в команду
 author: Magicmen
 author_url: http://jm-org.net/about/#Magicmen
-published: true
 fixed: false
-category: Набор в команду
 picture: invation-in-command.jpg
 ---
 

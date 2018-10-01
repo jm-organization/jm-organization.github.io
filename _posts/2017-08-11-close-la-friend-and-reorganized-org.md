@@ -1,10 +1,11 @@
 ---
 title: La Friend закрыт. JM Organization - реорганизирован.
+date: 2017-08-11 00:00:00 Z
+categories:
+- Важные новости
 author: Magicmen
 author_url: http://jm-org.net/about/#Magicmen
-published: true
 fixed: true
-category: Важные новости
 picture: close-la-friend-and-reorganized-org.png
 ---
 

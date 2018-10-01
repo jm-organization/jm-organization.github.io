@@ -1,10 +1,11 @@
 ---
 title: Новые горизонты в Украинской web-индустрии
+date: 2017-06-20 00:00:00 Z
+categories:
+- Важные новости
 author: Magicmen
 author_url: http://jm-org.net/about/#Magicmen
-published: true
 fixed: false
-category: Важные новости
 picture: relesed-site.png
 ---
 

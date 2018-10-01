@@ -1,19 +1,26 @@
+---
+title: Jm Organization.Github.Io
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 exclude:
-  - README.md
-  - /*.pdn
-  - /*.xcf
-  - /Thumbs.db
-
+- README.md
+- "/*.pdn"
+- "/*.xcf"
+- "/Thumbs.db"
 gems:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-redirect-from
-
-permalink: '/posts/:year/:month/:day/:title.html'
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-redirect-from
+permalink: "/posts/:year/:month/:day/:title.html"
 paginate: 5
 paginate_path: "/?page=:num"
-url: 'http://www.jm-org.net'
-
+url: http://www.jm-org.net
 comments: true
 vk-support: true
