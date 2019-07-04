@@ -4,7 +4,11 @@ layout: body-main-layout
 
 <section{% if page.url != '/' %} style="padding-top: 0"{% endif %}>
     <div class="page-width">
-        <div class="page-content" data-name="content">{{ content }}</div>
+        <div class="page-content" data-name="content">
+            <div class="alert alert-info" role="alert">Воспользоваться новой версией сайта: <a href="http://new.jm-org.net">new.jm-org.net</a></div>
+            
+            {{ content }}
+        </div>
 
         {% include jm_sidebar.html %}
     </div>
