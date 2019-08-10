@@ -7,7 +7,7 @@ news-disable: false
 service-disable: false
 portfolio-disable: true
 
-vk-widget-supports: true
+vk-widget-supports: false
 vk-widgets:
   community_messages: true
   groups: true
